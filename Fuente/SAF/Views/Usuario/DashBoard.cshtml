@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+@{
+	Layout = null;
+	var base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.logo);
+	var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+}
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title - SAF</title>
+
+	<environment include="Development">
+		<link rel="stylesheet" href="~/lib/bootstrap_4.1.1/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="~/lib/fontawesome_5.0.12/css/fontawesome-all.min.css" />
+		<link rel="stylesheet" href="~/lib/slidermenu/sidebar-menu.css">
+	</environment>
+</head>
+<body>
+
+
+	<div id="page">
+
+		<div id="header">
+			<img src="@imgSrc" class="text-md-left" />
+			<span id="pushRight" class="btn">&#9776;</span>Tutorial
+		</div>
+		<div id="content">
+			<div id="contenido">
+			</div>
+		</div>
+
+
+		<div id="menu">
+		</div>
+
+	</div>
+
+	<environment include="Development">
+		<script src="~/lib/jquery_3.3.1/jquery-3.3.1.min.js"></script>
+		<script src="~/lib/bootstrap_4.1.1/js/bootstrap.min.js"></script>
+		<script src="~/lib/slidermenu/sidebar-menu.js"></script>
+		<script>
+			$.sidebarMenu($('.sidebar-menu'))
+			$('#pushRight').click(function () {
+				$('body').addClass('animate-menu-push');
+				$('body').toggleClass('animate-menu-push-right')
+				$('.animate-menu-left').toggleClass('animate-menu-open')
+			})
+
+			$(document).ready(function () {
+				$('#menu').load('/Usuario/UsuarioMenu');
+
+			});
+
+			function cargarView(view) {
+				$('#contenido').load(view);
+			}
+		</script>
+	</environment>
+</body>
+</html>
+
