@@ -1,0 +1,24 @@
+﻿
+.loginCentral {
+    position: relative;
+    top: 0px;
+    z-index: 100;
+    width: 30%;
+    height: 100%;
+    margin: 0 0 0 0px;
+    background: #39444c;
+    background: rgba(57,68,76,0.9);
+    padding: 0px; 
+    min-width: 350px; 
+    max-width: 350px;
+}
+
+
+.login {
+	position: absolute;
+	top: 250px;
+	height: 150px;
+	width: 350px;
+	padding: 0px;
+	z-index: 2;
+}

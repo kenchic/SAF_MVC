@@ -49,7 +49,7 @@ namespace SAF.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				string RegistrationStatus = ""; 
+				string RegistrationStatus = "";
 				if (RegistrationStatus == "Success")
 				{
 					ModelState.Clear();
@@ -68,15 +68,15 @@ namespace SAF.Controllers
 		[HttpGet]
 		public IActionResult UserLogin()
 		{
-
 			return View();
 		}
-		
+
 
 		[HttpGet]
 		public IActionResult UsuarioLogin()
 		{
-
+			Random rdmFoto = new Random();
+			ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
 			return View();
 		}
 
@@ -114,7 +114,12 @@ namespace SAF.Controllers
 					}
 				}
 				else
+				{
+					Random rdmFoto = new Random();
+					ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
 					return View();
+				}
+					
 			}
 			catch (Exception ex)
 			{
