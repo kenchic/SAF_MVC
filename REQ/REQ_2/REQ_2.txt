@@ -3,3 +3,6 @@ OBJTIVOS
 2) Diseñar Menu
 3) Crear la primera Tabla CRUD Agente. 
 4) Escrtucturar Carpetas Repositorio
+
+DESARROLLO:
+1) Se diseña el mismo login de la versión web forms.

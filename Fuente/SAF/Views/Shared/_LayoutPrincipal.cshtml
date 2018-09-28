@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 @{
 	var base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.logo);
-	var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+	var imgLogo = String.Format("data:image/jpg;base64,{0}", base64);
 }
 
 <html>
@@ -20,7 +20,7 @@
 	<div class="page-header">
 		<div class="row form-group">
 			<div class="col-lg-2">
-				<img src="@imgSrc" class="img-fluid" />
+				<img src="@imgLogo" class="img-fluid" />
 			</div>
 			<div class="col-lg-10">
 				<span id="pushRight" class="btn">&#9776;</span>
