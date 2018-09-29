@@ -6,3 +6,10 @@ OBJTIVOS
 
 DESARROLLO:
 1) Se diseña el mismo login de la versión web forms.
+2) Se diseña el menu que va al lado izquierdo de la aplicación.
+3) No se realiza el punto hasta definir como versionar la base de datos.
+4) Se crea un preliminar de estructuras:
+Raiz : carpeta del repositorio
+	Fuente : Codigo fuente de la aplicación (Cores y Presentación)
+	REQ : Van las carpetas de cada requerimiento con su número correspondiente. 
+		Scrips: Van los script que se deben correr para la instalación.
