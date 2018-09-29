@@ -1,4 +1,4 @@
-OBJETIVOS
+OBJTIVOS
 1) Diseñar Login.
 2) Diseñar Menu
 3) Crear la primera Tabla CRUD Agente. 
