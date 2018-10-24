@@ -1,0 +1,5 @@
+USE [SAF]
+GO
+
+DROP TABLE bdAgente
+DROP PROCEDURE pAgente

@@ -5,24 +5,24 @@ using Newtonsoft.Json;
 using CoreGeneral;
 using CoreGeneral.Recursos;
 using CoreSeg.Datos;
-using CoreSeg.Models;
+using CoreSeg.Modelos;
 
 namespace CoreSeg.Negocios
 {
 	public class UsuarioNegocio
     {
-		private readonly UsuarioRepository ObjUsuario = new UsuarioRepository();
+		private readonly UsuarioDatos ObjUsuario = new UsuarioDatos();
 
 		public void SetConexion(string value)
 		{
 			ObjUsuario.Conexion = value;
 		}
 
-		public List<UsuarioModel> Listar()
+		public List<UsuarioModelo> Listar()
 		{
 			try
 			{
-				IList<UsuarioModel> LisUsuario = ObjUsuario.Listar("0");
+				IList<UsuarioModelo> LisUsuario = ObjUsuario.Listar("0");
 				return LisUsuario.ToList();
 			}
 			catch (Exception ex)
@@ -32,11 +32,11 @@ namespace CoreSeg.Negocios
 			}
 		}
 
-		public List<UsuarioModel> ListarActivos()
+		public List<UsuarioModelo> ListarActivos()
 		{
 			try
 			{
-				IList<UsuarioModel> LisUsuario = ObjUsuario.Listar("1");
+				IList<UsuarioModelo> LisUsuario = ObjUsuario.Listar("1");
 				return LisUsuario.ToList();
 			}
 			catch (Exception ex)
@@ -46,11 +46,11 @@ namespace CoreSeg.Negocios
 			}
 		}
 
-		public UsuarioModel Consultar(int id)
+		public UsuarioModelo Consultar(int id)
 		{
 			try
 			{
-				UsuarioModel objConsultar = new UsuarioModel();
+				UsuarioModelo objConsultar = new UsuarioModelo();
 				objConsultar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objConsultar);
 				return ObjUsuario.Consultar("2", Json);
@@ -62,7 +62,7 @@ namespace CoreSeg.Negocios
 			}
 		}
 
-		public void Insertar(UsuarioModel objInsertar)
+		public void Insertar(UsuarioModelo objInsertar)
 		{
 			try
 			{
@@ -76,7 +76,7 @@ namespace CoreSeg.Negocios
 			}
 		}
 
-		public void Editar(UsuarioModel objEditar)
+		public void Editar(UsuarioModelo objEditar)
 		{
 			try
 			{				
@@ -94,7 +94,7 @@ namespace CoreSeg.Negocios
 		{
 			try
 			{
-				UsuarioModel objBorrar = new UsuarioModel();
+				UsuarioModelo objBorrar = new UsuarioModelo();
 				objBorrar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objBorrar);				
 				return ObjUsuario.Borrar("5", Json);
@@ -106,7 +106,7 @@ namespace CoreSeg.Negocios
 			}
 		}
 		
-		public bool Autenticar(UsuarioModel objAutenticar)
+		public bool Autenticar(UsuarioModelo objAutenticar)
 		{
 			try
 			{				

@@ -1,0 +1,7 @@
+OBJETIVOS
+1) Crear la primera Tabla CRUD Agente. 
+2) Carpetas para llevar cambios de base de datos 
+3) Archivos base de las bds.
+
+DESARROLLO:
+

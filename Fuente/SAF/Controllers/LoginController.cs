@@ -11,7 +11,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using CoreSeg.Models;
+using CoreSeg.Modelos;
 using CoreSeg.Negocios;
 using CoreGeneral.Recursos;
 using CoreGeneral;
@@ -45,7 +45,7 @@ namespace SAF.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult RegisterUser([Bind] UsuarioModel usuario)
+		public IActionResult RegisterUser([Bind] UsuarioModelo usuario)
 		{
 			if (ModelState.IsValid)
 			{
@@ -82,7 +82,7 @@ namespace SAF.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult UsuarioLogin(UsuarioModel objUsuario)
+		public ActionResult UsuarioLogin(UsuarioModelo objUsuario)
 		{
 			try
 			{

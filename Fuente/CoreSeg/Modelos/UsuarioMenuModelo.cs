@@ -13,7 +13,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CoreSeg.Modelos
 {
-	public class VUsuarioMenuModel
+	public class VUsuarioMenuModelo
 	{
 		#region Propiedades
 

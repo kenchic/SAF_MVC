@@ -5,24 +5,24 @@ using Newtonsoft.Json;
 using CoreGeneral;
 using CoreGeneral.Recursos;
 using CoreSAF.Datos;
-using CoreSAF.Models;
+using CoreSAF.Modelos;
 
 namespace CoreSAF.Negocios
 {
 	public class AgenteNegocio
     {
-		private readonly AgenteRepository ObjAgente = new AgenteRepository();
+		private readonly AgenteDatos ObjAgente = new AgenteDatos();
 
 		public void SetConexion(string value)
 		{
 			ObjAgente.Conexion = value;
 		}
 
-		public List<AgenteModel> Listar()
+		public List<AgenteModelo> Listar()
 		{
 			try
 			{
-				IList<AgenteModel> LisAgente = ObjAgente.Listar("0");
+				IList<AgenteModelo> LisAgente = ObjAgente.Listar("0");
 				return LisAgente.ToList();
 			}
 			catch (Exception ex)
@@ -32,11 +32,11 @@ namespace CoreSAF.Negocios
 			}
 		}
 
-		public List<AgenteModel> ListarActivos()
+		public List<AgenteModelo> ListarActivos()
 		{
 			try
 			{
-				IList<AgenteModel> LisAgente = ObjAgente.Listar("1");
+				IList<AgenteModelo> LisAgente = ObjAgente.Listar("1");
 				return LisAgente.ToList();
 			}
 			catch (Exception ex)
@@ -46,11 +46,11 @@ namespace CoreSAF.Negocios
 			}
 		}
 
-		public AgenteModel Consultar(int id)
+		public AgenteModelo Consultar(int id)
 		{
 			try
 			{				
-				AgenteModel objConsultar = new AgenteModel();
+				AgenteModelo objConsultar = new AgenteModelo();
 				objConsultar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objConsultar);
 				return ObjAgente.Consultar("2", Json);
@@ -62,7 +62,7 @@ namespace CoreSAF.Negocios
 			}
 		}
 
-		public void Insertar(AgenteModel objInsertar)
+		public void Insertar(AgenteModelo objInsertar)
 		{
 			try
 			{
@@ -76,7 +76,7 @@ namespace CoreSAF.Negocios
 			}
 		}
 
-		public void Editar(AgenteModel objEditar)
+		public void Editar(AgenteModelo objEditar)
 		{
 			try
 			{				
@@ -94,7 +94,7 @@ namespace CoreSAF.Negocios
 		{
 			try
 			{
-				AgenteModel objBorrar = new AgenteModel();
+				AgenteModelo objBorrar = new AgenteModelo();
 				objBorrar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objBorrar);				
 				return ObjAgente.Borrar("5", Json);
