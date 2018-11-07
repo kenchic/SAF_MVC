@@ -11,8 +11,8 @@
 
 	<environment include="Development">
 		<link rel="stylesheet" href="~/css/saf.css" />
-		<link rel="stylesheet" href="~/lib/bootstrap_4.1.1/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="~/lib/fontawesome_5.0.12/css/fontawesome-all.min.css" />
+		<link rel="stylesheet" href="~/lib/bootstrap_4.1.1/css/bootstrap.css" />
+		<link rel="stylesheet" href="~/lib/fontawesome_5.0.12/css/fontawesome-all.css" />
 		<link rel="stylesheet" href="~/lib/slidermenu/sidebar-menu.css">
 	</environment>
 </head>
@@ -29,23 +29,21 @@
 	</div>
 
 	<div class="panel-body">
-		@Html.Partial("../Usuario/UsuarioMenu")		
-		<div id="contenido">
-			@RenderBody()
-		</div>
+		@Html.Partial("../Usuario/UsuarioMenu")
+		@RenderBody()
 	</div>
 
 	<environment include="Development">
-		<script src="~/lib/jquery_3.3.1/jquery-3.3.1.min.js"></script>
-		<script src="~/lib/bootstrap_4.1.1/js/bootstrap.min.js"></script>
+		<script src="~/lib/jquery_3.3.1/jquery-3.3.1.js"></script>
+		<script src="~/lib/bootstrap_4.1.1/js/bootstrap.js"></script>
 		<script src="~/lib/slidermenu/sidebar-menu.js"></script>
 		<script src="~/js/saf.js"></script>
 		<script>
 			$.sidebarMenu($('.sidebar-menu'))
 			$('#pushRight').click(function () {
 				$('body').addClass('animate-menu-push');
-				$('body').toggleClass('animate-menu-push-right')
-				$('.animate-menu-left').toggleClass('animate-menu-open')
+				$('body').toggleClass('animate-menu-push-right');
+				$('.animate-menu-left ').toggleClass('animate-menu-open');
 			})
 		</script>
 	</environment>

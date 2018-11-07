@@ -181,4 +181,8 @@
     <value>Usuario Login</value>
     <comment>Titulo de la vista Usuario Login</comment>
   </data>
+  <data name="TituloBloqueAgenteInsertar" xml:space="preserve">
+    <value>Insertar Agente</value>
+    <comment>Titulo del bloque de la vista AgenteInsertar</comment>
+  </data>
 </root>

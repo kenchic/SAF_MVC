@@ -1,17 +1,7 @@
-﻿///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-//////  LoginController
-//////  SAF - Integral Solutions SAS
-//////  Implementacion Controlador:	Login
-//////  Creacion:      				23/07/2018
-//////  Autor: 						German Alvarez
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-
-using System;
+﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using CoreSeg.Models;
+using CoreSeg.Modelos;
 using CoreSeg.Negocios;
 using CoreGeneral.Recursos;
 using CoreGeneral;
@@ -40,12 +30,11 @@ namespace SAF.Controllers
 		[HttpGet]
 		public IActionResult RegisterUser()
 		{
-
 			return View();
 		}
 
 		[HttpPost]
-		public IActionResult RegisterUser([Bind] UsuarioModel usuario)
+		public IActionResult RegisterUser([Bind] UsuarioModelo usuario)
 		{
 			if (ModelState.IsValid)
 			{
@@ -66,14 +55,7 @@ namespace SAF.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult UserLogin()
-		{
-			return View();
-		}
-
-
-		[HttpGet]
-		public IActionResult UsuarioLogin()
+		public IActionResult LoginUsuario()
 		{
 			Random rdmFoto = new Random();
 			ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
@@ -82,7 +64,7 @@ namespace SAF.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult UsuarioLogin(UsuarioModel objUsuario)
+		public ActionResult LoginUsuario(UsuarioModelo objUsuario)
 		{
 			try
 			{
@@ -105,7 +87,7 @@ namespace SAF.Controllers
 						ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
 
 						HttpContext.SignInAsync(principal);
-						return RedirectToAction("DashBoard", "Usuario");
+						return RedirectToAction("UsuarioDashBoard", "Usuario");
 					}
 					else
 					{

@@ -196,6 +196,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Insertar Agente.
+        /// </summary>
+        public static string TituloBloqueAgenteInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueAgenteInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Usuario Login.
         /// </summary>
         public static string TituloUsuarioLogin {

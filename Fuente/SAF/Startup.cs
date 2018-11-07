@@ -22,7 +22,7 @@ namespace SAF
 			services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 										.AddCookie(options =>
 										{
-											options.LoginPath = "/Login/UsuarioLogin/";
+											options.LoginPath = "/Login/LoginUsuario/";
 										});
 
 			services.AddMvc();			
@@ -49,7 +49,7 @@ namespace SAF
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Login}/{action=UsuarioLogin}/{id?}");
+                    template: "{controller=Login}/{action=LoginUsuario}/{id?}");
             });
         }
     }
