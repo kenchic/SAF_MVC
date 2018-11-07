@@ -16,7 +16,8 @@ CREATE TABLE [dbo].[bdArtefacto](
 	[idEstado] [tinyint] NOT NULL,
 	[idSistema] [tinyint] NOT NULL,
 	[Nombre] [varchar](50) NOT NULL,
-	[Version] [varchar](10) NOT NULL,
+	[Descripcion] [varchar](500) NOT NULL,
+	[Version] [varchar](10) NOT NULL,	
  CONSTRAINT [PK_bdArtefacto] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

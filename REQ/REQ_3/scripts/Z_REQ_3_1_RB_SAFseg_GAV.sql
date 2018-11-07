@@ -8,3 +8,5 @@ DROP TABLE bdArtefactoEstado
 DROP TABLE bdArtefactoTipo
 DROP TABLE bdRequerimiento
 DROP FUNCTION FParseJson
+DROP TABLE bdUsuario
+DROP PROCEDURE pUsuario

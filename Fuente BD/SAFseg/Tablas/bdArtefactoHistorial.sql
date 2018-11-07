@@ -16,7 +16,8 @@ CREATE TABLE [dbo].[bdArtefactoHistorial](
 	[idRequerimiento] [int] NOT NULL,
 	[Objetivo] [varchar](max) NOT NULL,
 	[Descripcion] [varchar](max) NOT NULL,
-	[Archivo] [varbinary](max) NOT NULL,
+	[Extension] [varchar](10) NOT NULL,
+	[Archivo] [varbinary](max) NOT NULL,	
  CONSTRAINT [PK_bdArtefactoHistorial] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

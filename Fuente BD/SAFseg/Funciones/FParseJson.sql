@@ -1,10 +1,15 @@
+USE [SAFseg]
 GO
 
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE FUNCTION [dbo].[FParseJSON]( @JSON NVARCHAR(MAX))
+
+
+
+CREATE FUNCTION [dbo].[fParseJSON]( @JSON NVARCHAR(MAX))
 
 RETURNS @hierarchy TABLE
   (
@@ -224,3 +229,13 @@ INSERT INTO @hierarchy (NAME, SequenceNo, parent_ID, StringValue, Object_ID, Val
 --
    RETURN
 END
+
+
+
+
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'18.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'FUNCTION',@level1name=N'fParseJSON'
+GO
+
+
