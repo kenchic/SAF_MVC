@@ -1,15 +1,15 @@
-OBJETIVOS
-1) Dise馻r Login.
-2) Dise馻r Menu
+OBJTIVOS
+1) Dise帽ar Login.
+2) Dise帽ar Menu
 3) Crear la primera Tabla CRUD Agente. 
 4) Escrtucturar Carpetas Repositorio
 
 DESARROLLO:
-1) Se dise馻 el mismo login de la versi髇 web forms.
-2) Se dise馻 el menu que va al lado izquierdo de la aplicaci髇.
+1) Se dise帽a el mismo login de la versi贸n web forms.
+2) Se dise帽a el menu que va al lado izquierdo de la aplicaci贸n.
 3) No se realiza el punto hasta definir como versionar la base de datos.
 4) Se crea un preliminar de estructuras:
 Raiz : carpeta del repositorio
-	Fuente : Codigo fuente de la aplicaci髇 (Cores y Presentaci髇)
-	REQ : Van las carpetas de cada requerimiento con su n鷐ero correspondiente. 
-		Scrips: Van los script que se deben correr para la instalaci髇.
+	Fuente : Codigo fuente de la aplicaci贸n (Cores y Presentaci贸n)
+	REQ : Van las carpetas de cada requerimiento con su n煤mero correspondiente. 
+		Scrips: Van los script que se deben correr para la instalaci贸n.
