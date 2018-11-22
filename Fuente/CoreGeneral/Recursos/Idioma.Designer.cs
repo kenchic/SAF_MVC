@@ -106,20 +106,20 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Id Agente.
-        /// </summary>
-        public static string EtiquetadAgente {
-            get {
-                return ResourceManager.GetString("EtiquetadAgente", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string EtiquetaId {
             get {
                 return ResourceManager.GetString("EtiquetaId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id Agente.
+        /// </summary>
+        public static string EtiquetaIdAgente {
+            get {
+                return ResourceManager.GetString("EtiquetaIdAgente", resourceCulture);
             }
         }
         
@@ -196,11 +196,29 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Consultar Agente.
+        /// </summary>
+        public static string TituloBloqueAgenteConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueAgenteConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Insertar Agente.
         /// </summary>
         public static string TituloBloqueAgenteInsertar {
             get {
                 return ResourceManager.GetString("TituloBloqueAgenteInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modificar Agente.
+        /// </summary>
+        public static string TituloBloqueAgenteModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueAgenteModificar", resourceCulture);
             }
         }
         

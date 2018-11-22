@@ -7,7 +7,3 @@
 $(document).ready(function () {
 	$('#menu').load('/Usuario/UsuarioMenu');
 });
-
-function cargarView(view) {
-	$('#content').load(view);
-}
