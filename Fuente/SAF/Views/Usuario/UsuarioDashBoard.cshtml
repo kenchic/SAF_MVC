@@ -6,34 +6,39 @@
 }
 
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width" />
-		<title>@ViewBag.Title - SAF</title>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title - SAF</title>
 
-		<environment include="Development">
-			<link rel="stylesheet" href="~/lib/bootstrap_4.1.1/css/bootstrap.css" />
-			<link rel="stylesheet" href="~/lib/fontawesome_5.0.12/css/fontawesome-all.css" />
-			<link rel="stylesheet" href="~/lib/slidermenu/sidebar-menu.css">
-		</environment>
-	</head>
-	<body>
-		<div id="page">
-			<div id="header">
-				<img src="@imgSrc" class="text-md-left" />
-				<span id="pushRight" class="btn">&#9776;</span>
-			</div>
-			<div id="content">
-			</div>
-			<div id="menu">
-			</div>
+	<environment include="Development">
+		<link rel="stylesheet" href="~/css/saf.css" />
+		<link rel="stylesheet" href="~/css/general.css" />
+		<link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="~/lib/slidermenu/sidebar-menu.css">
+	</environment>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<img src="@imgSrc" />
+			<span id="pushRight" class="btn">&#9776;</span>
 		</div>
+		<div id="contenido">
 
-		<environment include="Development">
-			<script src="~/lib/jquery_3.3.1/jquery-3.3.1.js"></script>
-			<script src="~/lib/bootstrap_4.1.1/js/bootstrap.js"></script>
-			<script src="~/lib/slidermenu/sidebar-menu.js"></script>
-			<script src="~/js/saf.js"></script>
-		</environment>
-	</body>
+		</div>
+		<div id="menu">
+		</div>
+	</div>
+	<div id="modalOperacion">
+	</div>
+	<environment include="Development">
+		<script src="~/lib/jquery/jquery.min.js"></script>
+		<script src="~/lib/slidermenu/sidebar-menu.js"></script>
+		<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+		<script src="~/js/saf.js"></script>
+		<script src="~/js/general.js"></script>
+	</environment>
+</body>
 </html>
 

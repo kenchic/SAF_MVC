@@ -125,7 +125,7 @@
     <value>Id</value>
     <comment>Label del campo Id</comment>
   </data>
-  <data name="EtiquetadAgente" xml:space="preserve">
+  <data name="EtiquetaIdAgente" xml:space="preserve">
     <value>Id Agente</value>
     <comment>Lable del campo Agente en ForenKey</comment>
   </data>
@@ -184,5 +184,13 @@
   <data name="TituloBloqueAgenteInsertar" xml:space="preserve">
     <value>Insertar Agente</value>
     <comment>Titulo del bloque de la vista AgenteInsertar</comment>
+  </data>
+  <data name="TituloBloqueAgenteConsultar" xml:space="preserve">
+    <value>Consultar Agente</value>
+    <comment>Titulo de la vista Consultar de la entidad Agente</comment>
+  </data>
+  <data name="TituloBloqueAgenteModificar" xml:space="preserve">
+    <value>Modificar Agente</value>
+    <comment>Titulo de la vista Modifcar de la entidad Agente</comment>
   </data>
 </root>

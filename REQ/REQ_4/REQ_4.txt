@@ -1,0 +1,11 @@
+OBJETIVOS
+1) Revisión de nuggets jquery, boostrap, ajax
+2) Ajustar estilos, action insert y y updated para soporten el ajax sin refrescar la pagina.
+3) Estandarizar archivos con el autogenerador
+
+DESARROLLO:
+1) ok 
+	se actualiza los nugget compatibles con Core. 
+   	se crear librerias del lado de cliente con LibMan para gestionar versiones.
+2) Se ajustan los estilos y se muestran la vistas editables en forma de modales
+3) ok se ajusta la app
