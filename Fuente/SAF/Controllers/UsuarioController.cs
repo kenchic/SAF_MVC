@@ -19,12 +19,18 @@ namespace SAF.Controllers
 		public ActionResult UsuarioMenu()
 		{
 			try
-			{				
+			{
+
+
+				//< div onclick = "mostrarVistaModal('/Agente/AgenteEditar/' + @item.Id);" class="btn-lista-vista">
+				//						<i class="fa fa-edit"></i>
+				//					</div>
+
 				string strMenu = "<li>";
 				strMenu += "<a href=\"#\" >";
 				strMenu += "<i class=\"fa fa-files-o\"></i>";
-				strMenu += "<span>Agente</span>";
-				strMenu += "<span class=\"label label-primary pull-right\">4</span>";
+				strMenu += crearPadre("Agente");
+				strMenu += "<span class=\"label label-primary\">Agente</span>";
 				strMenu += "</a>";
 				strMenu += "<ul class=\"sidebar-submenu\" style=\"display: none;\">";
 				strMenu += "<li><a href=\"#\" onclick=\"cargarView('/Agente/AgenteListar');\"><i class=\"fa fa-circle-o\"></i>Listar</a></li>";
@@ -34,7 +40,7 @@ namespace SAF.Controllers
 				strMenu += "</li>";
 				strMenu += "</ul>";
 				strMenu += "</li><script>$.sidebarMenu($('.sidebar-menu'));</script>";
-				ViewBag.Tree = strMenu;
+				ViewBag.Arbol = strMenu;
 				return View();
 			}
 			catch (Exception ex)
@@ -51,6 +57,22 @@ namespace SAF.Controllers
 			return RedirectToAction("LoginUsuario", "Login");
 		}
 
+		private string crearPadre(string strNombrePadre)
+		{
+			string strResultado = string.Empty;
+			try
+			{
+				strNombrePadre = string.Empty;
+				strResultado = strNombrePadre;
+			}
+			catch (Exception ex)
+			{
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "UsuarioController - UsuarioMenu");
+				throw;
+			}
+
+			return strResultado;
+		}
 		
 	}
 }
