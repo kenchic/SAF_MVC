@@ -1,7 +1,7 @@
 USE [SAFseg]
 GO
 
-/****** Object:  Table [dbo].[bdMenu]    Script Date: 03/12/2018 09:42:50 p.m. ******/
+/****** Object:  Table [dbo].[bdMenu]    Script Date: 03/12/2018 10:36:49 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -15,10 +15,10 @@ CREATE TABLE [dbo].[bdMenu](
 	[Id] [smallint] IDENTITY(1,1) NOT NULL,
 	[idMenu] [smallint] NULL,
 	[Nombre] [varchar](50) NOT NULL,
-	[Vista] [varchar](100) NOT NULL,
+	[Vista] [varchar](100) NULL,
 	[Orden] [smallint] NOT NULL,
 	[Imagen] [varchar](100) NULL,
-	[Activo] [bit] NOT NULL,
+	[Activo] [bit] NOT NULL CONSTRAINT [DF_bdMenu_Activo]  DEFAULT ((0)),
  CONSTRAINT [PK_bdMenu] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -28,9 +28,6 @@ CREATE TABLE [dbo].[bdMenu](
 GO
 
 SET ANSI_PADDING OFF
-GO
-
-ALTER TABLE [dbo].[bdMenu] ADD  CONSTRAINT [DF_bdMenu_Activo]  DEFAULT ((0)) FOR [Activo]
 GO
 
 ALTER TABLE [dbo].[bdMenu]  WITH CHECK ADD  CONSTRAINT [FK_bdMenuPadre] FOREIGN KEY([idMenu])
