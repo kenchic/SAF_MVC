@@ -3,33 +3,27 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CoreSeg.Modelos
 {
-	public class VUsuarioMenuModelo
+	public class UsuarioMenuModelo
 	{
 		#region Propiedades
 
 		[Display(Name = "Id")]
 		public Int32 Id { get; set; }
 
-		[Display(Name = "idCliente")]
-		public Int16 idCliente { get; set; }
-
-		[Display(Name = "Cliente")]
-		public string ClienteNombre { get; set; }
-
-		[Display(Name = "idProveedor")]
-		public Int16 idProveedor { get; set; }
-
-		[Display(Name = "Proveedor")]
-		public virtual string ProveedorNombre { get; set; }
-
 		[Display(Name = "Nombre")]
-		public String Nombre { get; set; }
+		public string Nombre { get; set; }
 
-		[Display(Name = "EsSistema")]
-		public Boolean EsSistema { get; set; }
+		[Display(Name = "Vista")]
+		public string Vista { get; set; }
 
-		[Display(Name = "Activo")]
-		public Boolean Activo { get; set; }
+		[Display(Name = "Orden")]
+		public Int32 Orden { get; set; }
+
+		[Display(Name = "SubOrden")]
+		public Int32? SubOrden { get; set; }
+
+		[Display(Name = "Image")]
+		public string Imagen { get; set; }		
 
 		#endregion
 	}
