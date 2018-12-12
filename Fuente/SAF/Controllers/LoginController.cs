@@ -77,16 +77,19 @@ namespace SAF.Controllers
 				ModelState.Remove("Admin");
 				if (ModelState.IsValid)
 				{
-					if (ObjUsuario.Autenticar(objUsuario))
+					if (ObjUsuario.Autenticar(ref objUsuario))
 					{
 						var claims = new List<Claim>
 						{
-							new Claim(ClaimTypes.Name, objUsuario.Usuario)
+							new Claim(ClaimTypes.Name, objUsuario.Usuario),
+							new Claim(ClaimTypes.NameIdentifier, objUsuario.Id.ToString())
+							
 						};
+
 						ClaimsIdentity userIdentity = new ClaimsIdentity(claims, "login");
 						ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
 
-						HttpContext.SignInAsync(principal);
+						HttpContext.SignInAsync(principal);						
 						return RedirectToAction("UsuarioDashBoard", "Usuario");
 					}
 					else

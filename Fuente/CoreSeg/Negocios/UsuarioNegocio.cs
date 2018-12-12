@@ -106,7 +106,7 @@ namespace CoreSeg.Negocios
 			}
 		}
 		
-		public bool Autenticar(UsuarioModelo objAutenticar)
+		public bool Autenticar(ref UsuarioModelo objAutenticar)
 		{
 			try
 			{				
@@ -120,5 +120,25 @@ namespace CoreSeg.Negocios
 				throw;
 			}
 		}
+
+		public List<UsuarioMenuModelo> ListarMenu(int id)
+		{
+			try
+			{
+				UsuarioModelo objConsultar = new UsuarioModelo();
+				objConsultar.Id = (short)id;
+				string Json = JsonConvert.SerializeObject(objConsultar);
+
+				IList<UsuarioMenuModelo> LisUsuario = ObjUsuario.ListarMenu("0", Json);
+				return LisUsuario == null ? new List<UsuarioMenuModelo>() : LisUsuario.ToList();
+			}
+			catch (Exception ex)
+			{
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - ListarMenu");
+				throw;
+			}
+		}
+	
 	}
+	
 }
