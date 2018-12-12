@@ -1,10 +1,13 @@
 USE [SAFseg]
 GO
 
+/****** Object:  StoredProcedure [dbo].[pUsuarioMenu]    Script Date: 11/12/2018 05:19:58 p.m. ******/
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
+
 CREATE PROCEDURE [dbo].[pUsuarioMenu]  
 (
 	@Accion INT = 0, --0:Listar menus del usUario y menus relacionados con roles del usuario,
@@ -19,7 +22,7 @@ BEGIN
 		SET @Usuario =  (	SELECT      
 							MAX(CASE WHEN name='Id' THEN convert(int,StringValue) ELSE 0 END) AS [Id]
 							FROM fParseJSON ( @json )
-							WHERE ValueType = 'string' OR ValueType = 'boolean'
+							WHERE ValueType = 'int' OR ValueType = 'string' OR ValueType = 'boolean'
 							GROUP BY parent_ID)
 
 		CREATE TABLE ##TablaTemporal (Id smallint, Nombre varchar(50), Vista varchar(50), Orden int, SubOrden int, Imagen Varchar(100) )
@@ -98,7 +101,7 @@ BEGIN
 		SELECT * FROM ##TablaTemporal ORDER BY Orden, SubOrden
 		DROP TABLE ##TablaTemporal
 	END
- END
+END
 
 GO
 

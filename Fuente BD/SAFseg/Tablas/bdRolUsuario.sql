@@ -1,7 +1,7 @@
 USE [SAFseg]
 GO
 
-/****** Object:  Table [dbo].[bdRolUsuario]    Script Date: 04/12/2018 04:00:47 p.m. ******/
+/****** Object:  Table [dbo].[bdRolUsuario]    Script Date: 11/12/2018 10:05:15 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
