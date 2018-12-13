@@ -1,15 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>  
+    <TargetFramework>netcoreapp2.2</TargetFramework>  
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>  
-    <Version>18.0.4</Version>  
-    <Company>Integral Solutions</Company>
+    <Version>18.0.5</Version>  
+    <Company>Integral Solutions</Company>  
+    <UserSecretsId>59442603-cd74-40b2-97a1-cb39f159af3d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.6" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="1.0.163" />
   </ItemGroup>
 
