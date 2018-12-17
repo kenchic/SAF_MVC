@@ -193,4 +193,20 @@
     <value>Modificar Agente</value>
     <comment>Titulo de la vista Modifcar de la entidad Agente</comment>
   </data>
+  <data name="TituloBloqueCiudadConsultar" xml:space="preserve">
+    <value>Detalle Ciudad</value>
+    <comment>Titulo de la vista </comment>
+  </data>
+  <data name="TituloBloqueCiudadInsertar" xml:space="preserve">
+    <value>Insertar Ciudad</value>
+    <comment>Titulo de la vista </comment>
+  </data>
+  <data name="TituloBloqueCiudadModificar" xml:space="preserve">
+    <value>Modificar Ciudad</value>
+    <comment>Titulo de la vista Mofiicar de la entidad Ciudad</comment>
+  </data>
+  <data name="TituloCiudadListar" xml:space="preserve">
+    <value>Ciudades</value>
+    <comment>Titulo de las ciudades</comment>
+  </data>
 </root>
