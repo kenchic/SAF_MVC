@@ -1,0 +1,5 @@
+USE [SAF]
+GO
+
+DROP TABLE bdCiudad
+DROP PROCEDURE pCiudad
