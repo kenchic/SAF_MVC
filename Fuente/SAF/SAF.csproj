@@ -25,4 +25,8 @@
     <ProjectReference Include="..\CoreSeg\CoreSeg.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Ciudad\" />
+  </ItemGroup>
+
 </Project>
