@@ -2,3 +2,4 @@ OBJETIVOS
 1) Creación pantalla conductor
 
 DESARROLLO:
+Se crea clases pantalla y scripts.
