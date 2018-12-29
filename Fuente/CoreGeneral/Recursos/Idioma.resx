@@ -209,4 +209,24 @@
     <value>Ciudades</value>
     <comment>Titulo de las ciudades</comment>
   </data>
+  <data name="TituloBloqueConductorConsultar" xml:space="preserve">
+    <value>Consultar Conductor</value>
+    <comment>Titulo de la vista</comment>
+  </data>
+  <data name="TituloBloqueConductorInsertar" xml:space="preserve">
+    <value>Insertar Conductor</value>
+    <comment>Titulo de la vista</comment>
+  </data>
+  <data name="TituloBloqueConductorModificar" xml:space="preserve">
+    <value>Modificar Conductor</value>
+    <comment>Titulo de la vista</comment>
+  </data>
+  <data name="TituloConductorListar" xml:space="preserve">
+    <value>Conductores</value>
+    <comment>Titulo de la vista Listar</comment>
+  </data>
+  <data name="EtiquetaPlaca" xml:space="preserve">
+    <value>Placa</value>
+    <comment>Label de la Placa</comment>
+  </data>
 </root>

@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Ciudad\" />
+    <Folder Include="Views\Conductor\" />
   </ItemGroup>
 
 </Project>

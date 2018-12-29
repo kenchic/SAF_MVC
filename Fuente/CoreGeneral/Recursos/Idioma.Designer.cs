@@ -160,6 +160,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Placa.
+        /// </summary>
+        public static string EtiquetaPlaca {
+            get {
+                return ResourceManager.GetString("EtiquetaPlaca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Usuario.
         /// </summary>
         public static string EtiquetaUsuario {
@@ -250,11 +259,47 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Conductor.
+        /// </summary>
+        public static string TituloBloqueConductorConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueConductorConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertar Conductor.
+        /// </summary>
+        public static string TituloBloqueConductorInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueConductorInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Conductor.
+        /// </summary>
+        public static string TituloBloqueConductorModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueConductorModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
             get {
                 return ResourceManager.GetString("TituloCiudadListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Conductores.
+        /// </summary>
+        public static string TituloConductorListar {
+            get {
+                return ResourceManager.GetString("TituloConductorListar", resourceCulture);
             }
         }
         
