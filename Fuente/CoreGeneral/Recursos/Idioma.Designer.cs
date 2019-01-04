@@ -286,6 +286,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Grupo de Elementos.
+        /// </summary>
+        public static string TituloBloqueGrupoElementoConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueGrupoElementoConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertar Grupo de Elementos.
+        /// </summary>
+        public static string TituloBloqueGrupoElementoInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueGrupoElementoInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Grupo de Elementos.
+        /// </summary>
+        public static string TituloBloqueGrupoElementoModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueGrupoElementoModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
@@ -300,6 +327,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloConductorListar {
             get {
                 return ResourceManager.GetString("TituloConductorListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Grupos de Elementos.
+        /// </summary>
+        public static string TituloGrupoElementoListar {
+            get {
+                return ResourceManager.GetString("TituloGrupoElementoListar", resourceCulture);
             }
         }
         
