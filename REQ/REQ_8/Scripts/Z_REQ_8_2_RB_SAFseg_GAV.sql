@@ -7,17 +7,17 @@ UPDATE bdSistema SET Version = '18.0.4' WHERE ID = 4 --CoreSAF
 
 UPDATE bdArtefacto SET idEstado = 2, Version='18.0.4' WHERE Id = 29  --Idioma.resx
 
-DELETE bdArtefactoHistorial WHERE idRequerimiento = 8 --bdConductor
+DELETE bdArtefactoHistorial WHERE idRequerimiento = 8 --bdGrupoElemento
 
-DELETE bdArtefacto WHERE Id = 57 --bdConductor
-DELETE bdArtefacto WHERE Id = 58 --ConductorController.cs
-DELETE bdArtefacto WHERE Id = 59 --ConductorNegocio.cs
-DELETE bdArtefacto WHERE Id = 60 --ConductorDatos.cs
-DELETE bdArtefacto WHERE Id = 61 --ConductorModelo.cs
-DELETE bdArtefacto WHERE Id = 62 --pConductor.sql
-DELETE bdArtefacto WHERE Id = 63 --ConductorConsultar.cshtml
-DELETE bdArtefacto WHERE Id = 64 --ConductorListar.cshtml
-DELETE bdArtefacto WHERE Id = 65 --ConductorEditar.cshtml
-DELETE bdArtefacto WHERE Id = 66 --ConductorInsertar.cshtml
+DELETE bdArtefacto WHERE Id = 57 --bdGrupoElemento
+DELETE bdArtefacto WHERE Id = 58 --GrupoElementoController.cs
+DELETE bdArtefacto WHERE Id = 59 --GrupoElementoNegocio.cs
+DELETE bdArtefacto WHERE Id = 60 --GrupoElementoDatos.cs
+DELETE bdArtefacto WHERE Id = 61 --GrupoElementoModelo.cs
+DELETE bdArtefacto WHERE Id = 62 --pGrupoElemento.sql
+DELETE bdArtefacto WHERE Id = 63 --GrupoElementoConsultar.cshtml
+DELETE bdArtefacto WHERE Id = 64 --GrupoElementoListar.cshtml
+DELETE bdArtefacto WHERE Id = 65 --GrupoElementoEditar.cshtml
+DELETE bdArtefacto WHERE Id = 66 --GrupoElementoInsertar.cshtml
 
 DELETE FROM bdRequerimiento WHERE Id = 8
