@@ -1,0 +1,5 @@
+OBJETIVOS
+1) Creación pantalla Lista de Precios
+
+DESARROLLO:
+Se crea clases pantalla y scripts.
