@@ -245,4 +245,20 @@
     <value>Grupos de Elementos</value>
     <comment>Titulo de la vista Listar</comment>
   </data>
+  <data name="TituloBloqueListaPrecioConsultar" xml:space="preserve">
+    <value>Consultar Lista Precios</value>
+    <comment>Titulo de la vista Consultar</comment>
+  </data>
+  <data name="TituloBloqueListaPrecioInsertar" xml:space="preserve">
+    <value>Insetar Lista Precios</value>
+    <comment>Titulo de la vista Insertar</comment>
+  </data>
+  <data name="TituloBloqueListaPrecioModificar" xml:space="preserve">
+    <value>Modificar Lista Precios</value>
+    <comment>Titulo de la vista Modificar</comment>
+  </data>
+  <data name="TituloListaPrecioListar" xml:space="preserve">
+    <value>Lista de Precios</value>
+    <comment>Titulo de la vista Listar</comment>
+  </data>
 </root>

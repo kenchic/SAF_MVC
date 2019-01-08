@@ -313,6 +313,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Lista Precios.
+        /// </summary>
+        public static string TituloBloqueListaPrecioConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueListaPrecioConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insetar Lista Precios.
+        /// </summary>
+        public static string TituloBloqueListaPrecioInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueListaPrecioInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Lista Precios.
+        /// </summary>
+        public static string TituloBloqueListaPrecioModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueListaPrecioModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
@@ -336,6 +363,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloGrupoElementoListar {
             get {
                 return ResourceManager.GetString("TituloGrupoElementoListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Lista de Precios.
+        /// </summary>
+        public static string TituloListaPrecioListar {
+            get {
+                return ResourceManager.GetString("TituloListaPrecioListar", resourceCulture);
             }
         }
         
