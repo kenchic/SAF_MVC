@@ -97,11 +97,29 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Código.
+        /// </summary>
+        public static string EtiquetaCodigo {
+            get {
+                return ResourceManager.GetString("EtiquetaCodigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Correo.
         /// </summary>
         public static string EtiquetaCorreo {
             get {
                 return ResourceManager.GetString("EtiquetaCorreo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción.
+        /// </summary>
+        public static string EtiquetaDescripcion {
+            get {
+                return ResourceManager.GetString("EtiquetaDescripcion", resourceCulture);
             }
         }
         
@@ -174,6 +192,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaUsuario {
             get {
                 return ResourceManager.GetString("EtiquetaUsuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Valor.
+        /// </summary>
+        public static string EtiquetaValor {
+            get {
+                return ResourceManager.GetString("EtiquetaValor", resourceCulture);
             }
         }
         
@@ -340,6 +367,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Parametro.
+        /// </summary>
+        public static string TituloBloqueParametroConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueParametroConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insetar Parrametro.
+        /// </summary>
+        public static string TituloBloqueParametroInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueParametroInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Parametro.
+        /// </summary>
+        public static string TituloBloqueParametroModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueParametroModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
@@ -372,6 +426,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloListaPrecioListar {
             get {
                 return ResourceManager.GetString("TituloListaPrecioListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Parametros.
+        /// </summary>
+        public static string TituloParametroListar {
+            get {
+                return ResourceManager.GetString("TituloParametroListar", resourceCulture);
             }
         }
         
