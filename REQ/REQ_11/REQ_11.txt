@@ -1,0 +1,4 @@
+OBJETIVOS
+1) Ajuste versiones de los artefactos
+
+DESARROLLO:
