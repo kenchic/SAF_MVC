@@ -1,6 +1,7 @@
 USE [SAFseg]
 GO
 
+/****** Object:  Table [dbo].[bdArtefacto]    Script Date: 10/01/2019 10:07:23 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +18,6 @@ CREATE TABLE [dbo].[bdArtefacto](
 	[idSistema] [tinyint] NOT NULL,
 	[Nombre] [varchar](50) NOT NULL,
 	[Descripcion] [varchar](500) NOT NULL,
-	[Version] [varchar](10) NOT NULL,	
  CONSTRAINT [PK_bdArtefacto] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -50,7 +50,7 @@ GO
 ALTER TABLE [dbo].[bdArtefacto] CHECK CONSTRAINT [FK_bdArtefactoTipo]
 GO
 
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'18.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdArtefacto'
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdArtefacto'
 GO
 
 
