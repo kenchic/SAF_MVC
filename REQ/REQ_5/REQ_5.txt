@@ -1,6 +1,0 @@
-OBJETIVOS
-1) Estilos y carge dinamico de menu
-
-DESARROLLO:
-Se finaliza el diseño del menú, editando la libreria en los css.
-Se crean los paquetes y se modifican los modelos y métodos para traer lista de menú del usuario

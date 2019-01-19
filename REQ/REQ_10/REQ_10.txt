@@ -1,5 +1,0 @@
-OBJETIVOS
-1) Creación pantalla Parametros
-
-DESARROLLO:
-Se crea clases pantalla y scripts.
