@@ -6,3 +6,17 @@
 	opacity: .70;
 	cursor: pointer;
 }
+
+.btn, .card, .form-control{
+    border-radius: 0rem;
+    color: #000000;
+}
+
+.modal-footer {
+    padding: 0em;
+    background-color: rgba(85, 142, 161, 0.03);
+}
+
+.modal-header {
+    padding: 0em;
+}

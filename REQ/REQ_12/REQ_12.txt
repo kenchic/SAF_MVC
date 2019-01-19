@@ -1,5 +1,15 @@
 OBJETIVOS
 1) Creación pantalla Proveedores
 2) Sobre- escritura de bootstrap para card en SAF.css.
+3) Organizar forma de hacer los branch. 
 
 DESARROLLO:
+1) se crearon las pantallas
+2) se crearon nuevos estilos para las modales y botones
+3) se debe tener la siguiente distribuciòn:
+Master (Produccion)
+Branch (Versiones)
+	  (Requerimientos)
+       (Correcione)
+
+Nota: los branches se elimna una vez lleguen al branch de versiones 

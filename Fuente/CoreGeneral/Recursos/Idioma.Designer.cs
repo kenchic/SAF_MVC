@@ -124,6 +124,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Dirección.
+        /// </summary>
+        public static string EtiquetaDireccion {
+            get {
+                return ResourceManager.GetString("EtiquetaDireccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Id.
         /// </summary>
         public static string EtiquetaId {
@@ -169,6 +178,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Iniciales.
+        /// </summary>
+        public static string EtiquetaIniciales {
+            get {
+                return ResourceManager.GetString("EtiquetaIniciales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Nombre.
         /// </summary>
         public static string EtiquetaNombre {
@@ -183,6 +201,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaPlaca {
             get {
                 return ResourceManager.GetString("EtiquetaPlaca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Teléfono.
+        /// </summary>
+        public static string EtiquetaTelefono {
+            get {
+                return ResourceManager.GetString("EtiquetaTelefono", resourceCulture);
             }
         }
         
@@ -394,6 +421,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Proveedor.
+        /// </summary>
+        public static string TituloBloqueProveedorConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueProveedorConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertar Proveedor.
+        /// </summary>
+        public static string TituloBloqueProveedorInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueProveedorInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Proveedor.
+        /// </summary>
+        public static string TituloBloqueProveedorModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueProveedorModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
@@ -435,6 +489,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloParametroListar {
             get {
                 return ResourceManager.GetString("TituloParametroListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Lista de Proveedores.
+        /// </summary>
+        public static string TituloProveedorListar {
+            get {
+                return ResourceManager.GetString("TituloProveedorListar", resourceCulture);
             }
         }
         
