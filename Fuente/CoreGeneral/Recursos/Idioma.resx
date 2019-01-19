@@ -289,4 +289,32 @@
     <value>Parametros</value>
     <comment>Titulo de los Parametros</comment>
   </data>
+  <data name="EtiquetaDireccion" xml:space="preserve">
+    <value>Dirección</value>
+    <comment>Label del campo Dirección</comment>
+  </data>
+  <data name="EtiquetaIniciales" xml:space="preserve">
+    <value>Iniciales</value>
+    <comment>Label del campo Iniciales</comment>
+  </data>
+  <data name="EtiquetaTelefono" xml:space="preserve">
+    <value>Teléfono</value>
+    <comment>Label del campo Teléfono</comment>
+  </data>
+  <data name="TituloBloqueProveedorConsultar" xml:space="preserve">
+    <value>Consultar Proveedor</value>
+    <comment>Titulo de la vista Consultar de la Proveedor</comment>
+  </data>
+  <data name="TituloBloqueProveedorInsertar" xml:space="preserve">
+    <value>Insertar Proveedor</value>
+    <comment>Titulo de la vista Insertar de la Proveedor</comment>
+  </data>
+  <data name="TituloBloqueProveedorModificar" xml:space="preserve">
+    <value>Modificar Proveedor</value>
+    <comment>Titulo de la vista Modificar de la Proveedor</comment>
+  </data>
+  <data name="TituloProveedorListar" xml:space="preserve">
+    <value>Lista de Proveedores</value>
+    <comment>Titulo de la Lista de Proveedores</comment>
+  </data>
 </root>
