@@ -133,6 +133,14 @@
     <value>Agente</value>
     <comment>Label del campo Agente en ForenKey</comment>
   </data>
+  <data name="EtiquetaConsecutivo" xml:space="preserve">
+    <value>Consecutivo</value>
+    <comment>Label del campo Consecutivo</comment>
+  </data>
+  <data name="EtiquetaEsSistema" xml:space="preserve">
+    <value>Es Sistema</value>
+    <comment>Label del campo EsSistema</comment>
+  </data>
   <data name="EtiquetaNombre" xml:space="preserve">
     <value>Nombre</value>
     <comment>Label del campo Nombre</comment>
@@ -316,5 +324,25 @@
   <data name="TituloProveedorListar" xml:space="preserve">
     <value>Lista de Proveedores</value>
     <comment>Titulo de la Lista de Proveedores</comment>
+  </data>
+  <data name="TituloBloqueTipoDocumentoConsultar" xml:space="preserve">
+    <value>Consultar Tipo Documento</value>
+    <comment>Titulo de la vista Consultar de la entidad Tipo Documento</comment>
+  </data>
+  <data name="TituloBloqueTipoDocumentoInsertar" xml:space="preserve">
+    <value>Insertar Tipo Documento</value>
+    <comment>Titulo de la vista Insertar de la entidad Tipo Documento</comment>
+  </data>
+  <data name="TituloBloqueTipoDocumentoModificar" xml:space="preserve">
+    <value>Modificar Tipo Documento</value>
+    <comment>Titulo de la vista Modificar de la entidad Tipo Documento</comment>
+  </data>
+  <data name="TituloTipoDocumentoListar" xml:space="preserve">
+    <value>Listar Tipo Documento</value>
+    <comment>Titulo de la vista Listar de Tipo Documento</comment>
+  </data>
+  <data name="EtiquetaOperacion" xml:space="preserve">
+    <value>Operación</value>
+    <comment>Label campo operación</comment>
   </data>
 </root>
