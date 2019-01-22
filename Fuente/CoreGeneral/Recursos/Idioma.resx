@@ -266,7 +266,7 @@
     <comment>Titulo de la vista Modificar de la entidad Lista Precios</comment>
   </data>
   <data name="TituloListaPrecioListar" xml:space="preserve">
-    <value>Listas de Precios</value>
+    <value>Lista de Precios</value>
     <comment>Titulo de la Lista de Precios</comment>
   </data>
   <data name="EtiquetaCodigo" xml:space="preserve">
@@ -322,7 +322,7 @@
     <comment>Titulo de la vista Modificar de la Proveedor</comment>
   </data>
   <data name="TituloProveedorListar" xml:space="preserve">
-    <value>Proveedores</value>
+    <value>Lista de Proveedores</value>
     <comment>Titulo de la Lista de Proveedores</comment>
   </data>
   <data name="TituloBloqueTipoDocumentoConsultar" xml:space="preserve">
@@ -338,27 +338,11 @@
     <comment>Titulo de la vista Modificar de la entidad Tipo Documento</comment>
   </data>
   <data name="TituloTipoDocumentoListar" xml:space="preserve">
-    <value>Tipos Documentos</value>
+    <value>Listar Tipo Documento</value>
     <comment>Titulo de la vista Listar de Tipo Documento</comment>
   </data>
   <data name="EtiquetaOperacion" xml:space="preserve">
     <value>Operación</value>
     <comment>Label campo operación</comment>
-  </data>
-  <data name="TituloBloqueTipoMantenimientoConsultar" xml:space="preserve">
-    <value>Consultar Tipo Mantenimiento</value>
-    <comment>Titulo de la vista Consultar de la entidad Tipo Mantenimiento</comment>
-  </data>
-  <data name="TituloBloqueTipoMantenimientoInsertar" xml:space="preserve">
-    <value>Insertar Tipo Mantenimiento</value>
-    <comment>Titulo de la vista Insertar de la entidad Tipo Mantenimiento</comment>
-  </data>
-  <data name="TituloBloqueTipoMantenimientoModificar" xml:space="preserve">
-    <value>Modificar Tipo Mantenimiento</value>
-    <comment>Titulo de la vista Modificar de la entidad Tipo Mantenimiento</comment>
-  </data>
-  <data name="TituloTipoMantenimientoListar" xml:space="preserve">
-    <value>Tipos Mantenimientos</value>
-    <comment>Titulo de la vista Listar de Tipo Documento</comment>
   </data>
 </root>

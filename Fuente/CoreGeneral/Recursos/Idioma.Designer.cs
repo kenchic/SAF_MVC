@@ -502,33 +502,6 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Consultar Tipo Mantenimiento.
-        /// </summary>
-        public static string TituloBloqueTipoMantenimientoConsultar {
-            get {
-                return ResourceManager.GetString("TituloBloqueTipoMantenimientoConsultar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Insertar Tipo Mantenimiento.
-        /// </summary>
-        public static string TituloBloqueTipoMantenimientoInsertar {
-            get {
-                return ResourceManager.GetString("TituloBloqueTipoMantenimientoInsertar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Modificar Tipo Mantenimiento.
-        /// </summary>
-        public static string TituloBloqueTipoMantenimientoModificar {
-            get {
-                return ResourceManager.GetString("TituloBloqueTipoMantenimientoModificar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
@@ -556,7 +529,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Listas de Precios.
+        ///   Busca una cadena traducida similar a Lista de Precios.
         /// </summary>
         public static string TituloListaPrecioListar {
             get {
@@ -574,7 +547,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Proveedores.
+        ///   Busca una cadena traducida similar a Lista de Proveedores.
         /// </summary>
         public static string TituloProveedorListar {
             get {
@@ -583,20 +556,11 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Tipos Documentos.
+        ///   Busca una cadena traducida similar a Listar Tipo Documento.
         /// </summary>
         public static string TituloTipoDocumentoListar {
             get {
                 return ResourceManager.GetString("TituloTipoDocumentoListar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Tipos Mantenimientos.
-        /// </summary>
-        public static string TituloTipoMantenimientoListar {
-            get {
-                return ResourceManager.GetString("TituloTipoMantenimientoListar", resourceCulture);
             }
         }
         
