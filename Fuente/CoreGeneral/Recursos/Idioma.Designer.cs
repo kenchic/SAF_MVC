@@ -529,6 +529,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Unidad Medida.
+        /// </summary>
+        public static string TituloBloqueUnidadMedidaConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueUnidadMedidaConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertar Unidad Medida.
+        /// </summary>
+        public static string TituloBloqueUnidadMedidaInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueUnidadMedidaInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Unidad Medida.
+        /// </summary>
+        public static string TituloBloqueUnidadMedidaModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueUnidadMedidaModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ciudades.
         /// </summary>
         public static string TituloCiudadListar {
@@ -597,6 +624,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloTipoMantenimientoListar {
             get {
                 return ResourceManager.GetString("TituloTipoMantenimientoListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Unidades de Medida.
+        /// </summary>
+        public static string TituloUnidadMedidaListar {
+            get {
+                return ResourceManager.GetString("TituloUnidadMedidaListar", resourceCulture);
             }
         }
         
