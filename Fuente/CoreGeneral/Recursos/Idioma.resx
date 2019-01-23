@@ -361,4 +361,20 @@
     <value>Tipos Mantenimientos</value>
     <comment>Titulo de la vista Listar de Tipo Documento</comment>
   </data>
+  <data name="TituloBloqueUnidadMedidaConsultar" xml:space="preserve">
+    <value>Consultar Unidad Medida</value>
+    <comment>Titulo de la vista Consultar de la entidad Unidad Medida</comment>
+  </data>
+  <data name="TituloBloqueUnidadMedidaInsertar" xml:space="preserve">
+    <value>Insertar Unidad Medida</value>
+    <comment>Titulo de la vista Insertar de la entidad Unidad Medida</comment>
+  </data>
+  <data name="TituloBloqueUnidadMedidaModificar" xml:space="preserve">
+    <value>Modificar Unidad Medida</value>
+    <comment>Titulo de la vista Modificar de la entidad Unidad Medida</comment>
+  </data>
+  <data name="TituloUnidadMedidaListar" xml:space="preserve">
+    <value>Unidades de Medida</value>
+    <comment>Titulo de la vista Listar de la entidad Unidad Medida</comment>
+  </data>
 </root>
