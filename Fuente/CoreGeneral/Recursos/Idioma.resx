@@ -377,4 +377,52 @@
     <value>Unidades de Medida</value>
     <comment>Titulo de la vista Listar de la entidad Unidad Medida</comment>
   </data>
+  <data name="TituloClienteListar" xml:space="preserve">
+    <value>Clientes</value>
+    <comment>Titulo de la vista Listar de la entidad Cliente</comment>
+  </data>
+  <data name="TituloBloqueClienteConsultar" xml:space="preserve">
+    <value>Consultar Cliente</value>
+    <comment>Titulo de la vista Consultar de la entidad Cliente</comment>
+  </data>
+  <data name="TituloBloqueClienteInsertar" xml:space="preserve">
+    <value>Insertar Cliente</value>
+    <comment>Titulo de la vista Insertar de la entidad Cliente</comment>
+  </data>
+  <data name="TituloBloqueClienteModificar" xml:space="preserve">
+    <value>Modificar Cliente</value>
+    <comment>Titulo de la vista Modificar de la entidad Cliente</comment>
+  </data>
+  <data name="EtiquetaCiudadNombre" xml:space="preserve">
+    <value>Ciudad</value>
+    <comment>Label del campo Nombre de la ciudad</comment>
+  </data>
+  <data name="EtiquetaNombre1" xml:space="preserve">
+    <value>Nopmbre 1</value>
+    <comment>Label del campo Nombre1 </comment>
+  </data>
+  <data name="EtiquetaNombre2" xml:space="preserve">
+    <value>Nopmbre 2</value>
+    <comment>Label del campo Nombre 2 </comment>
+  </data>				
+  <data name="EtiquetaApellido1" xml:space="preserve">
+    <value>Apellido 1</value>
+    <comment>Label del campo Apellido 1</comment>
+  </data>	
+  <data name="EtiquetaApellido2" xml:space="preserve">
+    <value>Apellido 2</value>
+    <comment>Label del campo Apellido 2</comment>
+  </data>				
+  <data name="EtiquetaDireccion" xml:space="preserve">
+    <value>Dirección</value>
+    <comment>Label del campo Direccion</comment>
+  </data>					
+  <data name="EtiquetaTelefono" xml:space="preserve">
+    <value>Teléfono</value>
+    <comment>Label del campo Telefono</comment>
+  </data>				
+  <data name="EtiquetaCelular" xml:space="preserve">
+    <value>Celular</value>
+    <comment>Label del campo Celular</comment>
+  </data>
 </root>
