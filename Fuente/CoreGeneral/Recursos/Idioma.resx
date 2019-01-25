@@ -299,7 +299,7 @@
   </data>
   <data name="EtiquetaDireccion" xml:space="preserve">
     <value>Dirección</value>
-    <comment>Label del campo Dirección</comment>
+    <comment>Label del campo Direccion</comment>
   </data>
   <data name="EtiquetaIniciales" xml:space="preserve">
     <value>Iniciales</value>
@@ -307,7 +307,7 @@
   </data>
   <data name="EtiquetaTelefono" xml:space="preserve">
     <value>Teléfono</value>
-    <comment>Label del campo Teléfono</comment>
+    <comment>Label del campo Telefono</comment>
   </data>
   <data name="TituloBloqueProveedorConsultar" xml:space="preserve">
     <value>Consultar Proveedor</value>
@@ -398,29 +398,21 @@
     <comment>Label del campo Nombre de la ciudad</comment>
   </data>
   <data name="EtiquetaNombre1" xml:space="preserve">
-    <value>Nopmbre 1</value>
+    <value>Nombre 1</value>
     <comment>Label del campo Nombre1 </comment>
   </data>
   <data name="EtiquetaNombre2" xml:space="preserve">
-    <value>Nopmbre 2</value>
+    <value>Nombre 2</value>
     <comment>Label del campo Nombre 2 </comment>
-  </data>				
+  </data>
   <data name="EtiquetaApellido1" xml:space="preserve">
     <value>Apellido 1</value>
     <comment>Label del campo Apellido 1</comment>
-  </data>	
+  </data>
   <data name="EtiquetaApellido2" xml:space="preserve">
     <value>Apellido 2</value>
     <comment>Label del campo Apellido 2</comment>
-  </data>				
-  <data name="EtiquetaDireccion" xml:space="preserve">
-    <value>Dirección</value>
-    <comment>Label del campo Direccion</comment>
-  </data>					
-  <data name="EtiquetaTelefono" xml:space="preserve">
-    <value>Teléfono</value>
-    <comment>Label del campo Telefono</comment>
-  </data>				
+  </data>
   <data name="EtiquetaCelular" xml:space="preserve">
     <value>Celular</value>
     <comment>Label del campo Celular</comment>
