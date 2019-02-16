@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  StoredProcedure [dbo].[pTipoDocumento]    Script Date: 21/01/2019 09:27:59 p.m. ******/
+/****** Object:  StoredProcedure [dbo].[pTipoDocumento]    Script Date: 05/02/2019 08:51:17 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -46,7 +46,7 @@ BEGIN
 					max(CASE WHEN name='Activo' THEN convert(BIT,StringValue) ELSE 0 END) AS Activo
 			FROM SAFseg.dbo.fParseJSON
 			( @Json )
-			WHERE ValueType = 'string' OR ValueType = 'boolean'
+			WHERE ValueType = 'string' OR ValueType = 'boolean' OR ValueType = 'int'
 			GROUP BY parent_ID) TipoDocumento
 		END
 	
@@ -88,7 +88,7 @@ END
 
 GO
 
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'pTipoDocumento'
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'pTipoDocumento'
 GO
 
 

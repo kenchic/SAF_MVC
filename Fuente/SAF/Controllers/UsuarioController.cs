@@ -59,7 +59,7 @@ namespace SAF.Controllers
 						{
 							if (lisMenus[i].Orden == lisMenus[j].Orden && lisMenus[i].Id != lisMenus[j].Id)
 							{
-								strMenu.Append(string.Concat("<li><a href=\"#\" onclick=\"cargarView('", lisMenus[j].Vista, "');\"><i class=\"", lisMenus[j].Imagen, "\"></i>", lisMenus[j].Nombre, "</a></li>"));
+								strMenu.Append(string.Concat("<li><a href=\"#\" onclick=\"cargarVista('", lisMenus[j].Vista, "');\"><i class=\"", lisMenus[j].Imagen, "\"></i>", lisMenus[j].Nombre, "</a></li>"));
 							}
 						}
 						strMenu.Append("</ul>");

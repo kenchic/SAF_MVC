@@ -18,8 +18,8 @@
 				<span class="label label-primary pull-right">4</span>
 			</a>
 			<ul class="sidebar-submenu" style="display: none;">
-				<li><a href="#" onclick="cargarView('/Agente/Listar');"><i class="fa fa-circle-o"></i>Listar</a></li>
-				<li><a href="#" onclick="cargarView('/Agente/inicio');"><i class="fa fa-circle-o"></i>Inicio 2</a></li>
+				<li><a href="#" onclick="cargarVista('/Agente/Listar');"><i class="fa fa-circle-o"></i>Listar</a></li>
+				<li><a href="#" onclick="cargarVista('/Agente/inicio');"><i class="fa fa-circle-o"></i>Inicio 2</a></li>
 				<li class="">
 					<a href="collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a>
 				</li>
@@ -144,10 +144,6 @@
 	$('#ageInicio').click(function () {
 		$('#partial-load').load('/Agente/inicio');
 	})
-
-	function cargarView(view) {
-		$('#contenido').load(view);
-	}	
 	
 </script>
 
