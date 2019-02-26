@@ -397,6 +397,10 @@
     <value>Ciudad</value>
     <comment>Label del campo Nombre de la ciudad</comment>
   </data>
+  <data name="EtiquetaClienteNombre" xml:space="preserve">
+    <value>Cliente</value>
+    <comment>Label del campo Nombre del Cliente</comment>
+  </data>
   <data name="EtiquetaNombre1" xml:space="preserve">
     <value>Nombre 1</value>
     <comment>Label del campo Nombre1 </comment>
@@ -416,5 +420,57 @@
   <data name="EtiquetaCelular" xml:space="preserve">
     <value>Celular</value>
     <comment>Label del campo Celular</comment>
+  </data>
+  <data name="EtiquetaObservacion" xml:space="preserve">
+    <value>Observación</value>
+    <comment>Label del campo Observación</comment>
+  </data>
+  <data name="EtiquetaTipo" xml:space="preserve">
+    <value>Tipo</value>
+    <comment>Label del campo Tipo</comment>
+  </data>
+  <data name="EtiquetaFormaContacto" xml:space="preserve">
+    <value>Forma Contacto</value>
+    <comment>Label del campo Forma Contacto Cliente</comment>
+  </data>
+  <data name="EtiquetaEstado" xml:space="preserve">
+    <value>Estado</value>
+    <comment>Label del campo Forma Contacto Cliente</comment>
+  </data>
+  <data name="EtiquetaFecha" xml:space="preserve">
+    <value>Fecha</value>
+    <comment>Label del campo Fecha</comment>
+  </data>
+  <data name="EtiquetaTelResponsable" xml:space="preserve">
+    <value>Tel. Responsable</value>
+    <comment>Label del campo Teléfono Responsable</comment>
+  </data>
+  <data name="EtiquetaNombreResponsable" xml:space="preserve">
+    <value>Nombre Responsable</value>
+    <comment>Label del campo Nombre Responsable</comment>
+  </data>
+  <data name="EtiquetaIdentificacionResponsable" xml:space="preserve">
+    <value>Identificación Responsable</value>
+    <comment>Label del campo Identificacion Responsable</comment>
+  </data>
+  <data name="EtiquetaSistemaMedida" xml:space="preserve">
+    <value>Sistema Medida</value>
+    <comment>Label del campo Sistema Medida</comment>
+  </data>
+  <data name="TituloBloqueProyectoConsultar" xml:space="preserve">
+    <value>Consultar Cliente</value>
+    <comment>Titulo de la vista Consultar de la entidad Cliente</comment>
+  </data>
+  <data name="TituloBloqueProyectoInsertar" xml:space="preserve">
+    <value>Insertar Cliente</value>
+    <comment>Titulo de la vista Insertar de la entidad Cliente</comment>
+  </data>
+  <data name="TituloBloqueProyectoModificar" xml:space="preserve">
+    <value>Modificar Cliente</value>
+    <comment>Titulo de la vista Modificar de la entidad Cliente</comment>
+  </data>
+  <data name="TituloProyectoListar" xml:space="preserve">
+    <value>Clientes</value>
+    <comment>Titulo de la vista Listar de la entidad Cliente</comment>
   </data>
 </root>
