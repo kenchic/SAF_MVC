@@ -458,19 +458,19 @@
     <comment>Label del campo Sistema Medida</comment>
   </data>
   <data name="TituloBloqueProyectoConsultar" xml:space="preserve">
-    <value>Consultar Cliente</value>
-    <comment>Titulo de la vista Consultar de la entidad Cliente</comment>
+    <value>Consultar Proyecto</value>
+    <comment>Titulo de la vista Consultar de la entidad Proyecto</comment>
   </data>
   <data name="TituloBloqueProyectoInsertar" xml:space="preserve">
-    <value>Insertar Cliente</value>
-    <comment>Titulo de la vista Insertar de la entidad Cliente</comment>
+    <value>Insertar Proyecto</value>
+    <comment>Titulo de la vista Insertar de la entidad Proyecto</comment>
   </data>
   <data name="TituloBloqueProyectoModificar" xml:space="preserve">
-    <value>Modificar Cliente</value>
-    <comment>Titulo de la vista Modificar de la entidad Cliente</comment>
+    <value>Modificar Proyecto</value>
+    <comment>Titulo de la vista Modificar de la entidad Proyecto</comment>
   </data>
   <data name="TituloProyectoListar" xml:space="preserve">
-    <value>Clientes</value>
-    <comment>Titulo de la vista Listar de la entidad Cliente</comment>
+    <value>Proyectos</value>
+    <comment>Titulo de la vista Listar de la entidad Proyecto</comment>
   </data>
 </root>

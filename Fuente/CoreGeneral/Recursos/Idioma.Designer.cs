@@ -349,6 +349,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Sistema Medida.
+        /// </summary>
+        public static string EtiquetaSistemaMedida {
+            get {
+                return ResourceManager.GetString("EtiquetaSistemaMedida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Teléfono.
         /// </summary>
         public static string EtiquetaTelefono {
@@ -637,7 +646,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Consultar Cliente.
+        ///   Busca una cadena traducida similar a Consultar Proyecto.
         /// </summary>
         public static string TituloBloqueProyectoConsultar {
             get {
@@ -646,7 +655,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Insertar Cliente.
+        ///   Busca una cadena traducida similar a Insertar Proyecto.
         /// </summary>
         public static string TituloBloqueProyectoInsertar {
             get {
@@ -655,7 +664,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Modificar Cliente.
+        ///   Busca una cadena traducida similar a Modificar Proyecto.
         /// </summary>
         public static string TituloBloqueProyectoModificar {
             get {
@@ -808,7 +817,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Clientes.
+        ///   Busca una cadena traducida similar a Proyectos.
         /// </summary>
         public static string TituloProyectoListar {
             get {
