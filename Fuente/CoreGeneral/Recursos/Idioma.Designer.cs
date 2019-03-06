@@ -457,6 +457,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Bodega.
+        /// </summary>
+        public static string TituloBloqueBodegaConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueBodegaConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertar Bodega.
+        /// </summary>
+        public static string TituloBloqueBodegaInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueBodegaInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Bodega.
+        /// </summary>
+        public static string TituloBloqueBodegaModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueBodegaModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Detalle Ciudad.
         /// </summary>
         public static string TituloBloqueCiudadConsultar {
@@ -750,6 +777,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloBloqueUnidadMedidaModificar {
             get {
                 return ResourceManager.GetString("TituloBloqueUnidadMedidaModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bodegas .
+        /// </summary>
+        public static string TituloBodegaListar {
+            get {
+                return ResourceManager.GetString("TituloBodegaListar", resourceCulture);
             }
         }
         
