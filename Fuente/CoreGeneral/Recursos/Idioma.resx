@@ -473,4 +473,20 @@
     <value>Proyectos</value>
     <comment>Titulo de la vista Listar de la entidad Proyectos</comment>
   </data>
+  <data name="TituloBloqueBodegaConsultar" xml:space="preserve">
+    <value>Consultar Bodega</value>
+    <comment>Titulo de la vista Consultar de la entidad Bodega</comment>
+  </data>
+  <data name="TituloBloqueBodegaInsertar" xml:space="preserve">
+    <value>Insertar Bodega</value>
+    <comment>Titulo de la vista Insertar de la entidad Bodega</comment>
+  </data>
+  <data name="TituloBloqueBodegaModificar" xml:space="preserve">
+    <value>Modificar Bodega</value>
+    <comment>Titulo de la vista Modificar de la entidad Bodega</comment>
+  </data>
+  <data name="TituloBodegaListar" xml:space="preserve">
+    <value>Bodegas </value>
+    <comment>Titulo de la vista Listar de la entidad Bodegas</comment>
+  </data>
 </root>
