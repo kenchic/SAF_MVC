@@ -489,4 +489,8 @@
     <value>Bodegas </value>
     <comment>Titulo de la vista Listar de la entidad Bodegas</comment>
   </data>
+  <data name="EtiquetaProveedorNombre" xml:space="preserve">
+    <value>Proveedor</value>
+    <comment>Label del campo Proveedor</comment>
+  </data>
 </root>
