@@ -349,6 +349,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Proveedor.
+        /// </summary>
+        public static string EtiquetaProveedorNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaProveedorNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Sistema Medida.
         /// </summary>
         public static string EtiquetaSistemaMedida {
