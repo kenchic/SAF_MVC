@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  View [dbo].[vBodega]    Script Date: 05/03/2019 01:39:55 p.m. ******/
+/****** Object:  View [dbo].[vBodega]    Script Date: 11/03/2019 05:17:23 p.m. ******/
 SET ANSI_NULLS ON
 GO
 

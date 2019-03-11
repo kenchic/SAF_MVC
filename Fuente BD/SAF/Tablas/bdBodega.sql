@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdBodega]    Script Date: 05/03/2019 01:40:03 p.m. ******/
+/****** Object:  Table [dbo].[bdBodega]    Script Date: 11/03/2019 05:17:11 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -13,10 +13,10 @@ GO
 
 CREATE TABLE [dbo].[bdBodega](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[idCliente] [int] NULL,
-	[idProveedor] [smallint] NULL,
+	[idCliente] [int] NULL CONSTRAINT [DF_bdBodega_idCliente]  DEFAULT ((0)),
+	[idProveedor] [smallint] NULL CONSTRAINT [DF_bdBodega_idProveedor]  DEFAULT ((0)),
 	[Nombre] [varchar](50) NOT NULL,
-	[EsSistema] [bit] NOT NULL,
+	[EsSistema] [bit] NOT NULL CONSTRAINT [DF_bdBodega_EsSistema]  DEFAULT ((0)),
 	[Activo] [bit] NOT NULL,
  CONSTRAINT [PK_bdBodegas] PRIMARY KEY CLUSTERED 
 (
@@ -27,15 +27,6 @@ CREATE TABLE [dbo].[bdBodega](
 GO
 
 SET ANSI_PADDING OFF
-GO
-
-ALTER TABLE [dbo].[bdBodega] ADD  CONSTRAINT [DF_bdBodega_idCliente]  DEFAULT ((0)) FOR [idCliente]
-GO
-
-ALTER TABLE [dbo].[bdBodega] ADD  CONSTRAINT [DF_bdBodega_idProveedor]  DEFAULT ((0)) FOR [idProveedor]
-GO
-
-ALTER TABLE [dbo].[bdBodega] ADD  CONSTRAINT [DF_bdBodega_EsSistema]  DEFAULT ((0)) FOR [EsSistema]
 GO
 
 ALTER TABLE [dbo].[bdBodega]  WITH CHECK ADD  CONSTRAINT [FK_bdBodegaCliente] FOREIGN KEY([idCliente])
