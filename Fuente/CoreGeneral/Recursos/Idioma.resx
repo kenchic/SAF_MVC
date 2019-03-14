@@ -125,14 +125,6 @@
     <value>Id</value>
     <comment>Label del campo Id</comment>
   </data>
-  <data name="EtiquetaIdAgente" xml:space="preserve">
-    <value>Id Agente</value>
-    <comment>Label del campo Agente en ForenKey</comment>
-  </data>
-  <data name="EtiquetaidAgenteNombre" xml:space="preserve">
-    <value>Agente</value>
-    <comment>Label del campo Agente en ForenKey</comment>
-  </data>
   <data name="EtiquetaConsecutivo" xml:space="preserve">
     <value>Consecutivo</value>
     <comment>Label del campo Consecutivo</comment>
@@ -177,13 +169,93 @@
     <value>Identificación</value>
     <comment>Label de la identificación</comment>
   </data>
-  <data name="EtiquetaidRol" xml:space="preserve">
-    <value>Rol</value>
-    <comment>Label del campo Rol en ForenKey</comment>
+  <data name="EtiquetaProyectoNombre" xml:space="preserve">
+    <value>Proyecto</value>
+    <comment>Label del campo Proyecto en ForenKey</comment>
+  </data>
+  <data name="EtiquetaListaPrecioNombre" xml:space="preserve">
+    <value>Lista Precio</value>
+    <comment>Label del campo Lista Precio en ForenKey</comment>
+  </data>
+  <data name="EtiquetaAgenteNombre" xml:space="preserve">
+    <value>Agente</value>
+    <comment>Label del campo Agente en ForenKey</comment>
   </data>
   <data name="EtiquetaUsuario" xml:space="preserve">
     <value>Usuario</value>
     <comment>Label del Usuario</comment>
+  </data>
+  <data name="EtiquetaContratoAlquiler" xml:space="preserve">
+    <value>Contrato Alquiler</value>
+    <comment>Label del ContratoAlquiler</comment>
+  </data>
+  <data name="EtiquetaInformacionBD" xml:space="preserve">
+    <value>Informacion BD</value>
+    <comment>Label del InformacionBD</comment>
+  </data>
+  <data name="EtiquetaCartaPagare" xml:space="preserve">
+    <value>Carta Pagare</value>
+    <comment>Label de Carta Pagare</comment>
+  </data>
+  <data name="EtiquetaPagare" xml:space="preserve">
+    <value>Pagare</value>
+    <comment>Label de Carta Pagare</comment>
+  </data>
+  <data name="EtiquetaLetraCambio" xml:space="preserve">
+    <value>Letra Cambio</value>
+    <comment>Label de Letra Cambio</comment>
+  </data>
+  <data name="EtiquetaGarantiasCondiciones" xml:space="preserve">
+    <value>Garantias Condiciones</value>
+    <comment>Label de Garantias Condiciones</comment>
+  </data>
+  <data name="EtiquetaDeposito" xml:space="preserve">
+    <value>Depósito</value>
+    <comment>Label de Deposito</comment>
+  </data>
+  <data name="EtiquetaAnticipo" xml:space="preserve">
+    <value>Anticipo</value>
+    <comment>Label de Anticipo</comment>
+  </data>
+  <data name="EtiquetaPersonaNatural" xml:space="preserve">
+    <value>Persona Natural</value>
+    <comment>Label de Persona Natural</comment>
+  </data>
+  <data name="EtiquetaPersonaJuridica" xml:space="preserve">
+    <value>Persona Juridica</value>
+    <comment>Label de Persona Juridica</comment>
+  </data>
+  <data name="EtiquetaFotoCopiaCedula" xml:space="preserve">
+    <value>Foto Copia Cédula</value>
+    <comment>Label de Persona Juridica</comment>
+  </data>
+  <data name="EtiquetaFotoCopiaNit" xml:space="preserve">
+    <value>Foto Copia Nit</value>
+    <comment>Label de Foto Copia Nit</comment>
+  </data>
+  <data name="EtiquetaCamaraComercio" xml:space="preserve">
+    <value>Cámara Comercio</value>
+    <comment>Label de Camara Comercio</comment>
+  </data>
+  <data name="EtiquetaDescuentoAlquiler" xml:space="preserve">
+    <value>Dto Alquiler</value>
+    <comment>Label de Descuento Alquiler</comment>
+  </data>
+  <data name="EtiquetaDescuentoVenta" xml:space="preserve">
+    <value>Dto Venta</value>
+    <comment>Label de Descuento Alquiler</comment>
+  </data>
+  <data name="EtiquetaDescuentoReposicion" xml:space="preserve">
+    <value>Dto Reposicion</value>
+    <comment>Label de Descuento Reposicion</comment>
+  </data>
+  <data name="EtiquetaDescuentoMantenimiento" xml:space="preserve">
+    <value>Dto Mantenimiento</value>
+    <comment>Label de Descuento Mantenimiento</comment>
+  </data>
+  <data name="EtiquetaPorcentajeAgente" xml:space="preserve">
+    <value>Pje Agente</value>
+    <comment>Label de Porcentaje Agente</comment>
   </data>
   <data name="TituloUsuarioLogin" xml:space="preserve">
     <value>Usuario Login</value>
@@ -492,5 +564,9 @@
   <data name="EtiquetaProveedorNombre" xml:space="preserve">
     <value>Proveedor</value>
     <comment>Label del campo Proveedor</comment>
+  </data>
+  <data name="TituloBloqueContratoModificar" xml:space="preserve">
+    <value>Modificar Contrato</value>
+    <comment>Titulo de la vista Modificar de la entidad Contrato</comment>
   </data>
 </root>

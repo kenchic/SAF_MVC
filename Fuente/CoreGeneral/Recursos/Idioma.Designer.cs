@@ -79,6 +79,24 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Agente.
+        /// </summary>
+        public static string EtiquetaAgenteNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaAgenteNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Anticipo.
+        /// </summary>
+        public static string EtiquetaAnticipo {
+            get {
+                return ResourceManager.GetString("EtiquetaAnticipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Apellido.
         /// </summary>
         public static string EtiquetaApellido {
@@ -102,6 +120,24 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaApellido2 {
             get {
                 return ResourceManager.GetString("EtiquetaApellido2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cámara Comercio.
+        /// </summary>
+        public static string EtiquetaCamaraComercio {
+            get {
+                return ResourceManager.GetString("EtiquetaCamaraComercio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Carta Pagare.
+        /// </summary>
+        public static string EtiquetaCartaPagare {
+            get {
+                return ResourceManager.GetString("EtiquetaCartaPagare", resourceCulture);
             }
         }
         
@@ -160,6 +196,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Contrato Alquiler.
+        /// </summary>
+        public static string EtiquetaContratoAlquiler {
+            get {
+                return ResourceManager.GetString("EtiquetaContratoAlquiler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Correo.
         /// </summary>
         public static string EtiquetaCorreo {
@@ -169,11 +214,56 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Depósito.
+        /// </summary>
+        public static string EtiquetaDeposito {
+            get {
+                return ResourceManager.GetString("EtiquetaDeposito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Descripción.
         /// </summary>
         public static string EtiquetaDescripcion {
             get {
                 return ResourceManager.GetString("EtiquetaDescripcion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dto Alquiler.
+        /// </summary>
+        public static string EtiquetaDescuentoAlquiler {
+            get {
+                return ResourceManager.GetString("EtiquetaDescuentoAlquiler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dto Mantenimiento.
+        /// </summary>
+        public static string EtiquetaDescuentoMantenimiento {
+            get {
+                return ResourceManager.GetString("EtiquetaDescuentoMantenimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dto Reposicion.
+        /// </summary>
+        public static string EtiquetaDescuentoReposicion {
+            get {
+                return ResourceManager.GetString("EtiquetaDescuentoReposicion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Dto Venta.
+        /// </summary>
+        public static string EtiquetaDescuentoVenta {
+            get {
+                return ResourceManager.GetString("EtiquetaDescuentoVenta", resourceCulture);
             }
         }
         
@@ -223,29 +313,38 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Foto Copia Cédula.
+        /// </summary>
+        public static string EtiquetaFotoCopiaCedula {
+            get {
+                return ResourceManager.GetString("EtiquetaFotoCopiaCedula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Foto Copia Nit.
+        /// </summary>
+        public static string EtiquetaFotoCopiaNit {
+            get {
+                return ResourceManager.GetString("EtiquetaFotoCopiaNit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Garantias Condiciones.
+        /// </summary>
+        public static string EtiquetaGarantiasCondiciones {
+            get {
+                return ResourceManager.GetString("EtiquetaGarantiasCondiciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Id.
         /// </summary>
         public static string EtiquetaId {
             get {
                 return ResourceManager.GetString("EtiquetaId", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Id Agente.
-        /// </summary>
-        public static string EtiquetaIdAgente {
-            get {
-                return ResourceManager.GetString("EtiquetaIdAgente", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Agente.
-        /// </summary>
-        public static string EtiquetaidAgenteNombre {
-            get {
-                return ResourceManager.GetString("EtiquetaidAgenteNombre", resourceCulture);
             }
         }
         
@@ -268,11 +367,11 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Rol.
+        ///   Busca una cadena traducida similar a Informacion BD.
         /// </summary>
-        public static string EtiquetaidRol {
+        public static string EtiquetaInformacionBD {
             get {
-                return ResourceManager.GetString("EtiquetaidRol", resourceCulture);
+                return ResourceManager.GetString("EtiquetaInformacionBD", resourceCulture);
             }
         }
         
@@ -282,6 +381,24 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaIniciales {
             get {
                 return ResourceManager.GetString("EtiquetaIniciales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Letra Cambio.
+        /// </summary>
+        public static string EtiquetaLetraCambio {
+            get {
+                return ResourceManager.GetString("EtiquetaLetraCambio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Lista Precio.
+        /// </summary>
+        public static string EtiquetaListaPrecioNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaListaPrecioNombre", resourceCulture);
             }
         }
         
@@ -340,6 +457,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Pagare.
+        /// </summary>
+        public static string EtiquetaPagare {
+            get {
+                return ResourceManager.GetString("EtiquetaPagare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Persona Juridica.
+        /// </summary>
+        public static string EtiquetaPersonaJuridica {
+            get {
+                return ResourceManager.GetString("EtiquetaPersonaJuridica", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Persona Natural.
+        /// </summary>
+        public static string EtiquetaPersonaNatural {
+            get {
+                return ResourceManager.GetString("EtiquetaPersonaNatural", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Placa.
         /// </summary>
         public static string EtiquetaPlaca {
@@ -349,11 +493,29 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Pje Agente.
+        /// </summary>
+        public static string EtiquetaPorcentajeAgente {
+            get {
+                return ResourceManager.GetString("EtiquetaPorcentajeAgente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Proveedor.
         /// </summary>
         public static string EtiquetaProveedorNombre {
             get {
                 return ResourceManager.GetString("EtiquetaProveedorNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Proyecto.
+        /// </summary>
+        public static string EtiquetaProyectoNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaProyectoNombre", resourceCulture);
             }
         }
         
@@ -570,6 +732,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloBloqueConductorModificar {
             get {
                 return ResourceManager.GetString("TituloBloqueConductorModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Contrato.
+        /// </summary>
+        public static string TituloBloqueContratoModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueContratoModificar", resourceCulture);
             }
         }
         
