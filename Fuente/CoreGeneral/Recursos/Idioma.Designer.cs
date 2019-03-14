@@ -331,7 +331,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Garantias Condiciones.
+        ///   Busca una cadena traducida similar a Garantías Condiciones.
         /// </summary>
         public static string EtiquetaGarantiasCondiciones {
             get {
@@ -367,7 +367,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Informacion BD.
+        ///   Busca una cadena traducida similar a Información BD.
         /// </summary>
         public static string EtiquetaInformacionBD {
             get {
@@ -493,7 +493,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Pje Agente.
+        ///   Busca una cadena traducida similar a % Agente.
         /// </summary>
         public static string EtiquetaPorcentajeAgente {
             get {

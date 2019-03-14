@@ -190,7 +190,7 @@
     <comment>Label del ContratoAlquiler</comment>
   </data>
   <data name="EtiquetaInformacionBD" xml:space="preserve">
-    <value>Informacion BD</value>
+    <value>Información BD</value>
     <comment>Label del InformacionBD</comment>
   </data>
   <data name="EtiquetaCartaPagare" xml:space="preserve">
@@ -206,7 +206,7 @@
     <comment>Label de Letra Cambio</comment>
   </data>
   <data name="EtiquetaGarantiasCondiciones" xml:space="preserve">
-    <value>Garantias Condiciones</value>
+    <value>Garantías Condiciones</value>
     <comment>Label de Garantias Condiciones</comment>
   </data>
   <data name="EtiquetaDeposito" xml:space="preserve">
@@ -254,7 +254,7 @@
     <comment>Label de Descuento Mantenimiento</comment>
   </data>
   <data name="EtiquetaPorcentajeAgente" xml:space="preserve">
-    <value>Pje Agente</value>
+    <value>% Agente</value>
     <comment>Label de Porcentaje Agente</comment>
   </data>
   <data name="TituloUsuarioLogin" xml:space="preserve">
