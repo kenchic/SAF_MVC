@@ -259,6 +259,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Dto Transporte.
+        /// </summary>
+        public static string EtiquetaDescuentoTransporte {
+            get {
+                return ResourceManager.GetString("EtiquetaDescuentoTransporte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Dto Venta.
         /// </summary>
         public static string EtiquetaDescuentoVenta {
@@ -516,6 +525,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaProyectoNombre {
             get {
                 return ResourceManager.GetString("EtiquetaProyectoNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Rol.
+        /// </summary>
+        public static string EtiquetaRolNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaRolNombre", resourceCulture);
             }
         }
         
