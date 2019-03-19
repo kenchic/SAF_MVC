@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  StoredProcedure [dbo].[pProyecto]    Script Date: 06/03/2019 09:08:28 p.m. ******/
+/****** Object:  StoredProcedure [dbo].[pProyecto]    Script Date: 18/03/2019 02:31:48 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -19,16 +19,16 @@ AS
 BEGIN
 	IF (@Accion = 0)
 		SELECT Id, idCliente, idCiudad, Nombre, Tipo, Direccion, Telefono, Observacion, Fecha, FormaContacto, SistemaMedida, IdentificacionResponsable, NombreResponsable, TelResponsable, Activo, Estado
-	           ,CiudadNombre, ClienteNombre FROM vProyecto
+	           ,CiudadNombre, ClienteNombre, idContrato FROM vProyecto
 
 	IF (@Accion = 1)
 		SELECT Id, idCliente, idCiudad, Nombre, Tipo, Direccion, Telefono, Observacion, Fecha, FormaContacto, SistemaMedida, IdentificacionResponsable, NombreResponsable, TelResponsable, Activo, Estado
-	           ,CiudadNombre, ClienteNombre FROM vProyecto WHERE Activo = 1
+	           ,CiudadNombre, ClienteNombre, idContrato FROM vProyecto WHERE Activo = 1
 
 	IF(@Accion = 2)
 		BEGIN
 			SELECT Id, idCliente, idCiudad, Nombre, Tipo, Direccion, Telefono, Observacion, Fecha, FormaContacto, SistemaMedida, IdentificacionResponsable, NombreResponsable, TelResponsable, Activo, Estado
-	           ,CiudadNombre, ClienteNombre FROM vProyecto 
+	           ,CiudadNombre, ClienteNombre, idContrato FROM vProyecto 
 			WHERE Id = 
 			(SELECT      
 				   max(CASE WHEN name='Id' THEN convert(SMALLINT,StringValue) ELSE 0 END) AS [Id]
@@ -117,6 +117,9 @@ END
 
 
 
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'pProyecto'
 GO
 
 

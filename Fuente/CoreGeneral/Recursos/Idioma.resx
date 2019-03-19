@@ -569,4 +569,12 @@
     <value>Modificar Contrato</value>
     <comment>Titulo de la vista Modificar de la entidad Contrato</comment>
   </data>
+  <data name="EtiquetaDescuentoTransporte" xml:space="preserve">
+    <value>Dto Transporte</value>
+    <comment>Label de Descuento de Transporte</comment>
+  </data>
+  <data name="EtiquetaRolNombre" xml:space="preserve">
+    <value>Rol</value>
+    <comment>Etiqueta campo Rol</comment>
+  </data>
 </root>
