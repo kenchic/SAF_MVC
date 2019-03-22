@@ -298,7 +298,7 @@
     <comment>Titulo de la vista Insertar de la entidad Conductor</comment>
   </data>
   <data name="TituloBloqueConductorModificar" xml:space="preserve">
-    <value>Modificar Conductor</value>
+    <value>Modificar Conductor </value>
     <comment>Titulo de la vista Modificar de la entidad Conductor</comment>
   </data>
   <data name="TituloConductorListar" xml:space="preserve">
@@ -529,6 +529,30 @@
     <value>Sistema Medida</value>
     <comment>Label del campo Sistema Medida</comment>
   </data>
+  <data name="EtiquetaGrupoElementoNombre" xml:space="preserve">
+    <value>Grupo Elemento</value>
+    <comment>Label del campo Grupo Elemento</comment>
+  </data>
+  <data name="EtiquetaUnidadMedidaNombre" xml:space="preserve">
+    <value>Unidad Medida</value>
+    <comment>Label del campo Unidad Medida</comment>
+  </data>
+  <data name="EtiquetaReferencia" xml:space="preserve">
+    <value>Referencia</value>
+    <comment>Label del campo Referencia</comment>
+  </data>
+  <data name="EtiquetaMt2" xml:space="preserve">
+    <value>Mt2</value>
+    <comment>Label del campo Mt2</comment>
+  </data>
+  <data name="EtiquetaPeso" xml:space="preserve">
+    <value>Peso</value>
+    <comment>Label del campo Peso</comment>
+  </data>
+  <data name="EtiquetaRotacion" xml:space="preserve">
+    <value>Rotacion</value>
+    <comment>Label del campo Rotacion</comment>
+  </data>
   <data name="TituloBloqueProyectoConsultar" xml:space="preserve">
     <value>Consultar Proyecto</value>
     <comment>Titulo de la vista Consultar de la entidad Proyecto</comment>
@@ -576,5 +600,21 @@
   <data name="EtiquetaRolNombre" xml:space="preserve">
     <value>Rol</value>
     <comment>Etiqueta campo Rol</comment>
+  </data>
+  <data name="TituloBloqueElementoConsultar" xml:space="preserve">
+    <value>Consultar Elemento</value>
+    <comment>Titulo de la vista Consultar de la entidad Proyecto</comment>
+  </data>
+  <data name="TituloBloqueElementoInsertar" xml:space="preserve">
+    <value>Insertar Elemento</value>
+    <comment>Titulo de la vista Insertar de la entidad Proyecto</comment>
+  </data>
+  <data name="TituloBloqueElementoModificar" xml:space="preserve">
+    <value>Modificar Elemento</value>
+    <comment>Titulo de la vista Modificar de la entidad Proyecto</comment>
+  </data>
+  <data name="TituloElementoListar" xml:space="preserve">
+    <value>Elementos</value>
+    <comment>Titulo de la vista Listar de la entidad Elementos</comment>
   </data>
 </root>
