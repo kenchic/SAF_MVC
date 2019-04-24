@@ -286,6 +286,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Elemento.
+        /// </summary>
+        public static string EtiquetaElementoNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaElementoNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Es Sistema.
         /// </summary>
         public static string EtiquetaEsSistema {
@@ -534,6 +543,33 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaPorcentajeAgente {
             get {
                 return ResourceManager.GetString("EtiquetaPorcentajeAgente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Precio Alquiler.
+        /// </summary>
+        public static string EtiquetaPrecioAlquiler {
+            get {
+                return ResourceManager.GetString("EtiquetaPrecioAlquiler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Precio Perdida.
+        /// </summary>
+        public static string EtiquetaPrecioPerdida {
+            get {
+                return ResourceManager.GetString("EtiquetaPrecioPerdida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Precio Venta.
+        /// </summary>
+        public static string EtiquetaPrecioVenta {
+            get {
+                return ResourceManager.GetString("EtiquetaPrecioVenta", resourceCulture);
             }
         }
         

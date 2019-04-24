@@ -599,7 +599,7 @@
   </data>
   <data name="EtiquetaRolNombre" xml:space="preserve">
     <value>Rol</value>
-    <comment>Etiqueta campo Rol</comment>
+    <comment>Label campo Rol</comment>
   </data>
   <data name="TituloBloqueElementoConsultar" xml:space="preserve">
     <value>Consultar Elemento</value>
@@ -616,5 +616,21 @@
   <data name="TituloElementoListar" xml:space="preserve">
     <value>Elementos</value>
     <comment>Titulo de la vista Listar de la entidad Elementos</comment>
+  </data>
+  <data name="EtiquetaElementoNombre" xml:space="preserve">
+    <value>Elemento</value>
+    <comment>Label del campo elemento</comment>
+  </data>
+  <data name="EtiquetaPrecioAlquiler" xml:space="preserve">
+    <value>Precio Alquiler</value>
+    <comment>Label del campo Precio Alquiler</comment>
+  </data>
+  <data name="EtiquetaPrecioPerdida" xml:space="preserve">
+    <value>Precio Perdida</value>
+    <comment>Label del campo PrecioPerdida</comment>
+  </data>
+  <data name="EtiquetaPrecioVenta" xml:space="preserve">
+    <value>Precio Venta</value>
+    <comment>Label del campo PrecioVenta</comment>
   </data>
 </root>
