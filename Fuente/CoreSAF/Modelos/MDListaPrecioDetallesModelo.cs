@@ -8,7 +8,7 @@ namespace CoreSAF.Modelos
     {
         #region Propiedades
         public ListaPrecioModelo ListaPrecio { get; set; }
-        public List<ListaPrecioDetalleModelo> Detalle { get; set; }
+        public List<VListaPrecioDetalleModelo> Detalle { get; set; }
         #endregion
     }
 }
