@@ -6,6 +6,7 @@ using CoreGeneral;
 using CoreGeneral.Recursos;
 using CoreSAF.Datos;
 using CoreSAF.Modelos;
+using CoreSeg.Modelos;
 
 namespace CoreSAF.Negocios
 {
@@ -13,12 +14,12 @@ namespace CoreSAF.Negocios
     {
 		private readonly AgenteDatos ObjAgente = new AgenteDatos();
 
-		public void SetConexion(string value)
+		public void AsignarSesion(SesionModelo objSesion)
 		{
-			ObjAgente.Conexion = value;
+			ObjAgente.objSesion = objSesion;
 		}
 
-		public List<AgenteModelo> Listar()
+        public List<AgenteModelo> Listar()
 		{
 			try
 			{

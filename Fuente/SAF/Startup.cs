@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using CoreSeg.Modelos;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +11,7 @@ namespace SAF
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration;            
         }
 
         public IConfiguration Configuration { get; }
@@ -18,7 +19,9 @@ namespace SAF
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-			services.AddSingleton<IConfiguration>(Configuration);
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+            services.AddSingleton<IConfiguration>(Configuration);
 			services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 										.AddCookie(options =>
 										{
@@ -42,10 +45,10 @@ namespace SAF
             {
                 app.UseExceptionHandler("/Inicio/Error");
             }
-			
+            
 			app.UseStaticFiles();
-
-			app.UseMvc(routes =>
+            app.UseSession();
+            app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",

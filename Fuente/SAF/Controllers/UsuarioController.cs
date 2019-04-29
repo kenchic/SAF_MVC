@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using System.Security.Claims;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using CoreGeneral;
@@ -10,7 +9,6 @@ using CoreSeg.Negocios;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 
 namespace SAF.Controllers
 {
@@ -18,19 +16,7 @@ namespace SAF.Controllers
 	public class UsuarioController : Controller
 	{
 
-		private readonly UsuarioNegocio ObjUsuario = new UsuarioNegocio();
-
-		public UsuarioController(IConfiguration IConfiguracion)
-		{
-			try
-			{
-				ObjUsuario.SetConexion(IConfiguracion["BD_SQL_SEG"]);
-			}
-			catch (Exception ex)
-			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "UsuarioController - Contructor");
-			}
-		}
+		private readonly UsuarioNegocio objUsuario = new UsuarioNegocio();
 
 		public ActionResult UsuarioDashBoard()
 		{
@@ -41,9 +27,11 @@ namespace SAF.Controllers
 		{
 			try
 			{
-				var identificacion = (ClaimsIdentity)User.Identity;
-				var idUsuario = identificacion.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).Select(c => c.Value).SingleOrDefault();
-				System.Collections.Generic.List<UsuarioMenuModelo> lisMenus = ObjUsuario.ListarMenu(Convert.ToInt32(idUsuario));
+                SesionNegocio objSesionNegocio = new SesionNegocio();
+                SesionModelo objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
+                objUsuario.AsignarSesion(objSesion);
+
+                List<UsuarioMenuModelo> lisMenus = objUsuario.ListarMenu(Convert.ToInt32(objSesion.Usuario.Id));
 				StringBuilder strMenu = new StringBuilder("<li>");
 				for (int i = 0; i < lisMenus.Count; i++)
 				{
@@ -53,8 +41,8 @@ namespace SAF.Controllers
 						strMenu.Append(string.Concat("<i class=\"", lisMenus[i].Imagen, "\"></i>"));
 						strMenu.Append(string.Concat("<span class=\"label label-primary\">", lisMenus[i].Nombre, "</span>"));
 						strMenu.Append("</a>");
-
 						strMenu.Append("<ul class=\"sidebar-submenu\" style=\"display: none;\">");
+
 						for (int j = i; j < lisMenus.Count; j++)
 						{
 							if (lisMenus[i].Orden == lisMenus[j].Orden && lisMenus[i].Id != lisMenus[j].Id)

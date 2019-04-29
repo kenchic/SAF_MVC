@@ -11,18 +11,18 @@ namespace CoreSeg.Negocios
 {
 	public class UsuarioNegocio
     {
-		private readonly UsuarioDatos ObjUsuario = new UsuarioDatos();
+		private readonly UsuarioDatos objUsuario = new UsuarioDatos();
 
-		public void SetConexion(string value)
-		{
-			ObjUsuario.Conexion = value;
-		}
+        public void AsignarSesion(SesionModelo objSesion)
+        {
+            objUsuario.objSesion = objSesion;
+        }
 
-		public List<UsuarioModelo> Listar()
+        public List<UsuarioModelo> Listar()
 		{
 			try
 			{
-				IList<UsuarioModelo> LisUsuario = ObjUsuario.Listar("0");
+				IList<UsuarioModelo> LisUsuario = objUsuario.Listar("0");
 				return LisUsuario.ToList();
 			}
 			catch (Exception ex)
@@ -36,7 +36,7 @@ namespace CoreSeg.Negocios
 		{
 			try
 			{
-				IList<UsuarioModelo> LisUsuario = ObjUsuario.Listar("1");
+				IList<UsuarioModelo> LisUsuario = objUsuario.Listar("1");
 				return LisUsuario.ToList();
 			}
 			catch (Exception ex)
@@ -53,7 +53,7 @@ namespace CoreSeg.Negocios
 				UsuarioModelo objConsultar = new UsuarioModelo();
 				objConsultar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objConsultar);
-				return ObjUsuario.Consultar("2", Json);
+				return objUsuario.Consultar("2", Json);
 			}
 			catch (Exception ex)
 			{
@@ -67,7 +67,7 @@ namespace CoreSeg.Negocios
 			try
 			{
 				string Json = JsonConvert.SerializeObject(objInsertar);
-				ObjUsuario.Insertar("3", Json);
+				objUsuario.Insertar("3", Json);
 			}
 			catch (Exception ex)
 			{
@@ -81,7 +81,7 @@ namespace CoreSeg.Negocios
 			try
 			{				
 				string Json = JsonConvert.SerializeObject(objEditar);				
-				ObjUsuario.Editar("4", Json);
+				objUsuario.Editar("4", Json);
 			}
 			catch (Exception ex)
 			{
@@ -97,7 +97,7 @@ namespace CoreSeg.Negocios
 				UsuarioModelo objBorrar = new UsuarioModelo();
 				objBorrar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objBorrar);				
-				return ObjUsuario.Borrar("5", Json);
+				return objUsuario.Borrar("5", Json);
 			}
 			catch (Exception ex)
 			{
@@ -111,7 +111,7 @@ namespace CoreSeg.Negocios
 			try
 			{				
 				string Json = JsonConvert.SerializeObject(objAutenticar);
-				objAutenticar = ObjUsuario.Consultar("6", Json);
+				objAutenticar = objUsuario.Consultar("6", Json);
 				return objAutenticar != null;
 			}
 			catch (Exception ex)
@@ -129,7 +129,7 @@ namespace CoreSeg.Negocios
 				objConsultar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objConsultar);
 
-				IList<UsuarioMenuModelo> LisUsuario = ObjUsuario.ListarMenu("0", Json);
+				IList<UsuarioMenuModelo> LisUsuario = objUsuario.ListarMenu("0", Json);
 				return LisUsuario == null ? new List<UsuarioMenuModelo>() : LisUsuario.ToList();
 			}
 			catch (Exception ex)
