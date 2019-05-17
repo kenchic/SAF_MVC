@@ -87,7 +87,10 @@ namespace SAF.Controllers
 
                     if (objUsuario.Autenticar(ref objUsuarioLogin))
                     {
-                        objSesion.Usuario = objUsuarioLogin;
+                        objSesion.Usuario = objUsuarioLogin;                        
+                        objSesionNegocio.AsignarSesion(objSesion);
+                        objSesionNegocio.Insertar(objSesion);
+
                         objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
 
                         var claims = new List<Claim>
