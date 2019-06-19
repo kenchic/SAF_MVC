@@ -97,6 +97,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Anulado.
+        /// </summary>
+        public static string EtiquetaAnulado {
+            get {
+                return ResourceManager.GetString("EtiquetaAnulado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Apellido.
         /// </summary>
         public static string EtiquetaApellido {
@@ -124,11 +133,38 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Bodega Destino.
+        /// </summary>
+        public static string EtiquetaBodegaDestinoNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaBodegaDestinoNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Bodega Origen.
+        /// </summary>
+        public static string EtiquetaBodegaOrigenNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaBodegaOrigenNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cámara Comercio.
         /// </summary>
         public static string EtiquetaCamaraComercio {
             get {
                 return ResourceManager.GetString("EtiquetaCamaraComercio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cantidad.
+        /// </summary>
+        public static string EtiquetaCantidad {
+            get {
+                return ResourceManager.GetString("EtiquetaCantidad", resourceCulture);
             }
         }
         
@@ -475,6 +511,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Número.
+        /// </summary>
+        public static string EtiquetaNumero {
+            get {
+                return ResourceManager.GetString("EtiquetaNumero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Observación.
         /// </summary>
         public static string EtiquetaObservacion {
@@ -651,6 +696,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaTipo {
             get {
                 return ResourceManager.GetString("EtiquetaTipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo Documento.
+        /// </summary>
+        public static string EtiquetaTipoDocumentoNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaTipoDocumentoNombre", resourceCulture);
             }
         }
         
@@ -849,6 +903,51 @@ namespace CoreGeneral.Recursos {
         public static string TituloBloqueContratoModificar {
             get {
                 return ResourceManager.GetString("TituloBloqueContratoModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Documento.
+        /// </summary>
+        public static string TituloBloqueDocumentoConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Documento .
+        /// </summary>
+        public static string TituloBloqueDocumentoDetalleConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoDetalleConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Documento.
+        /// </summary>
+        public static string TituloBloqueDocumentoDetalleModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoDetalleModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insetar Documento.
+        /// </summary>
+        public static string TituloBloqueDocumentoInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Lista Precios.
+        /// </summary>
+        public static string TituloBloqueDocumentoModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoModificar", resourceCulture);
             }
         }
         
@@ -1128,6 +1227,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloConductorListar {
             get {
                 return ResourceManager.GetString("TituloConductorListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Listas de Documentos.
+        /// </summary>
+        public static string TituloDocumentoListar {
+            get {
+                return ResourceManager.GetString("TituloDocumentoListar", resourceCulture);
             }
         }
         

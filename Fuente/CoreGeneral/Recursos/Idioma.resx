@@ -633,4 +633,52 @@
     <value>Precio Venta</value>
     <comment>Label del campo PrecioVenta</comment>
   </data>
+  <data name="TituloBloqueDocumentoConsultar" xml:space="preserve">
+    <value>Consultar Documento</value>
+    <comment>Titulo de la vista Consultar de la entidad Documento y DocumentoDetalle</comment>
+  </data>
+  <data name="TituloBloqueDocumentoInsertar" xml:space="preserve">
+    <value>Insetar Documento</value>
+    <comment>Titulo de la vista Insertar de la entidad Documento y DocumentoDetalle</comment>
+  </data>
+  <data name="TituloBloqueDocumentoModificar" xml:space="preserve">
+    <value>Modificar Lista Precios</value>
+    <comment>Titulo de la vista Modificar de la entidad Documento y DocumentoDetalle</comment>
+  </data>
+  <data name="TituloDocumentoListar" xml:space="preserve">
+    <value>Listas de Documentos</value>
+    <comment>Titulo de Documentos</comment>
+  </data>
+  <data name="EtiquetaAnulado" xml:space="preserve">
+    <value>Anulado</value>
+    <comment>Label del campo Anulado</comment>
+  </data>
+  <data name="EtiquetaBodegaDestinoNombre" xml:space="preserve">
+    <value>Bodega Destino</value>
+    <comment>Label del campo BodegaDestino</comment>
+  </data>
+  <data name="EtiquetaBodegaOrigenNombre" xml:space="preserve">
+    <value>Bodega Origen</value>
+    <comment>Label del campo BodegaOrigen</comment>
+  </data>
+  <data name="EtiquetaCantidad" xml:space="preserve">
+    <value>Cantidad</value>
+    <comment>Label del campo Cantidad</comment>
+  </data>
+  <data name="EtiquetaNumero" xml:space="preserve">
+    <value>Número</value>
+    <comment>Label del campo Número</comment>
+  </data>
+  <data name="EtiquetaTipoDocumentoNombre" xml:space="preserve">
+    <value>Tipo Documento</value>
+    <comment>Label del campo Tipo Documento</comment>
+  </data>
+  <data name="TituloBloqueDocumentoDetalleConsultar" xml:space="preserve">
+    <value>Consultar Documento </value>
+    <comment>Titulo de la vista Consultar de los Documento y sus Detalles</comment>
+  </data>
+  <data name="TituloBloqueDocumentoDetalleModificar" xml:space="preserve">
+    <value>Modificar Documento</value>
+    <comment>Titulo de la vista Editar de los Documento y sus Detalles</comment>
+  </data>
 </root>
