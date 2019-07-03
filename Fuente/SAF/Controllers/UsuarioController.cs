@@ -37,23 +37,21 @@ namespace SAF.Controllers
 				{
 					if (lisMenus[i].SubOrden == null)
 					{
-						strMenu.Append("<a href=\"#\" >");
-						strMenu.Append(string.Concat("<i class=\"", lisMenus[i].Imagen, "\"></i>"));
-						strMenu.Append(string.Concat("<span class=\"label label-primary\">", lisMenus[i].Nombre, "</span>"));
-						strMenu.Append("</a>");
-						strMenu.Append("<ul class=\"sidebar-submenu\" style=\"display: none;\">");
+                        strMenu.Append("<button class=\"dropdown-btn\">");
+                        strMenu.Append(string.Concat("<i class=\"", lisMenus[i].Imagen, "\"></i>&nbsp;&nbsp;", lisMenus[i].Nombre));
+                        strMenu.Append("</button>");
 
-						for (int j = i; j < lisMenus.Count; j++)
-						{
-							if (lisMenus[i].Orden == lisMenus[j].Orden && lisMenus[i].Id != lisMenus[j].Id)
-							{
-								strMenu.Append(string.Concat("<li><a href=\"#\" onclick=\"cargarVista('", lisMenus[j].Vista, "');\"><i class=\"", lisMenus[j].Imagen, "\"></i>", lisMenus[j].Nombre, "</a></li>"));
-							}
-						}
-						strMenu.Append("</ul>");
-					}
-				}
-				strMenu.Append("</li><script>$.sidebarMenu($('.sidebar-menu'));</script>");
+                        strMenu.Append("<div class=\"dropdown-container\">");
+                        for (int j = i; j < lisMenus.Count; j++)
+                        {
+                        	if (lisMenus[i].Orden == lisMenus[j].Orden && lisMenus[i].Id != lisMenus[j].Id)
+                        	{
+                        		strMenu.Append(string.Concat("<a href=\"#\" onclick=\"cargarVista('", lisMenus[j].Vista, "');\"><i class=\"", lisMenus[j].Imagen, "\"></i>&nbsp;&nbsp;", lisMenus[j].Nombre, "</a>"));
+                        	}
+                        }
+                        strMenu.Append("</div>");
+                    }
+                }
 				ViewBag.Arbol = strMenu;
 				return View();
 			}
@@ -70,6 +68,5 @@ namespace SAF.Controllers
 			await HttpContext.SignOutAsync();
 			return RedirectToAction("LoginUsuario", "Login");
 		}
-
 	}
 }

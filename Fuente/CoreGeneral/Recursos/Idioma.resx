@@ -642,7 +642,7 @@
     <comment>Titulo de la vista Insertar de la entidad Documento y DocumentoDetalle</comment>
   </data>
   <data name="TituloBloqueDocumentoModificar" xml:space="preserve">
-    <value>Modificar Lista Precios</value>
+    <value>Modificar Documento</value>
     <comment>Titulo de la vista Modificar de la entidad Documento y DocumentoDetalle</comment>
   </data>
   <data name="TituloDocumentoListar" xml:space="preserve">

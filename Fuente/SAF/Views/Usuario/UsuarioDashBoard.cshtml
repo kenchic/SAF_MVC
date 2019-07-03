@@ -1,39 +1,38 @@
 ﻿<!DOCTYPE html>
 @{
-	Layout = null;
-	var base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.logo);
-	var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+    Layout = null;
+    var base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.logo);
+    var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
 }
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
-	<title>@ViewBag.Title - SAF</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>@ViewBag.Title - SAF</title>
     <environment include="Development">
         <link rel="stylesheet" type="text/css" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="~/lib/font-awesome/css/all.min.css" />
-        <link rel="stylesheet" type="text/css" href="~/lib/slidermenu/sidebar-menu.css">
         <link rel="stylesheet" type="text/css" href="~/css/saf.css" />
         <link rel="stylesheet" type="text/css" href="~/css/general.css" />
     </environment>
 </head>
-<body>
-	<div id="page">
-		<div id="header">
-			<img src="@imgSrc" height="50" />
-			<span id="pushRight" class="fa fa-bars fa-2x btn-lista-vista"></span>
-		</div>
-		<div id="contenido">
-		</div>
-		<div id="menu">
-		</div>
-	</div>
-	<div id="modalOperacion">
-	</div>
+<body style="width:100%">
+    <div id="page">
+        <div id="menu" class="sidenav">
+        </div>
+        <div id="contenidoPrincipal" style="margin-left:250px">
+            <div id="header">
+                <img src="@imgSrc" height="50" />
+                <span id="pushRight" class="fa fa-bars fa-2x btn-lista-vista" onclick="abrirMenu()"></span>
+            </div>
+            <div id="contenido">
+            </div>
+        </div>
+    </div>
+    <div id="modalOperacion">
+    </div>
     <environment include="Development">
         <script src="~/lib/jquery/jquery.min.js"></script>
-        <script src="~/lib/slidermenu/sidebar-menu.js"></script>
         <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
         <script src="~/js/saf.js"></script>
         <script src="~/js/general.js"></script>

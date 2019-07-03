@@ -21,3 +21,19 @@ function abrirVistaModal(urlIn, divDestino, idModal) {
         }
     });
 }
+
+/*MENU*/
+function abrirMenu() {
+    if (document.getElementById("menu").style.width === "0px")
+    {
+        document.getElementById("menu").style.width = "250px";
+        document.getElementById("contenidoPrincipal").style.marginLeft = "250px";
+    }
+    else
+    {
+        document.getElementById("menu").style.width = "0px";
+        document.getElementById("contenidoPrincipal").style.marginLeft = "0px";
+    }
+}
+/*MENU*/
+

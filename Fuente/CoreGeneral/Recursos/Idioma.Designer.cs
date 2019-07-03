@@ -943,7 +943,7 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Modificar Lista Precios.
+        ///   Busca una cadena traducida similar a Modificar Documento.
         /// </summary>
         public static string TituloBloqueDocumentoModificar {
             get {
