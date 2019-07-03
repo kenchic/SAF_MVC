@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  StoredProcedure [dbo].[pDocumento]    Script Date: 17/06/2019 01:19:24 p.m. ******/
+/****** Object:  StoredProcedure [dbo].[pDocumento]    Script Date: 03/07/2019 03:32:27 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,10 +14,13 @@ GO
 CREATE PROCEDURE [dbo].[pDocumento]  
 (
 	@Accion INT = 0, --0:Listar Todos, 1: Listar Activos, 2: Consultar, 3: Insertar, 4: Editar, 5: Borrar, 6: Insertar Lista y Detalle, 7: Editar Lista y Detalle
-	@Json NVARCHAR(max)	
+	@Json NVARCHAR(max)	,
+	@IdDocumento INT OUTPUT
 )
 AS 
 BEGIN
+	SET @IdDocumento = 0
+
 	IF (@Accion = 0)
 		SELECT Id, Numero, idTipoDocumento, idBodegaOrigen, idBodegaDestino, Fecha, Descripcion, Anulado, TipoDocumentoNombre, BodegaOrigenNombre, BodegaDestinoNombre FROM vDocumento
 
@@ -96,7 +99,6 @@ BEGIN
 		BEGIN
 			BEGIN TRANSACTION;  
 			BEGIN TRY 
-				DECLARE @ID_DOCUMENTO AS INT
 
 				--Insertar Documento				
 				INSERT INTO bdDocumento (idTipoDocumento, idBodegaOrigen, idBodegaDestino, Numero, Fecha, Descripcion, Anulado)
@@ -115,11 +117,11 @@ BEGIN
 						GROUP BY parent_ID) Documento
 				WHERE Documento.Fecha <> ''
 
-				SELECT @ID_DOCUMENTO = SCOPE_IDENTITY()
+				SELECT @IdDocumento = SCOPE_IDENTITY()
 
 				--Insertar Detalle
 				INSERT INTO bdDocumentoDetalle (idDocumento, idElemento, Cantidad)
-				SELECT @ID_DOCUMENTO, idElemento, Cantidad
+				SELECT @IdDocumento, idElemento, Cantidad
 				FROM (SELECT
 							max(CASE WHEN name='Fecha' THEN convert(VARCHAR(100),StringValue) ELSE '' END) AS [Fecha],
 							max(CASE WHEN name='idElemento' THEN convert(INT,StringValue) ELSE 0 END) AS [idElemento],
@@ -129,6 +131,7 @@ BEGIN
 						WHERE ValueType = 'string' OR ValueType = 'boolean' OR ValueType = 'int'
 						GROUP BY parent_ID) DocumentoDetalle
 				WHERE DocumentoDetalle.Fecha = '' AND DocumentoDetalle.Cantidad > 0 AND DocumentoDetalle.idElemento > 0
+				
 			END TRY  
 			BEGIN CATCH  
 				SELECT   
