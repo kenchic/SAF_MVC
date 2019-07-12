@@ -2,14 +2,18 @@
 @{
     Layout = null;
     var base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.logo);
-    var imgSrc = String.Format("data:image/jpg;base64,{0}", base64);
+    var imgLogo = String.Format("data:image/jpg;base64,{0}", base64);
+
+    base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.cargar);
+    var imgCargar = String.Format("data:image/jpg;base64,{0}", base64);
 }
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title - SAF</title>
     <environment include="Development">
+        <link rel="stylesheet" type="text/css" href="~/lib/datatables/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="~/lib/font-awesome/css/all.min.css" />
         <link rel="stylesheet" type="text/css" href="~/css/saf.css" />
@@ -22,7 +26,7 @@
         </div>
         <div id="contenidoPrincipal" style="margin-left:250px">
             <div id="header">
-                <img src="@imgSrc" height="50" />
+                <img src="@imgLogo" height="50" />
                 <span id="pushRight" class="fa fa-bars fa-2x btn-lista-vista" onclick="abrirMenu()"></span>
             </div>
             <div id="contenido">
@@ -31,12 +35,17 @@
     </div>
     <div id="modalOperacion">
     </div>
+    <div id="cargando">
+        <div class="cargandoImagen parpadea">
+            <img src="@imgCargar" height="50" width="50" />
+        </div>
+    </div>
     <environment include="Development">
         <script src="~/lib/jquery/jquery.min.js"></script>
         <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
         <script src="~/js/saf.js"></script>
         <script src="~/js/general.js"></script>
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
     </environment>
 </body>
 </html>
-

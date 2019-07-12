@@ -124,3 +124,39 @@
     padding-right: 8px;
 }
 /*MENU DROPDOWN*/
+
+/*PROCESANDO*/
+#cargando {
+    z-index: 9999;
+    background: rgba(244, 244, 242, 0.45) repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.parpadea {
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.cargandoImagen {
+    /*border: 0.01em solid rgba(150, 150, 150, 0.1);*/
+    border-radius: 50%;
+    font-size: 30px;
+    height: 1em;
+    list-style: outside none none;
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+    width: 1em;
+    z-index: 2147483647;
+}

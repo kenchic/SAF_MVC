@@ -2,11 +2,7 @@
     $('#' + divDestino).load(view);
 }
 
-function cerrarModal(idModal) {
-	$('#' + idModal).modal('hide');
-	$('body').removeClass('modal-open');
-}
-
+//Función para mostrar modales
 function abrirVistaModal(urlIn, divDestino, idModal) {
     $.ajax({
         url: urlIn,
@@ -22,7 +18,13 @@ function abrirVistaModal(urlIn, divDestino, idModal) {
     });
 }
 
-/*MENU*/
+//Función para cerrar modales
+function cerrarModal(idModal) {
+    $('#' + idModal).modal('hide');
+    $('body').removeClass('modal-open');
+}
+
+//Función para ocultar o mostrar menu izq.
 function abrirMenu() {
     if (document.getElementById("menu").style.width === "0px")
     {
@@ -35,5 +37,10 @@ function abrirMenu() {
         document.getElementById("contenidoPrincipal").style.marginLeft = "0px";
     }
 }
-/*MENU*/
 
+//Funciones de inicio y fin de request
+$(document).ajaxStart(function () {
+    $('#cargando').fadeIn();
+    }).ajaxStop(function () {
+        $('#cargando').fadeOut();
+});

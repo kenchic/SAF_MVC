@@ -63,6 +63,16 @@ namespace CoreGeneral.Recursos {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        public static byte[] cargar {
+            get {
+                object obj = ResourceManager.GetObject("cargar", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         public static byte[] logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
