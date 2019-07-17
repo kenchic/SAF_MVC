@@ -11,7 +11,7 @@ function abrirVistaModal(urlIn, divDestino, idModal) {
             $('#' + idModal).modal({
                 backdrop: "static",
                 keyboard: false,
-                role: "dialog",                
+                role: "dialog",
                 show: true
             });
         }
@@ -26,13 +26,11 @@ function cerrarModal(idModal) {
 
 //Función para ocultar o mostrar menu izq.
 function abrirMenu() {
-    if (document.getElementById("menu").style.width === "0px")
-    {
+    if (document.getElementById("menu").style.width === "0px") {
         document.getElementById("menu").style.width = "250px";
         document.getElementById("contenidoPrincipal").style.marginLeft = "250px";
     }
-    else
-    {
+    else {
         document.getElementById("menu").style.width = "0px";
         document.getElementById("contenidoPrincipal").style.marginLeft = "0px";
     }
@@ -41,6 +39,9 @@ function abrirMenu() {
 //Funciones de inicio y fin de request
 $(document).ajaxStart(function () {
     $('#cargando').fadeIn();
-    }).ajaxStop(function () {
-        $('#cargando').fadeOut();
 });
+
+$(document).ajaxStop(function () {
+    $('#cargando').fadeOut();
+});
+

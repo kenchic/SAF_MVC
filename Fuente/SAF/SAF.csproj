@@ -5,11 +5,14 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>  
     <Version>18.0.5</Version>  
     <Company>Integral Solutions</Company>  
-    <UserSecretsId>59442603-cd74-40b2-97a1-cb39f159af3d</UserSecretsId>
+    <UserSecretsId>59442603-cd74-40b2-97a1-cb39f159af3d</UserSecretsId>  
+    <AssemblyVersion>19.0.5.0</AssemblyVersion>  
+    <FileVersion>19.0.5.0</FileVersion>  
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.6" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="1.0.163" />
