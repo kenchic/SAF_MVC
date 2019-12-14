@@ -38,10 +38,10 @@ function abrirMenu() {
 
 //Funciones de inicio y fin de request
 $(document).ajaxStart(function () {
-    $('#cargando').fadeIn();
+    $('#cargando').show();
 });
 
 $(document).ajaxStop(function () {
-    $('#cargando').fadeOut();
+    $('#cargando').hide();
 });
 

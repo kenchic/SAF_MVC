@@ -82,7 +82,7 @@ namespace SAF.Controllers
                 ModelState.Remove("Admin");
                 if (ModelState.IsValid)
                 {
-                    SesionModelo objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
+                    objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
                     objUsuario.AsignarSesion(objSesion);
 
                     if (objUsuario.Autenticar(ref objUsuarioLogin))

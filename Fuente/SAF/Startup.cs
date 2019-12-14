@@ -44,7 +44,7 @@ namespace SAF
             else
             {
                 app.UseExceptionHandler("/Inicio/Error");
-            }
+            }            
             
 			app.UseStaticFiles();
             app.UseSession();

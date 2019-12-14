@@ -15,6 +15,10 @@
       "destination": "wwwroot/lib/jquery/"
     },
     {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/lib/jqueryui/"
+    },
+    {
       "library": "jquery-validate@1.19.1",
       "destination": "wwwroot/lib/jquery-validate/"
     },
@@ -24,11 +28,7 @@
     },
     {
       "library": "datatables@1.10.19",
-      "destination": "wwwroot/lib/datatables"
-    },
-    {
-      "library": "magicsuggest@2.1.4",
-      "destination": "wwwroot/lib/magicsuggest"
+      "destination": "wwwroot/lib/datatables/"
     }
   ]
 }

@@ -52,7 +52,8 @@ namespace SAF.Controllers
                         strMenu.Append("</div>");
                     }
                 }
-				ViewBag.Arbol = strMenu;
+                strMenu.Append("</li>");
+                ViewBag.Arbol = strMenu;
 				return View();
 			}
 			catch (Exception ex)

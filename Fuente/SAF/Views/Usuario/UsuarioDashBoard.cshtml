@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewBag.Title - SAF</title>
     <environment include="Development">
-        <link rel="stylesheet" type="text/css" href="~/lib/magicsuggest/magicsuggest.css" />
+        <link rel="stylesheet" type="text/css" href="~/lib/jqueryui/jquery-ui.min.css" />
         <link rel="stylesheet" type="text/css" href="~/lib/datatables/css/jquery.dataTables.min.css">
         <link rel="stylesheet" type="text/css" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="~/lib/font-awesome/css/all.min.css" />
@@ -28,7 +28,7 @@
         <div id="contenidoPrincipal" style="margin-left:250px">
             <div id="header">
                 <img src="@imgLogo" height="50" />
-                <span id="pushRight" class="fa fa-bars fa-2x btn-lista-vista" onclick="abrirMenu()"></span>
+                <span id="pushRight" class="fa fa-bars fa-2x btn-lista-vista" onclick="abrirMenu();"></span>
             </div>
             <div id="contenido">
             </div>
@@ -43,11 +43,12 @@
     </div>
     <environment include="Development">
         <script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/jqueryui/jquery-ui.min.js"></script>
         <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+
         <script src="~/js/saf.js"></script>
         <script src="~/js/general.js"></script>
-        <script src="~/lib/magicsuggest/magicsuggest.js"></script>
-        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
     </environment>
 </body>
 </html>
