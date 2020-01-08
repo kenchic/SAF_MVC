@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  StoredProcedure [dbo].[pDocumento]    Script Date: 03/07/2019 03:32:27 p.m. ******/
+/****** Object:  StoredProcedure [dbo].[pDocumento]    Script Date: 08/01/2020 11:20:23 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -178,22 +178,41 @@ BEGIN
 					GROUP BY parent_ID) AS Documento ON A.Id = Documento.Id
 				WHERE Documento.Fecha <> ''
 					
-				--Editar Detalle
-				UPDATE DD
-				SET idElemento = DocumentoDetalle.idElemento,
-					Cantidad = DocumentoDetalle.Cantidad
-				FROM bdDocumentoDetalle AS DD
+				--Borrar Detalle
+				DELETE DD
+				FROM bdDocumentoDetalle DD
 				INNER JOIN 
-				(SELECT
-						max(CASE WHEN name='Id' THEN convert(INT,StringValue) ELSE 0 END) AS [Id],
-						max(CASE WHEN name='Fecha' THEN convert(DATETIME,StringValue) ELSE '' END) AS [Fecha],
-						max(CASE WHEN name='idElemento' THEN convert(INT,StringValue) ELSE 0 END) AS [idElemento],
-						max(CASE WHEN name='Cantidad' THEN convert(INT,StringValue) ELSE 0 END) AS [Cantidad]
+				(SELECT max(CASE WHEN name='Id' THEN convert(INT,StringValue) ELSE 0 END) AS [Id],
+						max(CASE WHEN name='Fecha' THEN convert(DATETIME,StringValue) ELSE '' END) AS [Fecha]
 				FROM SAFseg.dbo.fParseJSON
 					(@json)
-				WHERE ValueType = 'string' OR ValueType = 'int'
-				GROUP BY parent_ID) AS DocumentoDetalle ON DD.Id = DocumentoDetalle.Id
-				WHERE DocumentoDetalle.Fecha = ''
+				WHERE ValueType = 'string' OR ValueType = 'boolean' OR ValueType = 'int'
+				GROUP BY parent_ID) AS Documento ON DD.idDocumento = Documento.Id 
+				WHERE Documento.Fecha <> ''
+				
+				--Insertar Detalle
+				SELECT @IdDocumento  = Documento.Id 
+				FROM
+				(SELECT max(CASE WHEN name='Id' THEN convert(INT,StringValue) ELSE 0 END) AS [Id],
+						max(CASE WHEN name='Fecha' THEN convert(DATETIME,StringValue) ELSE '' END) AS [Fecha]
+				FROM SAFseg.dbo.fParseJSON
+					(@json)
+				WHERE ValueType = 'string' OR ValueType = 'boolean' OR ValueType = 'int'
+				GROUP BY parent_ID) AS Documento 
+				WHERE Documento.Fecha <> ''
+
+				INSERT INTO bdDocumentoDetalle (idDocumento, idElemento, Cantidad)
+				SELECT @IdDocumento, idElemento, Cantidad
+				FROM (SELECT
+							max(CASE WHEN name='Fecha' THEN convert(VARCHAR(100),StringValue) ELSE '' END) AS [Fecha],
+							max(CASE WHEN name='idElemento' THEN convert(INT,StringValue) ELSE 0 END) AS [idElemento],
+							max(CASE WHEN name='Cantidad' THEN convert(INT,StringValue) ELSE 0 END) AS [Cantidad]
+						FROM SAFseg.dbo.fParseJSON
+							( @Json )
+						WHERE ValueType = 'string' OR ValueType = 'boolean' OR ValueType = 'int'
+						GROUP BY parent_ID) DocumentoDetalle
+				WHERE DocumentoDetalle.Fecha = '' AND DocumentoDetalle.Cantidad > 0 AND DocumentoDetalle.idElemento > 0
+
 			END TRY  
 			BEGIN CATCH  
 				SELECT   
@@ -219,7 +238,7 @@ END
 
 GO
 
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'pDocumento'
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'pDocumento'
 GO
 
 
