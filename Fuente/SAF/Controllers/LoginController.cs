@@ -64,6 +64,8 @@ namespace SAF.Controllers
             Random rdmFoto = new Random();
             ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
             objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
+
+            ViewBag.Version = "Version 20.1";
             return View();
         }
 
