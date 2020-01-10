@@ -1,6 +1,7 @@
 USE [SAFseg]
 GO
 
+/****** Object:  Table [dbo].[bdRequerimiento]    Script Date: 09/01/2020 04:26:48 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -13,6 +14,7 @@ GO
 CREATE TABLE [dbo].[bdRequerimiento](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Descripcion] [varchar](max) NOT NULL,
+	[Estado] [varchar](10) NOT NULL CONSTRAINT [DF_bdRequerimiento_Estado]  DEFAULT ('I'),
  CONSTRAINT [PK_bdRequerimiento] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -24,7 +26,7 @@ GO
 SET ANSI_PADDING OFF
 GO
 
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'18.0.2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdRequerimiento'
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'20.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdRequerimiento'
 GO
 
 
