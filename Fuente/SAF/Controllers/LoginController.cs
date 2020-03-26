@@ -32,40 +32,13 @@ namespace SAF.Controllers
         }
 
         [HttpGet]
-        public IActionResult RegisterUser()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult RegisterUser([Bind] UsuarioModelo usuario)
-        {
-            if (ModelState.IsValid)
-            {
-                string RegistrationStatus = "";
-                if (RegistrationStatus == "Success")
-                {
-                    ModelState.Clear();
-                    TempData["Success"] = "Registration Successful!";
-                    return View();
-                }
-                else
-                {
-                    TempData["Fail"] = "This User ID already exists. Registration Failed.";
-                    return View();
-                }
-            }
-            return View();
-        }
-
-        [HttpGet]
         public IActionResult LoginUsuario()
         {
             Random rdmFoto = new Random();
             ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
             objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
 
-            ViewBag.Version = "Version 20.2.3";
+            ViewBag.Version = "Version 20.0.3";
             return View();
         }
 
