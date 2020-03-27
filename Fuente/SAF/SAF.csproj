@@ -3,11 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>  
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>  
-    <Version>19.0.5</Version>  
+    <Version>20.0.3</Version>  
     <Company>Integral Solutions</Company>  
     <UserSecretsId>59442603-cd74-40b2-97a1-cb39f159af3d</UserSecretsId>  
-    <AssemblyVersion>19.0.5.0</AssemblyVersion>  
-    <FileVersion>19.0.5.0</FileVersion>  
+    <AssemblyVersion>20.0.3.0</AssemblyVersion>  
+    <FileVersion>20.0.3.0</FileVersion>  
     <StartupObject />
   </PropertyGroup>
 
