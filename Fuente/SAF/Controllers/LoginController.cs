@@ -38,7 +38,10 @@ namespace SAF.Controllers
             ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
             objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
 
-            ViewBag.Version = "Version 20.0.3";
+            objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
+            SistemaNegocio objSistemaNegocio = new SistemaNegocio(objSesion);
+            SistemaModelo objSistema = objSistemaNegocio.Consultar(2); //SAF
+            ViewBag.Version = string.Concat("Version ", objSistema == null ? string.Empty : objSistema.Version);
             return View();
         }
 
@@ -57,7 +60,7 @@ namespace SAF.Controllers
                 ModelState.Remove("Admin");
                 if (ModelState.IsValid)
                 {
-                    objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
+                    
                     objUsuario.AsignarSesion(objSesion);
 
                     if (objUsuario.Autenticar(ref objUsuarioLogin))

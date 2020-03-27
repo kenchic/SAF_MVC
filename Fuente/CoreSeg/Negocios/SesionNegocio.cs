@@ -39,7 +39,7 @@ namespace CoreSeg.Negocios
                 objInsertar.FechaInicio = DateTime.Now;
 
                 string Json = JsonConvert.SerializeObject(objInsertar);
-                objSesion.Insertar("3", Json);
+                objSesion.InsertarS("3", Json);
             }
             catch (Exception ex)
             {

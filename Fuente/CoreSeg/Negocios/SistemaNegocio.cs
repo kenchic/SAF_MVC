@@ -13,79 +13,79 @@ namespace CoreSeg.Negocios
     {
 		private readonly SistemaDatos objSistema = new SistemaDatos();
 
-        public void AsignarSesion(SesionModelo objSesion)
+        public SistemaNegocio(SesionModelo objSesion)
         {
-            objUsuario.objSesion = objSesion;
+            objSistema.objSesion = objSesion;
         }
 
-        public List<UsuarioModelo> Listar()
+        public List<SistemaModelo> Listar()
 		{
 			try
 			{
-				IList<UsuarioModelo> LisUsuario = objUsuario.Listar("0");
-				return LisUsuario.ToList();
+				IList<SistemaModelo> LisSistema = objSistema.Listar("0");
+				return LisSistema.ToList();
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - Listar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Listar");
 				throw;
 			}
 		}
 
-		public List<UsuarioModelo> ListarActivos()
+		public List<SistemaModelo> ListarActivos()
 		{
 			try
 			{
-				IList<UsuarioModelo> LisUsuario = objUsuario.Listar("1");
-				return LisUsuario.ToList();
+				IList<SistemaModelo> LisSistema = objSistema.Listar("1");
+				return LisSistema.ToList();
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - ListarActivos");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - ListarActivos");
 				throw;
 			}
 		}
 
-		public UsuarioModelo Consultar(int id)
+		public SistemaModelo Consultar(int id)
 		{
 			try
 			{
-				UsuarioModelo objConsultar = new UsuarioModelo();
+				SistemaModelo objConsultar = new SistemaModelo();
 				objConsultar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objConsultar);
-				return objUsuario.Consultar("2", Json);
+				return objSistema.Consultar("2", Json);
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - Consultar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Consultar");
 				throw;
 			}
 		}
 
-		public void Insertar(UsuarioModelo objInsertar)
+		public void Insertar(SistemaModelo objInsertar)
 		{
 			try
 			{
 				string Json = JsonConvert.SerializeObject(objInsertar);
-				objUsuario.Insertar("3", Json);
+				objSistema.Insertar("3", Json);
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - Insertar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Insertar");
 				throw;
 			}
 		}
 
-		public void Editar(UsuarioModelo objEditar)
+		public void Editar(SistemaModelo objEditar)
 		{
 			try
 			{				
 				string Json = JsonConvert.SerializeObject(objEditar);				
-				objUsuario.Editar("4", Json);
+				objSistema.Editar("4", Json);
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - Editar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Editar");
 				throw;
 			}
 		}
@@ -94,51 +94,17 @@ namespace CoreSeg.Negocios
 		{
 			try
 			{
-				UsuarioModelo objBorrar = new UsuarioModelo();
+				SistemaModelo objBorrar = new SistemaModelo();
 				objBorrar.Id = (short)id;
 				string Json = JsonConvert.SerializeObject(objBorrar);				
-				return objUsuario.Borrar("5", Json);
+				return objSistema.Borrar("5", Json);
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - Borrar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Borrar");
 				throw;
 			}
 		}
-		
-		public bool Autenticar(ref UsuarioModelo objAutenticar)
-		{
-			try
-			{				
-				string Json = JsonConvert.SerializeObject(objAutenticar);
-				objAutenticar = objUsuario.Consultar("6", Json);
-				return objAutenticar != null;
-			}
-			catch (Exception ex)
-			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - Autenticar");
-				throw;
-			}
-		}
-
-		public List<UsuarioMenuModelo> ListarMenu(int id)
-		{
-			try
-			{
-				UsuarioModelo objConsultar = new UsuarioModelo();
-				objConsultar.Id = (short)id;
-				string Json = JsonConvert.SerializeObject(objConsultar);
-
-				IList<UsuarioMenuModelo> LisUsuario = objUsuario.ListarMenu("0", Json);
-				return LisUsuario == null ? new List<UsuarioMenuModelo>() : LisUsuario.ToList();
-			}
-			catch (Exception ex)
-			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.UsuarioNegocio - ListarMenu");
-				throw;
-			}
-		}
-	
 	}
 	
 }
