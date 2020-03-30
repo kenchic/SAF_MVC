@@ -1,7 +1,7 @@
 USE [SAFseg]
 GO
 
-/****** Object:  Table [dbo].[bdArtefactoHistorial]    Script Date: 10/01/2019 10:08:02 p.m. ******/
+/****** Object:  Table [dbo].[bdArtefactoHistorial]    Script Date: 27/03/2020 01:29:14 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,6 @@ CREATE TABLE [dbo].[bdArtefactoHistorial](
 	[Objetivo] [varchar](max) NOT NULL,
 	[Descripcion] [varchar](max) NOT NULL,
 	[Extension] [varchar](10) NOT NULL,
-	[Archivo] [varbinary](max) NOT NULL,
 	[Version] [varchar](10) NULL,
  CONSTRAINT [PK_bdArtefactoHistorial] PRIMARY KEY CLUSTERED 
 (
@@ -38,7 +37,7 @@ GO
 ALTER TABLE [dbo].[bdArtefactoHistorial] CHECK CONSTRAINT [FK_bdArtefactoHistorialArtefacto]
 GO
 
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdArtefactoHistorial'
+EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'20.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdArtefactoHistorial'
 GO
 
 
