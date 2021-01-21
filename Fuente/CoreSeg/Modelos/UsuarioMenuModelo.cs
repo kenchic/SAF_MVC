@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace CoreSeg.Modelos
+namespace CoreSEG.Modelos
 {
 	public class UsuarioMenuModelo
 	{

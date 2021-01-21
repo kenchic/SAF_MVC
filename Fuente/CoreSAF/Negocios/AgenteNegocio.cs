@@ -6,7 +6,7 @@ using CoreGeneral;
 using CoreGeneral.Recursos;
 using CoreSAF.Datos;
 using CoreSAF.Modelos;
-using CoreSeg.Modelos;
+using CoreSEG.Modelos;
 
 namespace CoreSAF.Negocios
 {

@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdBodega]    Script Date: 03/06/2019 12:26:54 p.m. ******/
+/****** Object:  Table [SAF].[bdBodega]    Script Date: 20/01/2021 12:02:30 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -11,7 +11,7 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[bdBodega](
+CREATE TABLE [SAF].[bdBodega](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[idCliente] [int] NULL,
 	[idProveedor] [smallint] NULL,
@@ -29,21 +29,16 @@ GO
 SET ANSI_PADDING OFF
 GO
 
-ALTER TABLE [dbo].[bdBodega]  WITH NOCHECK ADD  CONSTRAINT [FK_bdBodegaCliente] FOREIGN KEY([idCliente])
-REFERENCES [dbo].[bdCliente] ([Id])
+ALTER TABLE [SAF].[bdBodega]  WITH NOCHECK ADD  CONSTRAINT [FK_bdBodegaCliente] FOREIGN KEY([idCliente])
+REFERENCES [SAF].[bdCliente] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdBodega] NOCHECK CONSTRAINT [FK_bdBodegaCliente]
+ALTER TABLE [SAF].[bdBodega] NOCHECK CONSTRAINT [FK_bdBodegaCliente]
 GO
 
-ALTER TABLE [dbo].[bdBodega]  WITH NOCHECK ADD  CONSTRAINT [FK_bdBodegaProveedor] FOREIGN KEY([idProveedor])
-REFERENCES [dbo].[bdProveedor] ([Id])
+ALTER TABLE [SAF].[bdBodega]  WITH NOCHECK ADD  CONSTRAINT [FK_bdBodegaProveedor] FOREIGN KEY([idProveedor])
+REFERENCES [SAF].[bdProveedor] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdBodega] NOCHECK CONSTRAINT [FK_bdBodegaProveedor]
+ALTER TABLE [SAF].[bdBodega] NOCHECK CONSTRAINT [FK_bdBodegaProveedor]
 GO
-
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdBodega'
-GO
-
-

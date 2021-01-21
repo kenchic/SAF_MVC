@@ -1,14 +1,14 @@
 USE [SAF]
 GO
 
-/****** Object:  Trigger [dbo].[tProyectoAuditoria]    Script Date: 03/02/2020 11:11:34 a.m. ******/
+/****** Object:  Trigger [SAF].[tProyectoAuditoria]    Script Date: 03/02/2020 11:11:34 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TRIGGER [dbo].[tProyectoAuditoria] ON [dbo].[bdProyecto] 
+CREATE TRIGGER [SAF].[tProyectoAuditoria] ON [SAF].[bdProyecto] 
 FOR UPDATE, INSERT
 AS
 
@@ -20,37 +20,37 @@ BEGIN
         BEGIN
             IF EXISTS (SELECT * FROM DELETED) 
             	BEGIN --Actualizar
-					SELECT @IdSesion = Id FROM SAFseg.dbo.bdSesion WHERE IdSesionBD = @@SPID
+					SELECT @IdSesion = Id FROM SEG.bdSesion WHERE IdSesionBD = @@SPID
 				
-					SELECT @Detalle = '{ "Anterior": { ' + SAFseg.dbo.fJsonINT('idCliente',idCliente) + ',' + SAFseg.dbo.fJsonINT('idCiudad',idCiudad) + ',' + SAFseg.dbo.fJsonVAR('Nombre', Nombre) + ',' + SAFseg.dbo.fJsonVAR('Tipo', Tipo)  + 
-											',' + SAFseg.dbo.fJsonVAR('Direccion', Direccion) + 
-											',' + SAFseg.dbo.fJsonVAR('Telefono', Telefono) + ',' + SAFseg.dbo.fJsonVAR('Observacion', Observacion) + ',' + SAFseg.dbo.fJsonDATE('Fecha', Fecha) + ',' + SAFseg.dbo.fJsonVAR('FormaContacto', FormaContacto) + 
-											',' + SAFseg.dbo.fJsonVAR('SistemaMedida', SistemaMedida) + ',' + SAFseg.dbo.fJsonVAR('IdentificacionResponsable', IdentificacionResponsable) + ',' + SAFseg.dbo.fJsonVAR('NombreResponsable', NombreResponsable) + 
-											',' + SAFseg.dbo.fJsonVAR('TelResponsable', TelResponsable) + ',' + SAFseg.dbo.fJsonBIT('Activo', Activo) + ',' + SAFseg.dbo.fJsonTINY('Estado', Estado)  + '}, '
+					SELECT @Detalle = '{ "Anterior": { ' + SEG.fJsonINT('idCliente',idCliente) + ',' + SEG.fJsonINT('idCiudad',idCiudad) + ',' + SEG.fJsonVAR('Nombre', Nombre) + ',' + SEG.fJsonVAR('Tipo', Tipo)  + 
+											',' + SEG.fJsonVAR('Direccion', Direccion) + 
+											',' + SEG.fJsonVAR('Telefono', Telefono) + ',' + SEG.fJsonVAR('Observacion', Observacion) + ',' + SEG.fJsonDATE('Fecha', Fecha) + ',' + SEG.fJsonVAR('FormaContacto', FormaContacto) + 
+											',' + SEG.fJsonVAR('SistemaMedida', SistemaMedida) + ',' + SEG.fJsonVAR('IdentificacionResponsable', IdentificacionResponsable) + ',' + SEG.fJsonVAR('NombreResponsable', NombreResponsable) + 
+											',' + SEG.fJsonVAR('TelResponsable', TelResponsable) + ',' + SEG.fJsonBIT('Activo', Activo) + ',' + SEG.fJsonTINY('Estado', Estado)  + '}, '
 					FROM DELETED D
 				
-					SELECT @Detalle = @Detalle + '"Nuevo": { ' + SAFseg.dbo.fJsonINT('idCliente',idCliente) + ',' + SAFseg.dbo.fJsonINT('idCiudad',idCiudad) + ',' + SAFseg.dbo.fJsonVAR('Nombre', Nombre) + ',' + SAFseg.dbo.fJsonVAR('Tipo', Tipo)  + 
-											',' + SAFseg.dbo.fJsonVAR('Direccion', Direccion) + 
-											',' + SAFseg.dbo.fJsonVAR('Telefono', Telefono) + ',' + SAFseg.dbo.fJsonVAR('Observacion', Observacion) + ',' + SAFseg.dbo.fJsonDATE('Fecha', Fecha) + ',' + SAFseg.dbo.fJsonVAR('FormaContacto', FormaContacto) + 
-											',' + SAFseg.dbo.fJsonVAR('SistemaMedida', SistemaMedida) + ',' + SAFseg.dbo.fJsonVAR('IdentificacionResponsable', IdentificacionResponsable) + ',' + SAFseg.dbo.fJsonVAR('NombreResponsable', NombreResponsable) + 
-											',' + SAFseg.dbo.fJsonVAR('TelResponsable', TelResponsable) + ',' + SAFseg.dbo.fJsonBIT('Activo', Activo) + ',' + SAFseg.dbo.fJsonTINY('Estado', Estado)  + '} }'
+					SELECT @Detalle = @Detalle + '"Nuevo": { ' + SEG.fJsonINT('idCliente',idCliente) + ',' + SEG.fJsonINT('idCiudad',idCiudad) + ',' + SEG.fJsonVAR('Nombre', Nombre) + ',' + SEG.fJsonVAR('Tipo', Tipo)  + 
+											',' + SEG.fJsonVAR('Direccion', Direccion) + 
+											',' + SEG.fJsonVAR('Telefono', Telefono) + ',' + SEG.fJsonVAR('Observacion', Observacion) + ',' + SEG.fJsonDATE('Fecha', Fecha) + ',' + SEG.fJsonVAR('FormaContacto', FormaContacto) + 
+											',' + SEG.fJsonVAR('SistemaMedida', SistemaMedida) + ',' + SEG.fJsonVAR('IdentificacionResponsable', IdentificacionResponsable) + ',' + SEG.fJsonVAR('NombreResponsable', NombreResponsable) + 
+											',' + SEG.fJsonVAR('TelResponsable', TelResponsable) + ',' + SEG.fJsonBIT('Activo', Activo) + ',' + SEG.fJsonTINY('Estado', Estado)  + '} }'
 					FROM INSERTED AS I 
 				
-					INSERT INTO SAFseg.dbo.bdAuditoria (idSesion, Tabla, Fecha, Operacion, Observacion, Detalle)
+					INSERT INTO SEG.bdAuditoria (idSesion, Tabla, Fecha, Operacion, Observacion, Detalle)
 					VALUES ( @IdSesion ,'bdProyecto', GETDATE(),'Editar','', @Detalle)
             	END
             ELSE
 				BEGIN --Insertar
-					SELECT @IdSesion = Id FROM SAFseg.dbo.bdSesion WHERE IdSesionBD = @@SPID
+					SELECT @IdSesion = Id FROM SEG.bdSesion WHERE IdSesionBD = @@SPID
 			
-					SELECT @Detalle = '{ "Nuevo": { ' + SAFseg.dbo.fJsonINT('idCliente',idCliente) + ',' + SAFseg.dbo.fJsonINT('idCiudad',idCiudad) + ',' + SAFseg.dbo.fJsonVAR('Nombre', Nombre) + ',' + SAFseg.dbo.fJsonVAR('Tipo', Tipo)  + 
-											',' + SAFseg.dbo.fJsonVAR('Direccion', Direccion) + 
-											',' + SAFseg.dbo.fJsonVAR('Telefono', Telefono) + ',' + SAFseg.dbo.fJsonVAR('Observacion', Observacion) + ',' + SAFseg.dbo.fJsonDATE('Fecha', Fecha) + ',' + SAFseg.dbo.fJsonVAR('FormaContacto', FormaContacto) + 
-											',' + SAFseg.dbo.fJsonVAR('SistemaMedida', SistemaMedida) + ',' + SAFseg.dbo.fJsonVAR('IdentificacionResponsable', IdentificacionResponsable) + ',' + SAFseg.dbo.fJsonVAR('NombreResponsable', NombreResponsable) + 
-											',' + SAFseg.dbo.fJsonVAR('TelResponsable', TelResponsable) + ',' + SAFseg.dbo.fJsonBIT('Activo', Activo) + ',' + SAFseg.dbo.fJsonTINY('Estado', Estado) + '} }'
+					SELECT @Detalle = '{ "Nuevo": { ' + SEG.fJsonINT('idCliente',idCliente) + ',' + SEG.fJsonINT('idCiudad',idCiudad) + ',' + SEG.fJsonVAR('Nombre', Nombre) + ',' + SEG.fJsonVAR('Tipo', Tipo)  + 
+											',' + SEG.fJsonVAR('Direccion', Direccion) + 
+											',' + SEG.fJsonVAR('Telefono', Telefono) + ',' + SEG.fJsonVAR('Observacion', Observacion) + ',' + SEG.fJsonDATE('Fecha', Fecha) + ',' + SEG.fJsonVAR('FormaContacto', FormaContacto) + 
+											',' + SEG.fJsonVAR('SistemaMedida', SistemaMedida) + ',' + SEG.fJsonVAR('IdentificacionResponsable', IdentificacionResponsable) + ',' + SEG.fJsonVAR('NombreResponsable', NombreResponsable) + 
+											',' + SEG.fJsonVAR('TelResponsable', TelResponsable) + ',' + SEG.fJsonBIT('Activo', Activo) + ',' + SEG.fJsonTINY('Estado', Estado) + '} }'
 					FROM INSERTED AS I 
 				
-					INSERT INTO SAFseg.dbo.bdAuditoria (idSesion, Tabla, Fecha, Operacion, Observacion, Detalle)
+					INSERT INTO SEG.bdAuditoria (idSesion, Tabla, Fecha, Operacion, Observacion, Detalle)
 					VALUES ( @IdSesion ,'bdProyecto', GETDATE(),'Insertar','', @Detalle)
 				END
         END

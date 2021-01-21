@@ -1,0 +1,38 @@
+﻿@model CoreSAF.Modelos.TipoMantenimientoModelo
+
+<div class="modal fade" id="modalTipoMantenimientoConsultar">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 text-left">
+                    <h4 class="modal-title">@CoreGeneral.Recursos.Idioma.TituloBloqueTipoMantenimientoConsultar</h4>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-3">
+                        @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "col-form-label ont-weight-bold" })
+                        <span class="form-control">@Html.DisplayFor(model => model.Id)</span>
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "col-form-label font-weight-bold" })
+                        <span class="form-control">@Html.DisplayFor(model => model.Nombre)</span>
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "col-form-label font-weight-bold" })
+                        <span class="form-control">@Html.DisplayFor(model => model.Valor)</span>
+                    </div>
+                    <div class="col-lg-3">
+                        @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "col-form-label font-weight-bold" })
+                        <span class="form-check form-check-input">@Html.DisplayFor(model => model.Activo)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

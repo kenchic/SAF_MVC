@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdDocumento]    Script Date: 17/06/2019 01:37:48 p.m. ******/
+/****** Object:  Table [SAF].[bdDocumento]    Script Date: 20/01/2021 12:07:06 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -11,15 +11,15 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[bdDocumento](
+CREATE TABLE [SAF].[bdDocumento](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[idTipoDocumento] [tinyint] NOT NULL,
+	[idDocumentoTipo] [tinyint] NOT NULL,
 	[idBodegaOrigen] [int] NOT NULL,
 	[idBodegaDestino] [int] NOT NULL,
 	[Numero] [int] NOT NULL,
 	[Fecha] [datetime] NOT NULL,
 	[Descripcion] [varchar](1000) NULL,
-	[Anulado] [bit] NOT NULL,
+	[Estado] [varchar](10) NOT NULL,
  CONSTRAINT [PK_bdMovimientos] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -31,28 +31,23 @@ GO
 SET ANSI_PADDING OFF
 GO
 
-ALTER TABLE [dbo].[bdDocumento]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoBodegaDestino] FOREIGN KEY([idBodegaDestino])
-REFERENCES [dbo].[bdBodega] ([Id])
+ALTER TABLE [SAF].[bdDocumento]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoBodegaDestino] FOREIGN KEY([idBodegaDestino])
+REFERENCES [SAF].[bdBodega] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdDocumento] CHECK CONSTRAINT [FK_bdDocumentoBodegaDestino]
+ALTER TABLE [SAF].[bdDocumento] CHECK CONSTRAINT [FK_bdDocumentoBodegaDestino]
 GO
 
-ALTER TABLE [dbo].[bdDocumento]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoBodegaOrigen] FOREIGN KEY([idBodegaOrigen])
-REFERENCES [dbo].[bdBodega] ([Id])
+ALTER TABLE [SAF].[bdDocumento]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoBodegaOrigen] FOREIGN KEY([idBodegaOrigen])
+REFERENCES [SAF].[bdBodega] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdDocumento] CHECK CONSTRAINT [FK_bdDocumentoBodegaOrigen]
+ALTER TABLE [SAF].[bdDocumento] CHECK CONSTRAINT [FK_bdDocumentoBodegaOrigen]
 GO
 
-ALTER TABLE [dbo].[bdDocumento]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoTipoDocumento] FOREIGN KEY([idTipoDocumento])
-REFERENCES [dbo].[bdTipoDocumento] ([Id])
+ALTER TABLE [SAF].[bdDocumento]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoTipo] FOREIGN KEY([idDocumentoTipo])
+REFERENCES [SAF].[bdDocumentoTipo] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdDocumento] CHECK CONSTRAINT [FK_bdDocumentoTipoDocumento]
+ALTER TABLE [SAF].[bdDocumento] CHECK CONSTRAINT [FK_bdDocumentoTipo]
 GO
-
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdDocumento'
-GO
-
-

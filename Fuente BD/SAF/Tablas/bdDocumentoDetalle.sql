@@ -1,14 +1,14 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdDocumentoDetalle]    Script Date: 17/06/2019 01:38:05 p.m. ******/
+/****** Object:  Table [SAF].[bdDocumentoDetalle]    Script Date: 20/01/2021 12:08:26 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[bdDocumentoDetalle](
+CREATE TABLE [SAF].[bdDocumentoDetalle](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[idElemento] [smallint] NOT NULL,
 	[idDocumento] [int] NOT NULL,
@@ -21,22 +21,17 @@ CREATE TABLE [dbo].[bdDocumentoDetalle](
 
 GO
 
-ALTER TABLE [dbo].[bdDocumentoDetalle]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumento] FOREIGN KEY([idDocumento])
-REFERENCES [dbo].[bdDocumento] ([Id])
+ALTER TABLE [SAF].[bdDocumentoDetalle]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumento] FOREIGN KEY([idDocumento])
+REFERENCES [SAF].[bdDocumento] ([Id])
 ON DELETE CASCADE
 GO
 
-ALTER TABLE [dbo].[bdDocumentoDetalle] CHECK CONSTRAINT [FK_bdDocumento]
+ALTER TABLE [SAF].[bdDocumentoDetalle] CHECK CONSTRAINT [FK_bdDocumento]
 GO
 
-ALTER TABLE [dbo].[bdDocumentoDetalle]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoDetalleElemento] FOREIGN KEY([idElemento])
-REFERENCES [dbo].[bdElemento] ([Id])
+ALTER TABLE [SAF].[bdDocumentoDetalle]  WITH CHECK ADD  CONSTRAINT [FK_bdDocumentoDetalleElemento] FOREIGN KEY([idElemento])
+REFERENCES [SAF].[bdElemento] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdDocumentoDetalle] CHECK CONSTRAINT [FK_bdDocumentoDetalleElemento]
+ALTER TABLE [SAF].[bdDocumentoDetalle] CHECK CONSTRAINT [FK_bdDocumentoDetalleElemento]
 GO
-
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdDocumentoDetalle'
-GO
-
-
