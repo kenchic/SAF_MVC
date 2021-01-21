@@ -1,14 +1,14 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdContrato]    Script Date: 14/03/2019 10:13:34 p.m. ******/
+/****** Object:  Table [SAF].[bdContrato]    Script Date: 20/01/2021 12:38:01 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[bdContrato](
+CREATE TABLE [SAF].[bdContrato](
 	[Id] [smallint] IDENTITY(1,1) NOT NULL,
 	[idProyecto] [smallint] NOT NULL,
 	[idListaPrecio] [tinyint] NOT NULL,
@@ -40,28 +40,23 @@ CREATE TABLE [dbo].[bdContrato](
 
 GO
 
-ALTER TABLE [dbo].[bdContrato]  WITH CHECK ADD  CONSTRAINT [FK_bdContratoAgente] FOREIGN KEY([idAgente])
-REFERENCES [dbo].[bdAgente] ([Id])
+ALTER TABLE [SAF].[bdContrato]  WITH CHECK ADD  CONSTRAINT [FK_bdContratoAgente] FOREIGN KEY([idAgente])
+REFERENCES [SAF].[bdAgente] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdContrato] CHECK CONSTRAINT [FK_bdContratoAgente]
+ALTER TABLE [SAF].[bdContrato] CHECK CONSTRAINT [FK_bdContratoAgente]
 GO
 
-ALTER TABLE [dbo].[bdContrato]  WITH CHECK ADD  CONSTRAINT [FK_bdContratoListaPrecio] FOREIGN KEY([idListaPrecio])
-REFERENCES [dbo].[bdListaPrecio] ([Id])
+ALTER TABLE [SAF].[bdContrato]  WITH CHECK ADD  CONSTRAINT [FK_bdContratoListaPrecio] FOREIGN KEY([idListaPrecio])
+REFERENCES [SAF].[bdListaPrecio] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdContrato] CHECK CONSTRAINT [FK_bdContratoListaPrecio]
+ALTER TABLE [SAF].[bdContrato] CHECK CONSTRAINT [FK_bdContratoListaPrecio]
 GO
 
-ALTER TABLE [dbo].[bdContrato]  WITH CHECK ADD  CONSTRAINT [FK_bdContratoProyecto] FOREIGN KEY([idProyecto])
-REFERENCES [dbo].[bdProyecto] ([Id])
+ALTER TABLE [SAF].[bdContrato]  WITH CHECK ADD  CONSTRAINT [FK_bdContratoProyecto] FOREIGN KEY([idProyecto])
+REFERENCES [SAF].[bdProyecto] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdContrato] CHECK CONSTRAINT [FK_bdContratoProyecto]
+ALTER TABLE [SAF].[bdContrato] CHECK CONSTRAINT [FK_bdContratoProyecto]
 GO
-
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdContrato'
-GO
-
-

@@ -7,7 +7,7 @@
     cursor: pointer;
 }
 
-.btn, .card, .form-control {
+ .card, .form-control {
     border-radius: 0rem;
     color: #000000;
     margin: 0rem;

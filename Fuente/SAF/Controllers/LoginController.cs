@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using CoreSeg.Modelos;
-using CoreSeg.Negocios;
+using CoreSEG.Modelos;
+using CoreSEG.Negocios;
 using CoreGeneral.Recursos;
 using CoreGeneral;
 using System.Security.Claims;

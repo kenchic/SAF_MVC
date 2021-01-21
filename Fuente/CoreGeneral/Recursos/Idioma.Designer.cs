@@ -19,7 +19,7 @@ namespace CoreGeneral.Recursos {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Idioma {
@@ -318,6 +318,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaDireccion {
             get {
                 return ResourceManager.GetString("EtiquetaDireccion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tipo Documento.
+        /// </summary>
+        public static string EtiquetaDocumentoTipoNombre {
+            get {
+                return ResourceManager.GetString("EtiquetaDocumentoTipoNombre", resourceCulture);
             }
         }
         
@@ -700,15 +709,6 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Tipo Documento.
-        /// </summary>
-        public static string EtiquetaTipoDocumentoNombre {
-            get {
-                return ResourceManager.GetString("EtiquetaTipoDocumentoNombre", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Unidad Medida.
         /// </summary>
         public static string EtiquetaUnidadMedidaNombre {
@@ -952,6 +952,33 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Consultar Tipo Documento.
+        /// </summary>
+        public static string TituloBloqueDocumentoTipoConsultar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoTipoConsultar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insertar Tipo Documento.
+        /// </summary>
+        public static string TituloBloqueDocumentoTipoInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoTipoInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar Tipo Documento.
+        /// </summary>
+        public static string TituloBloqueDocumentoTipoModificar {
+            get {
+                return ResourceManager.GetString("TituloBloqueDocumentoTipoModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Consultar Elemento.
         /// </summary>
         public static string TituloBloqueElementoConsultar {
@@ -1114,33 +1141,6 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Consultar Tipo Documento.
-        /// </summary>
-        public static string TituloBloqueTipoDocumentoConsultar {
-            get {
-                return ResourceManager.GetString("TituloBloqueTipoDocumentoConsultar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Insertar Tipo Documento.
-        /// </summary>
-        public static string TituloBloqueTipoDocumentoInsertar {
-            get {
-                return ResourceManager.GetString("TituloBloqueTipoDocumentoInsertar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Modificar Tipo Documento.
-        /// </summary>
-        public static string TituloBloqueTipoDocumentoModificar {
-            get {
-                return ResourceManager.GetString("TituloBloqueTipoDocumentoModificar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Consultar Tipo Mantenimiento.
         /// </summary>
         public static string TituloBloqueTipoMantenimientoConsultar {
@@ -1240,6 +1240,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Tipos Documentos.
+        /// </summary>
+        public static string TituloDocumentoTipoListar {
+            get {
+                return ResourceManager.GetString("TituloDocumentoTipoListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Elementos.
         /// </summary>
         public static string TituloElementoListar {
@@ -1290,15 +1299,6 @@ namespace CoreGeneral.Recursos {
         public static string TituloProyectoListar {
             get {
                 return ResourceManager.GetString("TituloProyectoListar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Tipos Documentos.
-        /// </summary>
-        public static string TituloTipoDocumentoListar {
-            get {
-                return ResourceManager.GetString("TituloTipoDocumentoListar", resourceCulture);
             }
         }
         

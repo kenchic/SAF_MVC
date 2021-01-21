@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdElemento]    Script Date: 19/03/2019 09:34:22 p.m. ******/
+/****** Object:  Table [SAF].[bdElemento]    Script Date: 20/01/2021 12:08:53 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -11,7 +11,7 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[bdElemento](
+CREATE TABLE [SAF].[bdElemento](
 	[Id] [smallint] IDENTITY(1,1) NOT NULL,
 	[idGrupoElemento] [tinyint] NOT NULL,
 	[idUnidadMedida] [tinyint] NOT NULL,
@@ -32,21 +32,16 @@ GO
 SET ANSI_PADDING OFF
 GO
 
-ALTER TABLE [dbo].[bdElemento]  WITH CHECK ADD  CONSTRAINT [FK_bdElementoGrupoElemento] FOREIGN KEY([idGrupoElemento])
-REFERENCES [dbo].[bdGrupoElemento] ([Id])
+ALTER TABLE [SAF].[bdElemento]  WITH CHECK ADD  CONSTRAINT [FK_bdElementoGrupoElemento] FOREIGN KEY([idGrupoElemento])
+REFERENCES [SAF].[bdGrupoElemento] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdElemento] CHECK CONSTRAINT [FK_bdElementoGrupoElemento]
+ALTER TABLE [SAF].[bdElemento] CHECK CONSTRAINT [FK_bdElementoGrupoElemento]
 GO
 
-ALTER TABLE [dbo].[bdElemento]  WITH CHECK ADD  CONSTRAINT [FK_bdElementoUnidadMedida] FOREIGN KEY([idUnidadMedida])
-REFERENCES [dbo].[bdUnidadMedida] ([Id])
+ALTER TABLE [SAF].[bdElemento]  WITH CHECK ADD  CONSTRAINT [FK_bdElementoUnidadMedida] FOREIGN KEY([idUnidadMedida])
+REFERENCES [SAF].[bdUnidadMedida] ([Id])
 GO
 
-ALTER TABLE [dbo].[bdElemento] CHECK CONSTRAINT [FK_bdElementoUnidadMedida]
+ALTER TABLE [SAF].[bdElemento] CHECK CONSTRAINT [FK_bdElementoUnidadMedida]
 GO
-
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdElemento'
-GO
-
-

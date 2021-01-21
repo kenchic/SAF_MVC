@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  Table [dbo].[bdUnidadMedida]    Script Date: 22/01/2019 08:24:46 p.m. ******/
+/****** Object:  Table [SAF].[bdUnidadMedida]    Script Date: 20/01/2021 12:12:23 a.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -11,7 +11,7 @@ GO
 SET ANSI_PADDING ON
 GO
 
-CREATE TABLE [dbo].[bdUnidadMedida](
+CREATE TABLE [SAF].[bdUnidadMedida](
 	[Id] [tinyint] IDENTITY(1,1) NOT NULL,
 	[Nombre] [varchar](50) NOT NULL,
 	[Activo] [bit] NOT NULL,
@@ -25,8 +25,3 @@ GO
 
 SET ANSI_PADDING OFF
 GO
-
-EXEC sys.sp_addextendedproperty @name=N'Version', @value=N'19.0.1' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'bdUnidadMedida'
-GO
-
-

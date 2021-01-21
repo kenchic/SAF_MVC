@@ -397,19 +397,19 @@
     <value>Proveedores</value>
     <comment>Titulo de la Lista de Proveedores</comment>
   </data>
-  <data name="TituloBloqueTipoDocumentoConsultar" xml:space="preserve">
+  <data name="TituloBloqueDocumentoTipoConsultar" xml:space="preserve">
     <value>Consultar Tipo Documento</value>
     <comment>Titulo de la vista Consultar de la entidad Tipo Documento</comment>
   </data>
-  <data name="TituloBloqueTipoDocumentoInsertar" xml:space="preserve">
+  <data name="TituloBloqueDocumentoTipoInsertar" xml:space="preserve">
     <value>Insertar Tipo Documento</value>
     <comment>Titulo de la vista Insertar de la entidad Tipo Documento</comment>
   </data>
-  <data name="TituloBloqueTipoDocumentoModificar" xml:space="preserve">
+  <data name="TituloBloqueDocumentoTipoModificar" xml:space="preserve">
     <value>Modificar Tipo Documento</value>
     <comment>Titulo de la vista Modificar de la entidad Tipo Documento</comment>
   </data>
-  <data name="TituloTipoDocumentoListar" xml:space="preserve">
+  <data name="TituloDocumentoTipoListar" xml:space="preserve">
     <value>Tipos Documentos</value>
     <comment>Titulo de la vista Listar de Tipo Documento</comment>
   </data>
@@ -669,7 +669,7 @@
     <value>Número</value>
     <comment>Label del campo Número</comment>
   </data>
-  <data name="EtiquetaTipoDocumentoNombre" xml:space="preserve">
+  <data name="EtiquetaDocumentoTipoNombre" xml:space="preserve">
     <value>Tipo Documento</value>
     <comment>Label del campo Tipo Documento</comment>
   </data>

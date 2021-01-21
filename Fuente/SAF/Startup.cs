@@ -1,4 +1,4 @@
-﻿using CoreSeg.Modelos;
+﻿using CoreSEG.Modelos;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,25 +34,29 @@ namespace SAF
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-			app.UseAuthentication();
-
-			if (env.IsDevelopment())
+			
+            if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
             }
             else
             {
                 app.UseExceptionHandler("/Inicio/Error");
-            }            
-            
-			app.UseStaticFiles();
+            }
+
+            app.UseAuthentication();            
+            app.UseStaticFiles();
             app.UseSession();
-            app.UseMvc(routes =>
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseCors();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Login}/{action=LoginUsuario}/{id?}");
+                endpoints.MapControllerRoute(
+                        name: "default",
+                        pattern: "{controller}/{action}/{id?}",
+                        defaults: new { controller = "Login", action = "LoginUsuario" });
             });
         }
     }

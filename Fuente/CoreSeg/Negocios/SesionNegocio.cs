@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
-using CoreSeg.Modelos;
-using CoreSeg.Datos;
+using CoreSEG.Modelos;
+using CoreSEG.Datos;
 using System;
 using CoreGeneral.Recursos;
 using CoreGeneral;
 using System.Linq;
 
-namespace CoreSeg.Negocios
+namespace CoreSEG.Negocios
 {
 	public class SesionNegocio
     {

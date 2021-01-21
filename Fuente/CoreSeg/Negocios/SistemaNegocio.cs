@@ -4,10 +4,10 @@ using System.Linq;
 using Newtonsoft.Json;
 using CoreGeneral;
 using CoreGeneral.Recursos;
-using CoreSeg.Datos;
-using CoreSeg.Modelos;
+using CoreSEG.Datos;
+using CoreSEG.Modelos;
 
-namespace CoreSeg.Negocios
+namespace CoreSEG.Negocios
 {
 	public class SistemaNegocio
     {
@@ -27,7 +27,7 @@ namespace CoreSeg.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Listar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SistemaNegocio - Listar");
 				throw;
 			}
 		}
@@ -41,7 +41,7 @@ namespace CoreSeg.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - ListarActivos");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SistemaNegocio - ListarActivos");
 				throw;
 			}
 		}
@@ -57,7 +57,7 @@ namespace CoreSeg.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Consultar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SistemaNegocio - Consultar");
 				throw;
 			}
 		}
@@ -71,7 +71,7 @@ namespace CoreSeg.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Insertar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SistemaNegocio - Insertar");
 				throw;
 			}
 		}
@@ -85,7 +85,7 @@ namespace CoreSeg.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Editar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SistemaNegocio - Editar");
 				throw;
 			}
 		}
@@ -101,7 +101,7 @@ namespace CoreSeg.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSeg.Negocios.SistemaNegocio - Borrar");
+				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SistemaNegocio - Borrar");
 				throw;
 			}
 		}

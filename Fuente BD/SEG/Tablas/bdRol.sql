@@ -1,0 +1,31 @@
+USE [SAF]
+GO
+
+/****** Object:  Table [SEG].[bdRol]    Script Date: 20/01/2021 12:20:47 a.m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [SEG].[bdRol](
+	[Id] [smallint] IDENTITY(1,1) NOT NULL,
+	[idRol] [smallint] NULL,
+	[Nombre] [varchar](50) NOT NULL,
+	[Descripcion] [varchar](500) NOT NULL,
+	[Activo] [bit] NOT NULL,
+ CONSTRAINT [PK_bdRol] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAF", "SAF\SAF.csproj", "{0AF8D35A-7B53-4A3D-AC37-8E307D47C13F}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreSAF", "CoreSAF\CoreSAF.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreGeneral", "CoreGeneral\CoreGeneral.csproj", "{ACC57DBF-2755-453D-AC26-6141BD45C3F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreSeg", "CoreSeg\CoreSeg.csproj", "{9803B1D9-E42D-4DF3-9742-4B96633CE19A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreSEG", "CoreSeg\CoreSEG.csproj", "{9803B1D9-E42D-4DF3-9742-4B96633CE19A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

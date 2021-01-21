@@ -1,7 +1,7 @@
 USE [SAF]
 GO
 
-/****** Object:  Trigger [dbo].[tProyectoInsertar]    Script Date: 03/02/2020 03:34:41 p.m. ******/
+/****** Object:  Trigger [SAF].[tProyectoInsertar]    Script Date: 03/02/2020 03:34:41 p.m. ******/
 SET ANSI_NULLS ON
 GO
 
@@ -9,7 +9,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
-CREATE TRIGGER [dbo].[tProyectoInsertar] ON [dbo].[bdProyecto] 
+CREATE TRIGGER [SAF].[tProyectoInsertar] ON [SAF].[bdProyecto] 
 FOR INSERT
 AS
 
