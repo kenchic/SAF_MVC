@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>  
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>  
-    <Version>20.0.3</Version>  
+    <Version>21.0.3</Version>  
     <Company>Integral Solutions</Company>  
     <UserSecretsId>59442603-cd74-40b2-97a1-cb39f159af3d</UserSecretsId>  
     <AssemblyVersion>20.0.3.0</AssemblyVersion>  

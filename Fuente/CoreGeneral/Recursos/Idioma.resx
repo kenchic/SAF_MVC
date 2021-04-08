@@ -681,4 +681,8 @@
     <value>Modificar Documento</value>
     <comment>Titulo de la vista Editar de los Documento y sus Detalles</comment>
   </data>
+  <data name="TituloProyectoPlanillaListar" xml:space="preserve">
+    <value>Movimientos</value>
+    <comment>Titulo del bloque para la plantilla de movimientos de un proyecto</comment>
+  </data>
 </root>
