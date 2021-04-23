@@ -685,4 +685,40 @@
     <value>Movimientos</value>
     <comment>Titulo del bloque para la plantilla de movimientos de un proyecto</comment>
   </data>
+  <data name="EtiquetaConductor" xml:space="preserve">
+    <value>Conductor</value>
+    <comment>Label del campo Conductor</comment>
+  </data>
+  <data name="EtiquetaDespacho" xml:space="preserve">
+    <value>Despachado Parcial</value>
+    <comment>Label del campo Despachado Parcial / Completo</comment>
+  </data>
+  <data name="EtiquetaEquipoAdecuado" xml:space="preserve">
+    <value>Equipo Adecuado</value>
+    <comment>Label del campo Equipo Adecuado</comment>
+  </data>
+  <data name="EtiquetaFechaSistema" xml:space="preserve">
+    <value>Fecha Sistema</value>
+    <comment>Label del campo Fecha Sistema</comment>
+  </data>
+  <data name="EtiquetaPesoEquipo" xml:space="preserve">
+    <value>Peso Equipo</value>
+    <comment>Label del campo Peso Equipo</comment>
+  </data>
+  <data name="EtiquetaTransporte" xml:space="preserve">
+    <value>Transporte</value>
+    <comment>Label del campo Transporte</comment>
+  </data>
+  <data name="EtiquetaValorTransporte" xml:space="preserve">
+    <value>Valor Transporte</value>
+    <comment>Label del campo Valor Transporte</comment>
+  </data>
+  <data name="TituloBloqueRemisionInsertar" xml:space="preserve">
+    <value>Insetar Remisión</value>
+    <comment>Titulo de la vista Insertar de la entidad Remision y RemisionDetalle</comment>
+  </data>
+  <data name="EtiquetaCantidadFilas" xml:space="preserve">
+    <value>Cantidad Filas</value>
+    <comment>Cantidad de filas para un documento</comment>
+  </data>
 </root>

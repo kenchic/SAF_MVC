@@ -3,6 +3,7 @@ using System.Reflection;
 using System;
 using CoreGeneral.Recursos;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
 
 namespace CoreGeneral
 {
@@ -52,6 +53,14 @@ namespace CoreGeneral
                 Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, " CoreGeneral.Utilidades.ListaSeleccion ");
                 throw;
             }
+        }
+
+        public static string CodigoAleatorio(int longitud)
+        {
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, longitud)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }

@@ -46,12 +46,12 @@ namespace CoreSEG.Negocios
 			}
 		}
 
-		public SistemaModelo Consultar(int id)
+		public SistemaModelo Consultar(string id)
 		{
 			try
 			{
 				SistemaModelo objConsultar = new SistemaModelo();
-				objConsultar.Id = (short)id;
+				objConsultar.Id = id;
 				string Json = JsonConvert.SerializeObject(objConsultar);
 				return objSistema.Consultar("2", Json);
 			}
@@ -90,12 +90,12 @@ namespace CoreSEG.Negocios
 			}
 		}
 
-		public bool Borrar(int id)
+		public bool Borrar(string id)
 		{
 			try
 			{
 				SistemaModelo objBorrar = new SistemaModelo();
-				objBorrar.Id = (short)id;
+				objBorrar.Id = id;
 				string Json = JsonConvert.SerializeObject(objBorrar);				
 				return objSistema.Borrar("5", Json);
 			}

@@ -169,6 +169,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cantidad Filas.
+        /// </summary>
+        public static string EtiquetaCantidadFilas {
+            get {
+                return ResourceManager.GetString("EtiquetaCantidadFilas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Carta Pagare.
         /// </summary>
         public static string EtiquetaCartaPagare {
@@ -219,6 +228,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaCodigo {
             get {
                 return ResourceManager.GetString("EtiquetaCodigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Conductor.
+        /// </summary>
+        public static string EtiquetaConductor {
+            get {
+                return ResourceManager.GetString("EtiquetaConductor", resourceCulture);
             }
         }
         
@@ -313,6 +331,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Despachado Parcial.
+        /// </summary>
+        public static string EtiquetaDespacho {
+            get {
+                return ResourceManager.GetString("EtiquetaDespacho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Dirección.
         /// </summary>
         public static string EtiquetaDireccion {
@@ -340,6 +367,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Equipo Adecuado.
+        /// </summary>
+        public static string EtiquetaEquipoAdecuado {
+            get {
+                return ResourceManager.GetString("EtiquetaEquipoAdecuado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Es Sistema.
         /// </summary>
         public static string EtiquetaEsSistema {
@@ -363,6 +399,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaFecha {
             get {
                 return ResourceManager.GetString("EtiquetaFecha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Sistema.
+        /// </summary>
+        public static string EtiquetaFechaSistema {
+            get {
+                return ResourceManager.GetString("EtiquetaFechaSistema", resourceCulture);
             }
         }
         
@@ -583,6 +628,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Peso Equipo.
+        /// </summary>
+        public static string EtiquetaPesoEquipo {
+            get {
+                return ResourceManager.GetString("EtiquetaPesoEquipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Placa.
         /// </summary>
         public static string EtiquetaPlaca {
@@ -709,6 +763,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Transporte.
+        /// </summary>
+        public static string EtiquetaTransporte {
+            get {
+                return ResourceManager.GetString("EtiquetaTransporte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Unidad Medida.
         /// </summary>
         public static string EtiquetaUnidadMedidaNombre {
@@ -732,6 +795,15 @@ namespace CoreGeneral.Recursos {
         public static string EtiquetaValor {
             get {
                 return ResourceManager.GetString("EtiquetaValor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Valor Transporte.
+        /// </summary>
+        public static string EtiquetaValorTransporte {
+            get {
+                return ResourceManager.GetString("EtiquetaValorTransporte", resourceCulture);
             }
         }
         
@@ -1141,6 +1213,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Insetar Remisión.
+        /// </summary>
+        public static string TituloBloqueRemisionInsertar {
+            get {
+                return ResourceManager.GetString("TituloBloqueRemisionInsertar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Consultar Tipo Mantenimiento.
         /// </summary>
         public static string TituloBloqueTipoMantenimientoConsultar {
@@ -1299,6 +1380,15 @@ namespace CoreGeneral.Recursos {
         public static string TituloProyectoListar {
             get {
                 return ResourceManager.GetString("TituloProyectoListar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Movimientos.
+        /// </summary>
+        public static string TituloProyectoPlanillaListar {
+            get {
+                return ResourceManager.GetString("TituloProyectoPlanillaListar", resourceCulture);
             }
         }
         

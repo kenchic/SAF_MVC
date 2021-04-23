@@ -40,7 +40,7 @@ namespace SAF.Controllers
 
             objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
             SistemaNegocio objSistemaNegocio = new SistemaNegocio(objSesion);
-            SistemaModelo objSistema = objSistemaNegocio.Consultar(2); //SAF
+            SistemaModelo objSistema = objSistemaNegocio.Consultar("SAF");
             ViewBag.Version = string.Concat("Version ", objSistema == null ? string.Empty : objSistema.Version);
             return View();
         }
