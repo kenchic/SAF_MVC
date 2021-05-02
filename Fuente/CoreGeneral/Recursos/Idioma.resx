@@ -721,4 +721,8 @@
     <value>Cantidad Filas</value>
     <comment>Cantidad de filas para un documento</comment>
   </data>
+  <data name="EtiquetaValorEquipo" xml:space="preserve">
+    <value>Valor Equipo</value>
+    <comment>Label del campo Valor Equipo</comment>
+  </data>
 </root>

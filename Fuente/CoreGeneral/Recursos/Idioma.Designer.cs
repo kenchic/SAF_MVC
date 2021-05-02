@@ -799,6 +799,15 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Valor Equipo.
+        /// </summary>
+        public static string EtiquetaValorEquipo {
+            get {
+                return ResourceManager.GetString("EtiquetaValorEquipo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Valor Transporte.
         /// </summary>
         public static string EtiquetaValorTransporte {
