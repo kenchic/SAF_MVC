@@ -403,6 +403,24 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Entrega.
+        /// </summary>
+        public static string EtiquetaFechaEntrega {
+            get {
+                return ResourceManager.GetString("EtiquetaFechaEntrega", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Pedido.
+        /// </summary>
+        public static string EtiquetaFechaPedido {
+            get {
+                return ResourceManager.GetString("EtiquetaFechaPedido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Fecha Sistema.
         /// </summary>
         public static string EtiquetaFechaSistema {

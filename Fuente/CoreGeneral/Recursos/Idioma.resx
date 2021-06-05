@@ -725,4 +725,12 @@
     <value>Valor Equipo</value>
     <comment>Label del campo Valor Equipo</comment>
   </data>
+  <data name="EtiquetaFechaEntrega" xml:space="preserve">
+    <value>Fecha Entrega</value>
+    <comment>Label del campo Fecha Entraga</comment>
+  </data>
+  <data name="EtiquetaFechaPedido" xml:space="preserve">
+    <value>Fecha Pedido</value>
+    <comment>Label del campo Fecha Pedido</comment>
+  </data>
 </root>
