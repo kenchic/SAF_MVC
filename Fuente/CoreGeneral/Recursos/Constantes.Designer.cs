@@ -19,7 +19,7 @@ namespace CoreGeneral.Recursos {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Constantes {
@@ -90,11 +90,20 @@ namespace CoreGeneral.Recursos {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a 1.
+        ///   Busca una cadena traducida similar a 4.
         /// </summary>
         public static string MensajeError {
             get {
                 return ResourceManager.GetString("MensajeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 1.
+        /// </summary>
+        public static string MensajeExito {
+            get {
+                return ResourceManager.GetString("MensajeExito", resourceCulture);
             }
         }
         

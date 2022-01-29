@@ -9,14 +9,16 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title - SAF</title>
 
-	<environment include="Development">
-		<link rel="stylesheet" href="~/css/saf.css" />
-		<link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="~/lib/slidermenu/sidebar-menu.css">
-	</environment>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/saf.css" />
+        <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/solid.css" />
+        <link rel="stylesheet" href="~/lib/slidermenu/sidebar-menu.css">
+    </environment>
 </head>
 <body>
+	pppp
 	<div class="page-header">
 		<div class="row form-group">
 			<div class="col-lg-2">
@@ -33,21 +35,22 @@
         @RenderBody()
     </div>
 
-	<environment include="Development">
-		<script src="~/lib/jquery/jquery.min.js"></script>
-		<script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
-		<script src="~/lib/slidermenu/sidebar-menu.js"></script>
-		<script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
-		<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-		<script src="~/js/saf.js"></script>
-		<script>
-			$.sidebarMenu($('.sidebar-menu'))
-			$('#pushRight').click(function () {
-				$('body').addClass('animate-menu-push');
-				$('body').toggleClass('animate-menu-push-right');
-				$('.animate-menu-left ').toggleClass('animate-menu-open');
-			})
-		</script>
-	</environment>
+    <environment include="Development">
+        <script src="~/lib/jquery/jquery.min.js"></script>
+        <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/lib/slidermenu/sidebar-menu.js"></script>
+        <script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/js/saf.js"></script>
+        <script src="~/js/notificacion.js"></script>
+        <script>
+            $.sidebarMenu($('.sidebar-menu'))
+            $('#pushRight').click(function () {
+                $('body').addClass('animate-menu-push');
+                $('body').toggleClass('animate-menu-push-right');
+                $('.animate-menu-left ').toggleClass('animate-menu-open');
+            })
+        </script>
+    </environment>
 </body>
 </html>

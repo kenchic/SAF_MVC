@@ -5,10 +5,12 @@ using Microsoft.Extensions.Configuration;
 using CoreSEG.Modelos;
 using CoreSEG.Negocios;
 using CoreGeneral.Recursos;
-using CoreGeneral;
+using CoreGeneral.Negocios;
 using System.Security.Claims;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication;
+using CoreGES.Negocios;
+using CoreGES.Modelos;
 
 namespace SAF.Controllers
 {
@@ -24,25 +26,35 @@ namespace SAF.Controllers
             {                
                 objSesion.ConexionSAF = IConfiguracion["BD_SQL_SAF"];
                 objSesion.ConexionSEG = IConfiguracion["BD_SQL_SEG"];
+                objSesion.ConexionGES = IConfiguracion["BD_SQL_GES"];
             }
             catch (Exception ex)
             {
-                Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - Contructor");
+                MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - Contructor");
             }
         }
 
         [HttpGet]
         public IActionResult LoginUsuario()
         {
-            Random rdmFoto = new Random();
-            ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
-            objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
+            try
+            {
+                Random rdmFoto = new Random();
+                ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
+                objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
 
-            objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
-            SistemaNegocio objSistemaNegocio = new SistemaNegocio(objSesion);
-            SistemaModelo objSistema = objSistemaNegocio.Consultar("SAF");
-            ViewBag.Version = string.Concat("Version ", objSistema == null ? string.Empty : objSistema.Version);
-            return View();
+                objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
+                SistemaNegocio objSistemaNegocio = new SistemaNegocio(objSesion);
+                SistemaModelo objSistema = objSistemaNegocio.Consultar("SAF");
+                ViewBag.Version = string.Concat("Version ", objSistema == null ? string.Empty : objSistema.Version);
+                return View();
+            }
+            catch (Exception ex)
+            {
+                MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - LoginUsuario HttpGet");
+                ViewBag.Notificacion = MensajeNegocio.CrearNotificacion(Constantes.MensajeError, ex.Message);
+                return View();
+            }            
         }
 
         [HttpPost]
@@ -100,7 +112,7 @@ namespace SAF.Controllers
             }
             catch (Exception ex)
             {
-                Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - LoginUsuario");
+                MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - LoginUsuario");
                 return View();
             }
         }        

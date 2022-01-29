@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using CoreGeneral;
+using CoreGeneral.Negocios;
 using CoreGeneral.Recursos;
 using CoreSAF.Datos;
 using CoreSAF.Modelos;
@@ -16,7 +16,7 @@ namespace CoreSAF.Negocios
 
 		public void AsignarSesion(SesionModelo objSesion)
 		{
-			ObjAgente.objSesion = objSesion;
+			ObjAgente.Session = objSesion;
 		}
 
         public List<AgenteModelo> Listar()
@@ -28,7 +28,7 @@ namespace CoreSAF.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Listar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Listar");
 				throw;
 			}
 		}
@@ -42,7 +42,7 @@ namespace CoreSAF.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - ListarActivos");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - ListarActivos");
 				throw;
 			}
 		}
@@ -58,7 +58,7 @@ namespace CoreSAF.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Consultar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Consultar");
 				throw;
 			}
 		}
@@ -72,7 +72,7 @@ namespace CoreSAF.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Insertar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Insertar");
 				throw;
 			}
 		}
@@ -86,7 +86,7 @@ namespace CoreSAF.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Editar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Editar");
 				throw;
 			}
 		}
@@ -102,7 +102,7 @@ namespace CoreSAF.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Borrar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSAF.Negocios.AgenteNegocio - Borrar");
 				throw;
 			}
 		}

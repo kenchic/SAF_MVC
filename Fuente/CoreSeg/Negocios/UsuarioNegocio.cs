@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using CoreGeneral;
+using CoreGeneral.Negocios;
 using CoreGeneral.Recursos;
 using CoreSEG.Datos;
 using CoreSEG.Modelos;
@@ -15,7 +15,7 @@ namespace CoreSEG.Negocios
 
         public void AsignarSesion(SesionModelo objSesion)
         {
-            objUsuario.objSesion = objSesion;
+            objUsuario.Session = objSesion;
         }
 
         public List<UsuarioModelo> Listar()
@@ -27,7 +27,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Listar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Listar");
 				throw;
 			}
 		}
@@ -41,7 +41,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - ListarActivos");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - ListarActivos");
 				throw;
 			}
 		}
@@ -57,7 +57,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Consultar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Consultar");
 				throw;
 			}
 		}
@@ -71,7 +71,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Insertar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Insertar");
 				throw;
 			}
 		}
@@ -85,7 +85,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Editar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Editar");
 				throw;
 			}
 		}
@@ -101,7 +101,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Borrar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Borrar");
 				throw;
 			}
 		}
@@ -116,7 +116,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Autenticar");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - Autenticar");
 				throw;
 			}
 		}
@@ -134,7 +134,7 @@ namespace CoreSEG.Negocios
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - ListarMenu");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.UsuarioNegocio - ListarMenu");
 				throw;
 			}
 		}

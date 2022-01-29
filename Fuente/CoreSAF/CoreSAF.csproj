@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreGeneral\CoreGeneral.csproj" />
+    <ProjectReference Include="..\CoreGes\CoreGES.csproj" />
     <ProjectReference Include="..\CoreSEG\CoreSEG.csproj" />
   </ItemGroup>
 

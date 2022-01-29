@@ -4,7 +4,7 @@ using CoreSEG.Modelos;
 using CoreSEG.Datos;
 using System;
 using CoreGeneral.Recursos;
-using CoreGeneral;
+using CoreGeneral.Negocios;
 using System.Linq;
 
 namespace CoreSEG.Negocios
@@ -15,7 +15,7 @@ namespace CoreSEG.Negocios
 
         public void AsignarSesion(SesionModelo objSesionIn)
         {
-            objSesion.objSesion = objSesionIn;
+            objSesion.Session = objSesionIn;
         }
 
         public void SetObjectAsJson<T>(ISession session, string key, T value)
@@ -43,7 +43,7 @@ namespace CoreSEG.Negocios
             }
             catch (Exception ex)
             {
-                Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SesionNegocio - Insertar");
+                MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "CoreSEG.Negocios.SesionNegocio - Insertar");
                 throw;
             }
         }

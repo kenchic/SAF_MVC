@@ -45,3 +45,6 @@ $(document).ajaxStop(function () {
     $('#cargando').hide();
 });
 
+function notificaciones(tipo, notificacion) {
+    alert(TempData["notificacion"]);
+}

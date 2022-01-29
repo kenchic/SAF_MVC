@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using CoreGeneral.Negocios;
 
 namespace SAF
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
-			CoreGeneral.Mensajes.EscribirLog(CoreGeneral.Recursos.Constantes.MensajeInfo, "Inicio", "");
+			MensajeNegocio.EscribirLog(CoreGeneral.Recursos.Constantes.MensajeInfo, "Inicio", "");
 			BuildWebHost(args).Run();
 		}
 

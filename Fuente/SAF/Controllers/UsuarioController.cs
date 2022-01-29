@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using CoreGeneral;
+using CoreGeneral.Negocios;
 using CoreGeneral.Recursos;
 using CoreSEG.Modelos;
 using CoreSEG.Negocios;
@@ -58,7 +58,7 @@ namespace SAF.Controllers
 			}
 			catch (Exception ex)
 			{
-				Mensajes.EscribirLog(Constantes.MensajeError, ex.Message, "UsuarioController - UsuarioMenu");
+				MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "UsuarioController - UsuarioMenu");
 				return View();
 			}
 		}
