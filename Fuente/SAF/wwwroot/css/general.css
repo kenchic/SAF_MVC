@@ -1,23 +1,17 @@
-﻿.btn-lista-vista {
+﻿/*.btn-lista-vista {
     background-color: transparent;
     -webkit-align-items: center;
     height: 20px;
     width: 20px;
     opacity: .70;
     cursor: pointer;
-}
-
- .card, .form-control {
-    border-radius: 0rem;
-    color: #000000;
-    margin: 0rem;
-}
-
+}*/
+/*
 .modal-content {
     border-radius: 0rem;
 }
-
-.modal-footer {
+*/
+/*.modal-footer {
     padding: 0rem;
     background-color: rgba(85, 142, 161, 0.03);
     border-top-left-radius: 0rem;
@@ -29,18 +23,18 @@
     margin: 0rem;
     border-top-left-radius: 0rem;
     border-top-right-radius: 0rem;
-}
+}*/
 
-.form-control {
+/*.form-control {
     height: 27px;
     padding: 0rem 0rem 0rem 0.5rem;
     font-size: 0.775rem;
-}
-
+}*/
+/*
 .col-form-label {
     font-size: 0.775rem;
 }
-
+*/
 .card-body {
     padding: 0;
 }
@@ -48,6 +42,15 @@
 .card-header {
     padding: .3rem 1.25rem;
 }
+
+.card {
+    border-radius: 0rem;
+    color: #000000;
+    margin: 0rem;
+}
+
+
+
 
 /*MENU*/
 .sidenav {

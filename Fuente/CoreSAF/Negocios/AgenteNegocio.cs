@@ -5,19 +5,16 @@ using Newtonsoft.Json;
 using CoreGeneral.Negocios;
 using CoreGeneral.Recursos;
 using CoreSAF.Datos;
-using CoreSAF.Modelos;
-using CoreSEG.Modelos;
+using CoreGeneral.Modelos.SAF;
+using CoreGeneral.Modelos.SEG;
+using CoreGeneral.Datos;
 
 namespace CoreSAF.Negocios
 {
-	public class AgenteNegocio
+	public class AgenteNegocio : BaseDatos
     {
 		private readonly AgenteDatos ObjAgente = new AgenteDatos();
 
-		public void AsignarSesion(SesionModelo objSesion)
-		{
-			ObjAgente.Session = objSesion;
-		}
 
         public List<AgenteModelo> Listar()
 		{

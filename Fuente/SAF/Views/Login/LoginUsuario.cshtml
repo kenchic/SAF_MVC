@@ -1,4 +1,4 @@
-﻿@model CoreSEG.Modelos.UsuarioModelo
+﻿@model CoreGeneral.Modelos.SEG.UsuarioModelo
 
 @{
     var base64 = Convert.ToBase64String(CoreGeneral.Recursos.Constantes.logo);
@@ -55,7 +55,7 @@
             </div>
 
             <div class="col-xl-12 mb-sm-2">
-                <button type="submit" class="btn btn-default btn-success">Ingresar</button>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
                 <a asp-action="RegisterUser" class="btn btn-info">Registrar</a>
             </div>
             <div class="col-xl-12 mb-sm-2">

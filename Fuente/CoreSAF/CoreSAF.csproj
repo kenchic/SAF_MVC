@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Modelos\**" />
+    <EmbeddedResource Remove="Modelos\**" />
+    <None Remove="Modelos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
@@ -15,8 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreGeneral\CoreGeneral.csproj" />
-    <ProjectReference Include="..\CoreGes\CoreGES.csproj" />
-    <ProjectReference Include="..\CoreSEG\CoreSEG.csproj" />
   </ItemGroup>
 
 </Project>

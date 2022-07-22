@@ -19,6 +19,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
+    <PackageReference Include="RestSharp" Version="107.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +28,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoreGeneral\CoreGeneral.csproj" />
-    <ProjectReference Include="..\CoreGes\CoreGES.csproj" />
-    <ProjectReference Include="..\CoreSAF\CoreSAF.csproj" />
-    <ProjectReference Include="..\CoreSEG\CoreSEG.csproj" />
   </ItemGroup>
 
   <ItemGroup>

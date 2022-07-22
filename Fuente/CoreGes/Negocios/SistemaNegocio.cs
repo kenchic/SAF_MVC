@@ -5,8 +5,8 @@ using Newtonsoft.Json;
 using CoreGeneral.Negocios;
 using CoreGeneral.Recursos;
 using CoreGES.Datos;
-using CoreGES.Modelos;
-using CoreSEG.Modelos;
+using CoreGeneral.Modelos.GES;
+using CoreGeneral.Modelos.SEG;
 
 namespace CoreGES.Negocios
 {

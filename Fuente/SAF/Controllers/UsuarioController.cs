@@ -4,57 +4,59 @@ using System.Text;
 using System.Threading.Tasks;
 using CoreGeneral.Negocios;
 using CoreGeneral.Recursos;
-using CoreSEG.Modelos;
-using CoreSEG.Negocios;
+using CoreGeneral.Modelos.SEG;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using CoreGeneral.Utilidades;
+using SAF.Helper;
+using Newtonsoft.Json;
 
 namespace SAF.Controllers
 {
 	[Authorize]
 	public class UsuarioController : Controller
 	{
-
-		private readonly UsuarioNegocio objUsuario = new UsuarioNegocio();
-
-		public ActionResult UsuarioDashBoard()
+        public ActionResult DashBoard()
 		{
 			return View();
 		}
 
-		public ActionResult UsuarioMenu()
+		public ActionResult Menu()
 		{
 			try
 			{
-                SesionNegocio objSesionNegocio = new SesionNegocio();
-                SesionModelo objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
-                objUsuario.AsignarSesion(objSesion);
-
-                List<UsuarioMenuModelo> lisMenus = objUsuario.ListarMenu(Convert.ToInt32(objSesion.Usuario.Id));
-				StringBuilder strMenu = new StringBuilder("<li>");
-				for (int i = 0; i < lisMenus.Count; i++)
-				{
-					if (lisMenus[i].SubOrden == null)
-					{
-                        strMenu.Append("<button class=\"dropdown-btn\">");
-                        strMenu.Append(string.Concat("<i class=\"", lisMenus[i].Imagen, "\"></i>&nbsp;&nbsp;", lisMenus[i].Nombre));
-                        strMenu.Append("</button>");
-
-                        strMenu.Append("<div class=\"dropdown-container\">");
-                        for (int j = i; j < lisMenus.Count; j++)
+                SesionModelo sesion = Sesion.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
+                var parametros = new Dictionary<string, string>();
+                parametros.Add("Usuario", sesion.Usuario.Id);
+                string resultado = ClienteApi.GetRecurso(Configuracion.UrlApiSAF(), "Usuario/Menu", parametros, sesion.Token);
+                if (!string.IsNullOrEmpty(resultado))
+                {
+                    var menus = JsonConvert.DeserializeObject<List<UsuarioMenuModelo>>(resultado);
+                    var strMenu = new StringBuilder("<li>");
+                    for (int i = 0; i < menus.Count; i++)
+                    {
+                        if (menus[i].SubOrden == null)
                         {
-                        	if (lisMenus[i].Orden == lisMenus[j].Orden && lisMenus[i].Id != lisMenus[j].Id)
-                        	{
-                        		strMenu.Append(string.Concat("<a href=\"#\" onclick=\"cargarVista('", lisMenus[j].Vista, "');\"><i class=\"", lisMenus[j].Imagen, "\"></i>&nbsp;&nbsp;", lisMenus[j].Nombre, "</a>"));
-                        	}
+                            strMenu.Append("<button class=\"dropdown-btn\">");
+                            strMenu.Append(string.Concat("<i class=\"", menus[i].Imagen, "\"></i>&nbsp;&nbsp;", menus[i].Nombre));
+                            strMenu.Append("</button>");
+
+                            strMenu.Append("<div class=\"dropdown-container\">");
+                            for (int j = i; j < menus.Count; j++)
+                            {
+                                if (menus[i].Orden == menus[j].Orden && menus[i].Id != menus[j].Id)
+                                {
+                                    strMenu.Append(string.Concat("<a href=\"#\" onclick=\"cargarVista('", menus[j].Vista, "');\"><i class=\"", menus[j].Imagen, "\"></i>&nbsp;&nbsp;", menus[j].Nombre, "</a>"));
+                                }
+                            }
+                            strMenu.Append("</div>");
                         }
-                        strMenu.Append("</div>");
                     }
+                    strMenu.Append("</li>");
+                    ViewBag.Arbol = strMenu;
                 }
-                strMenu.Append("</li>");
-                ViewBag.Arbol = strMenu;
-				return View();
+                return View();
 			}
 			catch (Exception ex)
 			{

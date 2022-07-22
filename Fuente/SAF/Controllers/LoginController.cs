@@ -1,39 +1,21 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using CoreSEG.Modelos;
-using CoreSEG.Negocios;
+using CoreGeneral.Modelos.SEG;
 using CoreGeneral.Recursos;
 using CoreGeneral.Negocios;
 using System.Security.Claims;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication;
-using CoreGES.Negocios;
-using CoreGES.Modelos;
+using CoreGeneral.Modelos.GES;
+using SAF.Helper;
+using CoreGeneral.Utilidades;
+using Newtonsoft.Json;
 
 namespace SAF.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly UsuarioNegocio objUsuario = new UsuarioNegocio();
-        private readonly SesionNegocio objSesionNegocio = new SesionNegocio();
-        private SesionModelo objSesion = new SesionModelo();
-
-        public LoginController(IConfiguration IConfiguracion)
-        {
-            try
-            {                
-                objSesion.ConexionSAF = IConfiguracion["BD_SQL_SAF"];
-                objSesion.ConexionSEG = IConfiguracion["BD_SQL_SEG"];
-                objSesion.ConexionGES = IConfiguracion["BD_SQL_GES"];
-            }
-            catch (Exception ex)
-            {
-                MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - Contructor");
-            }
-        }
-
         [HttpGet]
         public IActionResult LoginUsuario()
         {
@@ -41,12 +23,12 @@ namespace SAF.Controllers
             {
                 Random rdmFoto = new Random();
                 ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
-                objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
-
-                objSesion = objSesionNegocio.GetObjectFromJson<SesionModelo>(HttpContext.Session, "SesionUsuario");
-                SistemaNegocio objSistemaNegocio = new SistemaNegocio(objSesion);
-                SistemaModelo objSistema = objSistemaNegocio.Consultar("SAF");
-                ViewBag.Version = string.Concat("Version ", objSistema == null ? string.Empty : objSistema.Version);
+                var resultado = ClienteApi.GetRecurso(Configuracion.UrlApiSAF(), "Sistema/Version");
+                if (!string.IsNullOrEmpty(resultado))
+                {
+                    var sistema = JsonConvert.DeserializeObject<SistemaModelo>(resultado);
+                    ViewBag.Version = sistema.Version;
+                }
                 return View();
             }
             catch (Exception ex)
@@ -54,12 +36,12 @@ namespace SAF.Controllers
                 MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - LoginUsuario HttpGet");
                 ViewBag.Notificacion = MensajeNegocio.CrearNotificacion(Constantes.MensajeError, ex.Message);
                 return View();
-            }            
+            }
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult LoginUsuario(UsuarioModelo objUsuarioLogin)
+        public ActionResult LoginUsuario(UsuarioModelo usuarioLogin)
         {
             try
             {
@@ -72,29 +54,37 @@ namespace SAF.Controllers
                 ModelState.Remove("Admin");
                 if (ModelState.IsValid)
                 {
-                    
-                    objUsuario.AsignarSesion(objSesion);
-
-                    if (objUsuario.Autenticar(ref objUsuarioLogin))
+                    AutenticacionModelo autenticar = new AutenticacionModelo
                     {
-                        objSesion.Usuario = objUsuarioLogin;                        
-                        objSesionNegocio.AsignarSesion(objSesion);
-                        objSesionNegocio.Insertar(objSesion);
+                        Usuario = usuarioLogin.Usuario,
+                        Clave = usuarioLogin.Clave,
+                        FechaInicio = DateTime.Now,
+                        FechaFin = DateTime.MinValue
+                    };
 
-                        objSesionNegocio.SetObjectAsJson(HttpContext.Session, "SesionUsuario", objSesion);
+                    var resultado = ClienteApi.PostRecurso(Configuracion.UrlApiSEG(), "Autenticacion/Autenticar", autenticar);
+                    if (!string.IsNullOrEmpty(resultado))
+                    {
+                        var token = JsonConvert.DeserializeObject<string>(resultado);
+                        resultado = ClienteApi.GetRecurso(Configuracion.UrlApiSAF(), "Login/Ingresar", token);
+                        var usuario = JsonConvert.DeserializeObject<UsuarioModelo>(resultado);
+                        
+                        SesionModelo session = new SesionModelo
+                        {
+                            Usuario = usuario,
+                            Token = token
+                        };
+                        Sesion.SetObjectAsJson(HttpContext.Session, "SesionUsuario", session);
 
                         var claims = new List<Claim>
                         {
-                            new Claim(ClaimTypes.Name, objUsuarioLogin.Usuario),
-                            new Claim(ClaimTypes.NameIdentifier, objUsuarioLogin.Id.ToString())
+                            new Claim(ClaimTypes.Name, usuarioLogin.Usuario),
+                            new Claim(ClaimTypes.NameIdentifier, token)
                         };
-
                         ClaimsIdentity userIdentity = new ClaimsIdentity(claims, "login");
                         ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
-
                         HttpContext.SignInAsync(principal);
-
-                        return RedirectToAction("UsuarioDashBoard", "Usuario");
+                        return RedirectToAction("DashBoard", "Usuario");
                     }
                     else
                     {
@@ -108,13 +98,12 @@ namespace SAF.Controllers
                     ViewBag.Foto = string.Format("/images/fondos/{0}.jpg", rdmFoto.Next(1, 6));
                     return View();
                 }
-
             }
             catch (Exception ex)
             {
                 MensajeNegocio.EscribirLog(Constantes.MensajeError, ex.Message, "LoginController - LoginUsuario");
                 return View();
             }
-        }        
+        }
     }
 }

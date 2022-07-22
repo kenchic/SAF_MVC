@@ -1,3 +1,3 @@
 ﻿$(document).ready(function () {
-    $('#menu').load('/Usuario/UsuarioMenu');
+    $('#menu').load('/Usuario/Menu');
 });

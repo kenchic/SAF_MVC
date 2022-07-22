@@ -8,12 +8,7 @@ function abrirVistaModal(urlIn, divDestino, idModal) {
         url: urlIn,
         success: function (data) {
             $('#' + divDestino).html(data);
-            $('#' + idModal).modal({
-                backdrop: "static",
-                keyboard: false,
-                role: "dialog",
-                show: true
-            });
+            $('#' + idModal).modal("show");
         }
     });
 }
